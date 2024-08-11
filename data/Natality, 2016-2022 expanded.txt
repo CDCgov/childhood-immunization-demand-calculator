@@ -1,0 +1,2064 @@
+"Notes"	"State of Residence"	"State of Residence Code"	"Year"	"Year Code"	"Month"	"Month Code"	Births
+	"Alabama"	"01"	"2020"	"2020"	"January"	"1"	4955
+	"Alabama"	"01"	"2020"	"2020"	"February"	"2"	4449
+	"Alabama"	"01"	"2020"	"2020"	"March"	"3"	4775
+	"Alabama"	"01"	"2020"	"2020"	"April"	"4"	4567
+	"Alabama"	"01"	"2020"	"2020"	"May"	"5"	4510
+	"Alabama"	"01"	"2020"	"2020"	"June"	"6"	4799
+	"Alabama"	"01"	"2020"	"2020"	"July"	"7"	5224
+	"Alabama"	"01"	"2020"	"2020"	"August"	"8"	5201
+	"Alabama"	"01"	"2020"	"2020"	"September"	"9"	5001
+	"Alabama"	"01"	"2020"	"2020"	"October"	"10"	4777
+	"Alabama"	"01"	"2020"	"2020"	"November"	"11"	4484
+	"Alabama"	"01"	"2020"	"2020"	"December"	"12"	4905
+"Total"	"Alabama"	"01"	"2020"	"2020"			57647
+	"Alabama"	"01"	"2021"	"2021"	"January"	"1"	4553
+	"Alabama"	"01"	"2021"	"2021"	"February"	"2"	4385
+	"Alabama"	"01"	"2021"	"2021"	"March"	"3"	4756
+	"Alabama"	"01"	"2021"	"2021"	"April"	"4"	4519
+	"Alabama"	"01"	"2021"	"2021"	"May"	"5"	4512
+	"Alabama"	"01"	"2021"	"2021"	"June"	"6"	4930
+	"Alabama"	"01"	"2021"	"2021"	"July"	"7"	5154
+	"Alabama"	"01"	"2021"	"2021"	"August"	"8"	5172
+	"Alabama"	"01"	"2021"	"2021"	"September"	"9"	5147
+	"Alabama"	"01"	"2021"	"2021"	"October"	"10"	4968
+	"Alabama"	"01"	"2021"	"2021"	"November"	"11"	4900
+	"Alabama"	"01"	"2021"	"2021"	"December"	"12"	5058
+"Total"	"Alabama"	"01"	"2021"	"2021"			58054
+	"Alabama"	"01"	"2022"	"2022"	"January"	"1"	4808
+	"Alabama"	"01"	"2022"	"2022"	"February"	"2"	4383
+	"Alabama"	"01"	"2022"	"2022"	"March"	"3"	4806
+	"Alabama"	"01"	"2022"	"2022"	"April"	"4"	4456
+	"Alabama"	"01"	"2022"	"2022"	"May"	"5"	4588
+	"Alabama"	"01"	"2022"	"2022"	"June"	"6"	4709
+	"Alabama"	"01"	"2022"	"2022"	"July"	"7"	5006
+	"Alabama"	"01"	"2022"	"2022"	"August"	"8"	5494
+	"Alabama"	"01"	"2022"	"2022"	"September"	"9"	5053
+	"Alabama"	"01"	"2022"	"2022"	"October"	"10"	4839
+	"Alabama"	"01"	"2022"	"2022"	"November"	"11"	4919
+	"Alabama"	"01"	"2022"	"2022"	"December"	"12"	5088
+"Total"	"Alabama"	"01"	"2022"	"2022"			58149
+"Total"	"Alabama"	"01"					173850
+	"Alaska"	"02"	"2020"	"2020"	"January"	"1"	818
+	"Alaska"	"02"	"2020"	"2020"	"February"	"2"	717
+	"Alaska"	"02"	"2020"	"2020"	"March"	"3"	777
+	"Alaska"	"02"	"2020"	"2020"	"April"	"4"	758
+	"Alaska"	"02"	"2020"	"2020"	"May"	"5"	832
+	"Alaska"	"02"	"2020"	"2020"	"June"	"6"	810
+	"Alaska"	"02"	"2020"	"2020"	"July"	"7"	777
+	"Alaska"	"02"	"2020"	"2020"	"August"	"8"	782
+	"Alaska"	"02"	"2020"	"2020"	"September"	"9"	820
+	"Alaska"	"02"	"2020"	"2020"	"October"	"10"	805
+	"Alaska"	"02"	"2020"	"2020"	"November"	"11"	768
+	"Alaska"	"02"	"2020"	"2020"	"December"	"12"	805
+"Total"	"Alaska"	"02"	"2020"	"2020"			9469
+	"Alaska"	"02"	"2021"	"2021"	"January"	"1"	746
+	"Alaska"	"02"	"2021"	"2021"	"February"	"2"	662
+	"Alaska"	"02"	"2021"	"2021"	"March"	"3"	800
+	"Alaska"	"02"	"2021"	"2021"	"April"	"4"	815
+	"Alaska"	"02"	"2021"	"2021"	"May"	"5"	860
+	"Alaska"	"02"	"2021"	"2021"	"June"	"6"	809
+	"Alaska"	"02"	"2021"	"2021"	"July"	"7"	861
+	"Alaska"	"02"	"2021"	"2021"	"August"	"8"	820
+	"Alaska"	"02"	"2021"	"2021"	"September"	"9"	831
+	"Alaska"	"02"	"2021"	"2021"	"October"	"10"	739
+	"Alaska"	"02"	"2021"	"2021"	"November"	"11"	704
+	"Alaska"	"02"	"2021"	"2021"	"December"	"12"	720
+"Total"	"Alaska"	"02"	"2021"	"2021"			9367
+	"Alaska"	"02"	"2022"	"2022"	"January"	"1"	734
+	"Alaska"	"02"	"2022"	"2022"	"February"	"2"	720
+	"Alaska"	"02"	"2022"	"2022"	"March"	"3"	833
+	"Alaska"	"02"	"2022"	"2022"	"April"	"4"	779
+	"Alaska"	"02"	"2022"	"2022"	"May"	"5"	798
+	"Alaska"	"02"	"2022"	"2022"	"June"	"6"	816
+	"Alaska"	"02"	"2022"	"2022"	"July"	"7"	812
+	"Alaska"	"02"	"2022"	"2022"	"August"	"8"	826
+	"Alaska"	"02"	"2022"	"2022"	"September"	"9"	797
+	"Alaska"	"02"	"2022"	"2022"	"October"	"10"	766
+	"Alaska"	"02"	"2022"	"2022"	"November"	"11"	725
+	"Alaska"	"02"	"2022"	"2022"	"December"	"12"	753
+"Total"	"Alaska"	"02"	"2022"	"2022"			9359
+"Total"	"Alaska"	"02"					28195
+	"Arizona"	"04"	"2020"	"2020"	"January"	"1"	6703
+	"Arizona"	"04"	"2020"	"2020"	"February"	"2"	6274
+	"Arizona"	"04"	"2020"	"2020"	"March"	"3"	6374
+	"Arizona"	"04"	"2020"	"2020"	"April"	"4"	5970
+	"Arizona"	"04"	"2020"	"2020"	"May"	"5"	6036
+	"Arizona"	"04"	"2020"	"2020"	"June"	"6"	6084
+	"Arizona"	"04"	"2020"	"2020"	"July"	"7"	6772
+	"Arizona"	"04"	"2020"	"2020"	"August"	"8"	6700
+	"Arizona"	"04"	"2020"	"2020"	"September"	"9"	6741
+	"Arizona"	"04"	"2020"	"2020"	"October"	"10"	6646
+	"Arizona"	"04"	"2020"	"2020"	"November"	"11"	6202
+	"Arizona"	"04"	"2020"	"2020"	"December"	"12"	6445
+"Total"	"Arizona"	"04"	"2020"	"2020"			76947
+	"Arizona"	"04"	"2021"	"2021"	"January"	"1"	6173
+	"Arizona"	"04"	"2021"	"2021"	"February"	"2"	5616
+	"Arizona"	"04"	"2021"	"2021"	"March"	"3"	6011
+	"Arizona"	"04"	"2021"	"2021"	"April"	"4"	6030
+	"Arizona"	"04"	"2021"	"2021"	"May"	"5"	6060
+	"Arizona"	"04"	"2021"	"2021"	"June"	"6"	6223
+	"Arizona"	"04"	"2021"	"2021"	"July"	"7"	6908
+	"Arizona"	"04"	"2021"	"2021"	"August"	"8"	7112
+	"Arizona"	"04"	"2021"	"2021"	"September"	"9"	7099
+	"Arizona"	"04"	"2021"	"2021"	"October"	"10"	7054
+	"Arizona"	"04"	"2021"	"2021"	"November"	"11"	6681
+	"Arizona"	"04"	"2021"	"2021"	"December"	"12"	6949
+"Total"	"Arizona"	"04"	"2021"	"2021"			77916
+	"Arizona"	"04"	"2022"	"2022"	"January"	"1"	6575
+	"Arizona"	"04"	"2022"	"2022"	"February"	"2"	6007
+	"Arizona"	"04"	"2022"	"2022"	"March"	"3"	6484
+	"Arizona"	"04"	"2022"	"2022"	"April"	"4"	5957
+	"Arizona"	"04"	"2022"	"2022"	"May"	"5"	6005
+	"Arizona"	"04"	"2022"	"2022"	"June"	"6"	6268
+	"Arizona"	"04"	"2022"	"2022"	"July"	"7"	6740
+	"Arizona"	"04"	"2022"	"2022"	"August"	"8"	7114
+	"Arizona"	"04"	"2022"	"2022"	"September"	"9"	6847
+	"Arizona"	"04"	"2022"	"2022"	"October"	"10"	6660
+	"Arizona"	"04"	"2022"	"2022"	"November"	"11"	6841
+	"Arizona"	"04"	"2022"	"2022"	"December"	"12"	7049
+"Total"	"Arizona"	"04"	"2022"	"2022"			78547
+"Total"	"Arizona"	"04"					233410
+	"Arkansas"	"05"	"2020"	"2020"	"January"	"1"	2956
+	"Arkansas"	"05"	"2020"	"2020"	"February"	"2"	2760
+	"Arkansas"	"05"	"2020"	"2020"	"March"	"3"	2950
+	"Arkansas"	"05"	"2020"	"2020"	"April"	"4"	2855
+	"Arkansas"	"05"	"2020"	"2020"	"May"	"5"	2820
+	"Arkansas"	"05"	"2020"	"2020"	"June"	"6"	2853
+	"Arkansas"	"05"	"2020"	"2020"	"July"	"7"	3115
+	"Arkansas"	"05"	"2020"	"2020"	"August"	"8"	3126
+	"Arkansas"	"05"	"2020"	"2020"	"September"	"9"	3099
+	"Arkansas"	"05"	"2020"	"2020"	"October"	"10"	3020
+	"Arkansas"	"05"	"2020"	"2020"	"November"	"11"	2740
+	"Arkansas"	"05"	"2020"	"2020"	"December"	"12"	2957
+"Total"	"Arkansas"	"05"	"2020"	"2020"			35251
+	"Arkansas"	"05"	"2021"	"2021"	"January"	"1"	2833
+	"Arkansas"	"05"	"2021"	"2021"	"February"	"2"	2623
+	"Arkansas"	"05"	"2021"	"2021"	"March"	"3"	3005
+	"Arkansas"	"05"	"2021"	"2021"	"April"	"4"	2679
+	"Arkansas"	"05"	"2021"	"2021"	"May"	"5"	2759
+	"Arkansas"	"05"	"2021"	"2021"	"June"	"6"	3018
+	"Arkansas"	"05"	"2021"	"2021"	"July"	"7"	3181
+	"Arkansas"	"05"	"2021"	"2021"	"August"	"8"	3357
+	"Arkansas"	"05"	"2021"	"2021"	"September"	"9"	3264
+	"Arkansas"	"05"	"2021"	"2021"	"October"	"10"	3110
+	"Arkansas"	"05"	"2021"	"2021"	"November"	"11"	2960
+	"Arkansas"	"05"	"2021"	"2021"	"December"	"12"	3176
+"Total"	"Arkansas"	"05"	"2021"	"2021"			35965
+	"Arkansas"	"05"	"2022"	"2022"	"January"	"1"	2822
+	"Arkansas"	"05"	"2022"	"2022"	"February"	"2"	2775
+	"Arkansas"	"05"	"2022"	"2022"	"March"	"3"	2995
+	"Arkansas"	"05"	"2022"	"2022"	"April"	"4"	2722
+	"Arkansas"	"05"	"2022"	"2022"	"May"	"5"	2805
+	"Arkansas"	"05"	"2022"	"2022"	"June"	"6"	2995
+	"Arkansas"	"05"	"2022"	"2022"	"July"	"7"	3032
+	"Arkansas"	"05"	"2022"	"2022"	"August"	"8"	3250
+	"Arkansas"	"05"	"2022"	"2022"	"September"	"9"	3073
+	"Arkansas"	"05"	"2022"	"2022"	"October"	"10"	2869
+	"Arkansas"	"05"	"2022"	"2022"	"November"	"11"	2964
+	"Arkansas"	"05"	"2022"	"2022"	"December"	"12"	3169
+"Total"	"Arkansas"	"05"	"2022"	"2022"			35471
+"Total"	"Arkansas"	"05"					106687
+	"California"	"06"	"2020"	"2020"	"January"	"1"	35954
+	"California"	"06"	"2020"	"2020"	"February"	"2"	33196
+	"California"	"06"	"2020"	"2020"	"March"	"3"	34920
+	"California"	"06"	"2020"	"2020"	"April"	"4"	33748
+	"California"	"06"	"2020"	"2020"	"May"	"5"	34908
+	"California"	"06"	"2020"	"2020"	"June"	"6"	34437
+	"California"	"06"	"2020"	"2020"	"July"	"7"	37190
+	"California"	"06"	"2020"	"2020"	"August"	"8"	37185
+	"California"	"06"	"2020"	"2020"	"September"	"9"	36387
+	"California"	"06"	"2020"	"2020"	"October"	"10"	35932
+	"California"	"06"	"2020"	"2020"	"November"	"11"	33342
+	"California"	"06"	"2020"	"2020"	"December"	"12"	33060
+"Total"	"California"	"06"	"2020"	"2020"			420259
+	"California"	"06"	"2021"	"2021"	"January"	"1"	31919
+	"California"	"06"	"2021"	"2021"	"February"	"2"	30054
+	"California"	"06"	"2021"	"2021"	"March"	"3"	34599
+	"California"	"06"	"2021"	"2021"	"April"	"4"	33443
+	"California"	"06"	"2021"	"2021"	"May"	"5"	34330
+	"California"	"06"	"2021"	"2021"	"June"	"6"	34913
+	"California"	"06"	"2021"	"2021"	"July"	"7"	36434
+	"California"	"06"	"2021"	"2021"	"August"	"8"	38341
+	"California"	"06"	"2021"	"2021"	"September"	"9"	37438
+	"California"	"06"	"2021"	"2021"	"October"	"10"	37057
+	"California"	"06"	"2021"	"2021"	"November"	"11"	35439
+	"California"	"06"	"2021"	"2021"	"December"	"12"	36641
+"Total"	"California"	"06"	"2021"	"2021"			420608
+	"California"	"06"	"2022"	"2022"	"January"	"1"	34502
+	"California"	"06"	"2022"	"2022"	"February"	"2"	31954
+	"California"	"06"	"2022"	"2022"	"March"	"3"	35395
+	"California"	"06"	"2022"	"2022"	"April"	"4"	32572
+	"California"	"06"	"2022"	"2022"	"May"	"5"	34022
+	"California"	"06"	"2022"	"2022"	"June"	"6"	34190
+	"California"	"06"	"2022"	"2022"	"July"	"7"	36632
+	"California"	"06"	"2022"	"2022"	"August"	"8"	37863
+	"California"	"06"	"2022"	"2022"	"September"	"9"	35919
+	"California"	"06"	"2022"	"2022"	"October"	"10"	35393
+	"California"	"06"	"2022"	"2022"	"November"	"11"	35121
+	"California"	"06"	"2022"	"2022"	"December"	"12"	35541
+"Total"	"California"	"06"	"2022"	"2022"			419104
+"Total"	"California"	"06"					1259971
+	"Colorado"	"08"	"2020"	"2020"	"January"	"1"	4984
+	"Colorado"	"08"	"2020"	"2020"	"February"	"2"	4711
+	"Colorado"	"08"	"2020"	"2020"	"March"	"3"	5283
+	"Colorado"	"08"	"2020"	"2020"	"April"	"4"	5104
+	"Colorado"	"08"	"2020"	"2020"	"May"	"5"	5268
+	"Colorado"	"08"	"2020"	"2020"	"June"	"6"	5174
+	"Colorado"	"08"	"2020"	"2020"	"July"	"7"	5506
+	"Colorado"	"08"	"2020"	"2020"	"August"	"8"	5408
+	"Colorado"	"08"	"2020"	"2020"	"September"	"9"	5249
+	"Colorado"	"08"	"2020"	"2020"	"October"	"10"	5234
+	"Colorado"	"08"	"2020"	"2020"	"November"	"11"	4775
+	"Colorado"	"08"	"2020"	"2020"	"December"	"12"	4798
+"Total"	"Colorado"	"08"	"2020"	"2020"			61494
+	"Colorado"	"08"	"2021"	"2021"	"January"	"1"	4675
+	"Colorado"	"08"	"2021"	"2021"	"February"	"2"	4784
+	"Colorado"	"08"	"2021"	"2021"	"March"	"3"	5277
+	"Colorado"	"08"	"2021"	"2021"	"April"	"4"	5335
+	"Colorado"	"08"	"2021"	"2021"	"May"	"5"	5422
+	"Colorado"	"08"	"2021"	"2021"	"June"	"6"	5524
+	"Colorado"	"08"	"2021"	"2021"	"July"	"7"	5605
+	"Colorado"	"08"	"2021"	"2021"	"August"	"8"	5648
+	"Colorado"	"08"	"2021"	"2021"	"September"	"9"	5371
+	"Colorado"	"08"	"2021"	"2021"	"October"	"10"	5287
+	"Colorado"	"08"	"2021"	"2021"	"November"	"11"	4983
+	"Colorado"	"08"	"2021"	"2021"	"December"	"12"	5038
+"Total"	"Colorado"	"08"	"2021"	"2021"			62949
+	"Colorado"	"08"	"2022"	"2022"	"January"	"1"	4888
+	"Colorado"	"08"	"2022"	"2022"	"February"	"2"	4630
+	"Colorado"	"08"	"2022"	"2022"	"March"	"3"	5274
+	"Colorado"	"08"	"2022"	"2022"	"April"	"4"	5081
+	"Colorado"	"08"	"2022"	"2022"	"May"	"5"	5389
+	"Colorado"	"08"	"2022"	"2022"	"June"	"6"	5322
+	"Colorado"	"08"	"2022"	"2022"	"July"	"7"	5536
+	"Colorado"	"08"	"2022"	"2022"	"August"	"8"	5502
+	"Colorado"	"08"	"2022"	"2022"	"September"	"9"	5219
+	"Colorado"	"08"	"2022"	"2022"	"October"	"10"	5408
+	"Colorado"	"08"	"2022"	"2022"	"November"	"11"	5040
+	"Colorado"	"08"	"2022"	"2022"	"December"	"12"	5094
+"Total"	"Colorado"	"08"	"2022"	"2022"			62383
+"Total"	"Colorado"	"08"					186826
+	"Connecticut"	"09"	"2020"	"2020"	"January"	"1"	2795
+	"Connecticut"	"09"	"2020"	"2020"	"February"	"2"	2496
+	"Connecticut"	"09"	"2020"	"2020"	"March"	"3"	2859
+	"Connecticut"	"09"	"2020"	"2020"	"April"	"4"	2734
+	"Connecticut"	"09"	"2020"	"2020"	"May"	"5"	2851
+	"Connecticut"	"09"	"2020"	"2020"	"June"	"6"	2882
+	"Connecticut"	"09"	"2020"	"2020"	"July"	"7"	3014
+	"Connecticut"	"09"	"2020"	"2020"	"August"	"8"	3016
+	"Connecticut"	"09"	"2020"	"2020"	"September"	"9"	2896
+	"Connecticut"	"09"	"2020"	"2020"	"October"	"10"	2836
+	"Connecticut"	"09"	"2020"	"2020"	"November"	"11"	2530
+	"Connecticut"	"09"	"2020"	"2020"	"December"	"12"	2551
+"Total"	"Connecticut"	"09"	"2020"	"2020"			33460
+	"Connecticut"	"09"	"2021"	"2021"	"January"	"1"	2417
+	"Connecticut"	"09"	"2021"	"2021"	"February"	"2"	2543
+	"Connecticut"	"09"	"2021"	"2021"	"March"	"3"	3007
+	"Connecticut"	"09"	"2021"	"2021"	"April"	"4"	2975
+	"Connecticut"	"09"	"2021"	"2021"	"May"	"5"	3059
+	"Connecticut"	"09"	"2021"	"2021"	"June"	"6"	3114
+	"Connecticut"	"09"	"2021"	"2021"	"July"	"7"	3246
+	"Connecticut"	"09"	"2021"	"2021"	"August"	"8"	3323
+	"Connecticut"	"09"	"2021"	"2021"	"September"	"9"	3245
+	"Connecticut"	"09"	"2021"	"2021"	"October"	"10"	2990
+	"Connecticut"	"09"	"2021"	"2021"	"November"	"11"	2850
+	"Connecticut"	"09"	"2021"	"2021"	"December"	"12"	2901
+"Total"	"Connecticut"	"09"	"2021"	"2021"			35670
+	"Connecticut"	"09"	"2022"	"2022"	"January"	"1"	2694
+	"Connecticut"	"09"	"2022"	"2022"	"February"	"2"	2576
+	"Connecticut"	"09"	"2022"	"2022"	"March"	"3"	3007
+	"Connecticut"	"09"	"2022"	"2022"	"April"	"4"	2881
+	"Connecticut"	"09"	"2022"	"2022"	"May"	"5"	2953
+	"Connecticut"	"09"	"2022"	"2022"	"June"	"6"	2980
+	"Connecticut"	"09"	"2022"	"2022"	"July"	"7"	3153
+	"Connecticut"	"09"	"2022"	"2022"	"August"	"8"	3243
+	"Connecticut"	"09"	"2022"	"2022"	"September"	"9"	2996
+	"Connecticut"	"09"	"2022"	"2022"	"October"	"10"	2937
+	"Connecticut"	"09"	"2022"	"2022"	"November"	"11"	2930
+	"Connecticut"	"09"	"2022"	"2022"	"December"	"12"	2982
+"Total"	"Connecticut"	"09"	"2022"	"2022"			35332
+"Total"	"Connecticut"	"09"					104462
+	"Delaware"	"10"	"2020"	"2020"	"January"	"1"	830
+	"Delaware"	"10"	"2020"	"2020"	"February"	"2"	799
+	"Delaware"	"10"	"2020"	"2020"	"March"	"3"	854
+	"Delaware"	"10"	"2020"	"2020"	"April"	"4"	805
+	"Delaware"	"10"	"2020"	"2020"	"May"	"5"	879
+	"Delaware"	"10"	"2020"	"2020"	"June"	"6"	894
+	"Delaware"	"10"	"2020"	"2020"	"July"	"7"	926
+	"Delaware"	"10"	"2020"	"2020"	"August"	"8"	961
+	"Delaware"	"10"	"2020"	"2020"	"September"	"9"	928
+	"Delaware"	"10"	"2020"	"2020"	"October"	"10"	904
+	"Delaware"	"10"	"2020"	"2020"	"November"	"11"	783
+	"Delaware"	"10"	"2020"	"2020"	"December"	"12"	829
+"Total"	"Delaware"	"10"	"2020"	"2020"			10392
+	"Delaware"	"10"	"2021"	"2021"	"January"	"1"	739
+	"Delaware"	"10"	"2021"	"2021"	"February"	"2"	688
+	"Delaware"	"10"	"2021"	"2021"	"March"	"3"	818
+	"Delaware"	"10"	"2021"	"2021"	"April"	"4"	852
+	"Delaware"	"10"	"2021"	"2021"	"May"	"5"	854
+	"Delaware"	"10"	"2021"	"2021"	"June"	"6"	914
+	"Delaware"	"10"	"2021"	"2021"	"July"	"7"	999
+	"Delaware"	"10"	"2021"	"2021"	"August"	"8"	918
+	"Delaware"	"10"	"2021"	"2021"	"September"	"9"	1023
+	"Delaware"	"10"	"2021"	"2021"	"October"	"10"	942
+	"Delaware"	"10"	"2021"	"2021"	"November"	"11"	854
+	"Delaware"	"10"	"2021"	"2021"	"December"	"12"	881
+"Total"	"Delaware"	"10"	"2021"	"2021"			10482
+	"Delaware"	"10"	"2022"	"2022"	"January"	"1"	894
+	"Delaware"	"10"	"2022"	"2022"	"February"	"2"	812
+	"Delaware"	"10"	"2022"	"2022"	"March"	"3"	941
+	"Delaware"	"10"	"2022"	"2022"	"April"	"4"	801
+	"Delaware"	"10"	"2022"	"2022"	"May"	"5"	870
+	"Delaware"	"10"	"2022"	"2022"	"June"	"6"	930
+	"Delaware"	"10"	"2022"	"2022"	"July"	"7"	1015
+	"Delaware"	"10"	"2022"	"2022"	"August"	"8"	1010
+	"Delaware"	"10"	"2022"	"2022"	"September"	"9"	889
+	"Delaware"	"10"	"2022"	"2022"	"October"	"10"	869
+	"Delaware"	"10"	"2022"	"2022"	"November"	"11"	898
+	"Delaware"	"10"	"2022"	"2022"	"December"	"12"	887
+"Total"	"Delaware"	"10"	"2022"	"2022"			10816
+"Total"	"Delaware"	"10"					31690
+	"District of Columbia"	"11"	"2020"	"2020"	"January"	"1"	793
+	"District of Columbia"	"11"	"2020"	"2020"	"February"	"2"	715
+	"District of Columbia"	"11"	"2020"	"2020"	"March"	"3"	774
+	"District of Columbia"	"11"	"2020"	"2020"	"April"	"4"	685
+	"District of Columbia"	"11"	"2020"	"2020"	"May"	"5"	728
+	"District of Columbia"	"11"	"2020"	"2020"	"June"	"6"	775
+	"District of Columbia"	"11"	"2020"	"2020"	"July"	"7"	762
+	"District of Columbia"	"11"	"2020"	"2020"	"August"	"8"	769
+	"District of Columbia"	"11"	"2020"	"2020"	"September"	"9"	736
+	"District of Columbia"	"11"	"2020"	"2020"	"October"	"10"	739
+	"District of Columbia"	"11"	"2020"	"2020"	"November"	"11"	688
+	"District of Columbia"	"11"	"2020"	"2020"	"December"	"12"	710
+"Total"	"District of Columbia"	"11"	"2020"	"2020"			8874
+	"District of Columbia"	"11"	"2021"	"2021"	"January"	"1"	712
+	"District of Columbia"	"11"	"2021"	"2021"	"February"	"2"	627
+	"District of Columbia"	"11"	"2021"	"2021"	"March"	"3"	702
+	"District of Columbia"	"11"	"2021"	"2021"	"April"	"4"	664
+	"District of Columbia"	"11"	"2021"	"2021"	"May"	"5"	711
+	"District of Columbia"	"11"	"2021"	"2021"	"June"	"6"	688
+	"District of Columbia"	"11"	"2021"	"2021"	"July"	"7"	742
+	"District of Columbia"	"11"	"2021"	"2021"	"August"	"8"	735
+	"District of Columbia"	"11"	"2021"	"2021"	"September"	"9"	813
+	"District of Columbia"	"11"	"2021"	"2021"	"October"	"10"	751
+	"District of Columbia"	"11"	"2021"	"2021"	"November"	"11"	809
+	"District of Columbia"	"11"	"2021"	"2021"	"December"	"12"	706
+"Total"	"District of Columbia"	"11"	"2021"	"2021"			8660
+	"District of Columbia"	"11"	"2022"	"2022"	"January"	"1"	706
+	"District of Columbia"	"11"	"2022"	"2022"	"February"	"2"	609
+	"District of Columbia"	"11"	"2022"	"2022"	"March"	"3"	673
+	"District of Columbia"	"11"	"2022"	"2022"	"April"	"4"	633
+	"District of Columbia"	"11"	"2022"	"2022"	"May"	"5"	626
+	"District of Columbia"	"11"	"2022"	"2022"	"June"	"6"	690
+	"District of Columbia"	"11"	"2022"	"2022"	"July"	"7"	686
+	"District of Columbia"	"11"	"2022"	"2022"	"August"	"8"	764
+	"District of Columbia"	"11"	"2022"	"2022"	"September"	"9"	662
+	"District of Columbia"	"11"	"2022"	"2022"	"October"	"10"	656
+	"District of Columbia"	"11"	"2022"	"2022"	"November"	"11"	662
+	"District of Columbia"	"11"	"2022"	"2022"	"December"	"12"	708
+"Total"	"District of Columbia"	"11"	"2022"	"2022"			8075
+"Total"	"District of Columbia"	"11"					25609
+	"Florida"	"12"	"2020"	"2020"	"January"	"1"	18194
+	"Florida"	"12"	"2020"	"2020"	"February"	"2"	16741
+	"Florida"	"12"	"2020"	"2020"	"March"	"3"	17194
+	"Florida"	"12"	"2020"	"2020"	"April"	"4"	16566
+	"Florida"	"12"	"2020"	"2020"	"May"	"5"	16892
+	"Florida"	"12"	"2020"	"2020"	"June"	"6"	16906
+	"Florida"	"12"	"2020"	"2020"	"July"	"7"	17864
+	"Florida"	"12"	"2020"	"2020"	"August"	"8"	18124
+	"Florida"	"12"	"2020"	"2020"	"September"	"9"	18193
+	"Florida"	"12"	"2020"	"2020"	"October"	"10"	18091
+	"Florida"	"12"	"2020"	"2020"	"November"	"11"	17183
+	"Florida"	"12"	"2020"	"2020"	"December"	"12"	17723
+"Total"	"Florida"	"12"	"2020"	"2020"			209671
+	"Florida"	"12"	"2021"	"2021"	"January"	"1"	16542
+	"Florida"	"12"	"2021"	"2021"	"February"	"2"	16082
+	"Florida"	"12"	"2021"	"2021"	"March"	"3"	17226
+	"Florida"	"12"	"2021"	"2021"	"April"	"4"	16753
+	"Florida"	"12"	"2021"	"2021"	"May"	"5"	16919
+	"Florida"	"12"	"2021"	"2021"	"June"	"6"	17483
+	"Florida"	"12"	"2021"	"2021"	"July"	"7"	18488
+	"Florida"	"12"	"2021"	"2021"	"August"	"8"	19586
+	"Florida"	"12"	"2021"	"2021"	"September"	"9"	20025
+	"Florida"	"12"	"2021"	"2021"	"October"	"10"	19529
+	"Florida"	"12"	"2021"	"2021"	"November"	"11"	18398
+	"Florida"	"12"	"2021"	"2021"	"December"	"12"	19229
+"Total"	"Florida"	"12"	"2021"	"2021"			216260
+	"Florida"	"12"	"2022"	"2022"	"January"	"1"	18496
+	"Florida"	"12"	"2022"	"2022"	"February"	"2"	17037
+	"Florida"	"12"	"2022"	"2022"	"March"	"3"	18842
+	"Florida"	"12"	"2022"	"2022"	"April"	"4"	17107
+	"Florida"	"12"	"2022"	"2022"	"May"	"5"	17311
+	"Florida"	"12"	"2022"	"2022"	"June"	"6"	18099
+	"Florida"	"12"	"2022"	"2022"	"July"	"7"	19224
+	"Florida"	"12"	"2022"	"2022"	"August"	"8"	20825
+	"Florida"	"12"	"2022"	"2022"	"September"	"9"	18962
+	"Florida"	"12"	"2022"	"2022"	"October"	"10"	19144
+	"Florida"	"12"	"2022"	"2022"	"November"	"11"	19569
+	"Florida"	"12"	"2022"	"2022"	"December"	"12"	19817
+"Total"	"Florida"	"12"	"2022"	"2022"			224433
+"Total"	"Florida"	"12"					650364
+	"Georgia"	"13"	"2020"	"2020"	"January"	"1"	10652
+	"Georgia"	"13"	"2020"	"2020"	"February"	"2"	9502
+	"Georgia"	"13"	"2020"	"2020"	"March"	"3"	10049
+	"Georgia"	"13"	"2020"	"2020"	"April"	"4"	9710
+	"Georgia"	"13"	"2020"	"2020"	"May"	"5"	10039
+	"Georgia"	"13"	"2020"	"2020"	"June"	"6"	10099
+	"Georgia"	"13"	"2020"	"2020"	"July"	"7"	10657
+	"Georgia"	"13"	"2020"	"2020"	"August"	"8"	11039
+	"Georgia"	"13"	"2020"	"2020"	"September"	"9"	10592
+	"Georgia"	"13"	"2020"	"2020"	"October"	"10"	10232
+	"Georgia"	"13"	"2020"	"2020"	"November"	"11"	9604
+	"Georgia"	"13"	"2020"	"2020"	"December"	"12"	10298
+"Total"	"Georgia"	"13"	"2020"	"2020"			122473
+	"Georgia"	"13"	"2021"	"2021"	"January"	"1"	9660
+	"Georgia"	"13"	"2021"	"2021"	"February"	"2"	9072
+	"Georgia"	"13"	"2021"	"2021"	"March"	"3"	10140
+	"Georgia"	"13"	"2021"	"2021"	"April"	"4"	9821
+	"Georgia"	"13"	"2021"	"2021"	"May"	"5"	9872
+	"Georgia"	"13"	"2021"	"2021"	"June"	"6"	10350
+	"Georgia"	"13"	"2021"	"2021"	"July"	"7"	10941
+	"Georgia"	"13"	"2021"	"2021"	"August"	"8"	11251
+	"Georgia"	"13"	"2021"	"2021"	"September"	"9"	11145
+	"Georgia"	"13"	"2021"	"2021"	"October"	"10"	10711
+	"Georgia"	"13"	"2021"	"2021"	"November"	"11"	10200
+	"Georgia"	"13"	"2021"	"2021"	"December"	"12"	10910
+"Total"	"Georgia"	"13"	"2021"	"2021"			124073
+	"Georgia"	"13"	"2022"	"2022"	"January"	"1"	10401
+	"Georgia"	"13"	"2022"	"2022"	"February"	"2"	9586
+	"Georgia"	"13"	"2022"	"2022"	"March"	"3"	10675
+	"Georgia"	"13"	"2022"	"2022"	"April"	"4"	9618
+	"Georgia"	"13"	"2022"	"2022"	"May"	"5"	9861
+	"Georgia"	"13"	"2022"	"2022"	"June"	"6"	10414
+	"Georgia"	"13"	"2022"	"2022"	"July"	"7"	10904
+	"Georgia"	"13"	"2022"	"2022"	"August"	"8"	11855
+	"Georgia"	"13"	"2022"	"2022"	"September"	"9"	10565
+	"Georgia"	"13"	"2022"	"2022"	"October"	"10"	10407
+	"Georgia"	"13"	"2022"	"2022"	"November"	"11"	10747
+	"Georgia"	"13"	"2022"	"2022"	"December"	"12"	11097
+"Total"	"Georgia"	"13"	"2022"	"2022"			126130
+"Total"	"Georgia"	"13"					372676
+	"Hawaii"	"15"	"2020"	"2020"	"January"	"1"	1350
+	"Hawaii"	"15"	"2020"	"2020"	"February"	"2"	1290
+	"Hawaii"	"15"	"2020"	"2020"	"March"	"3"	1356
+	"Hawaii"	"15"	"2020"	"2020"	"April"	"4"	1302
+	"Hawaii"	"15"	"2020"	"2020"	"May"	"5"	1342
+	"Hawaii"	"15"	"2020"	"2020"	"June"	"6"	1197
+	"Hawaii"	"15"	"2020"	"2020"	"July"	"7"	1323
+	"Hawaii"	"15"	"2020"	"2020"	"August"	"8"	1332
+	"Hawaii"	"15"	"2020"	"2020"	"September"	"9"	1331
+	"Hawaii"	"15"	"2020"	"2020"	"October"	"10"	1384
+	"Hawaii"	"15"	"2020"	"2020"	"November"	"11"	1317
+	"Hawaii"	"15"	"2020"	"2020"	"December"	"12"	1261
+"Total"	"Hawaii"	"15"	"2020"	"2020"			15785
+	"Hawaii"	"15"	"2021"	"2021"	"January"	"1"	1207
+	"Hawaii"	"15"	"2021"	"2021"	"February"	"2"	1117
+	"Hawaii"	"15"	"2021"	"2021"	"March"	"3"	1417
+	"Hawaii"	"15"	"2021"	"2021"	"April"	"4"	1270
+	"Hawaii"	"15"	"2021"	"2021"	"May"	"5"	1283
+	"Hawaii"	"15"	"2021"	"2021"	"June"	"6"	1267
+	"Hawaii"	"15"	"2021"	"2021"	"July"	"7"	1353
+	"Hawaii"	"15"	"2021"	"2021"	"August"	"8"	1420
+	"Hawaii"	"15"	"2021"	"2021"	"September"	"9"	1386
+	"Hawaii"	"15"	"2021"	"2021"	"October"	"10"	1332
+	"Hawaii"	"15"	"2021"	"2021"	"November"	"11"	1258
+	"Hawaii"	"15"	"2021"	"2021"	"December"	"12"	1310
+"Total"	"Hawaii"	"15"	"2021"	"2021"			15620
+	"Hawaii"	"15"	"2022"	"2022"	"January"	"1"	1360
+	"Hawaii"	"15"	"2022"	"2022"	"February"	"2"	1273
+	"Hawaii"	"15"	"2022"	"2022"	"March"	"3"	1357
+	"Hawaii"	"15"	"2022"	"2022"	"April"	"4"	1208
+	"Hawaii"	"15"	"2022"	"2022"	"May"	"5"	1209
+	"Hawaii"	"15"	"2022"	"2022"	"June"	"6"	1253
+	"Hawaii"	"15"	"2022"	"2022"	"July"	"7"	1339
+	"Hawaii"	"15"	"2022"	"2022"	"August"	"8"	1308
+	"Hawaii"	"15"	"2022"	"2022"	"September"	"9"	1327
+	"Hawaii"	"15"	"2022"	"2022"	"October"	"10"	1314
+	"Hawaii"	"15"	"2022"	"2022"	"November"	"11"	1278
+	"Hawaii"	"15"	"2022"	"2022"	"December"	"12"	1309
+"Total"	"Hawaii"	"15"	"2022"	"2022"			15535
+"Total"	"Hawaii"	"15"					46940
+	"Idaho"	"16"	"2020"	"2020"	"January"	"1"	1698
+	"Idaho"	"16"	"2020"	"2020"	"February"	"2"	1615
+	"Idaho"	"16"	"2020"	"2020"	"March"	"3"	1864
+	"Idaho"	"16"	"2020"	"2020"	"April"	"4"	1790
+	"Idaho"	"16"	"2020"	"2020"	"May"	"5"	1861
+	"Idaho"	"16"	"2020"	"2020"	"June"	"6"	1817
+	"Idaho"	"16"	"2020"	"2020"	"July"	"7"	1963
+	"Idaho"	"16"	"2020"	"2020"	"August"	"8"	1924
+	"Idaho"	"16"	"2020"	"2020"	"September"	"9"	1923
+	"Idaho"	"16"	"2020"	"2020"	"October"	"10"	1756
+	"Idaho"	"16"	"2020"	"2020"	"November"	"11"	1632
+	"Idaho"	"16"	"2020"	"2020"	"December"	"12"	1690
+"Total"	"Idaho"	"16"	"2020"	"2020"			21533
+	"Idaho"	"16"	"2021"	"2021"	"January"	"1"	1675
+	"Idaho"	"16"	"2021"	"2021"	"February"	"2"	1570
+	"Idaho"	"16"	"2021"	"2021"	"March"	"3"	1950
+	"Idaho"	"16"	"2021"	"2021"	"April"	"4"	1862
+	"Idaho"	"16"	"2021"	"2021"	"May"	"5"	1950
+	"Idaho"	"16"	"2021"	"2021"	"June"	"6"	1992
+	"Idaho"	"16"	"2021"	"2021"	"July"	"7"	1968
+	"Idaho"	"16"	"2021"	"2021"	"August"	"8"	2047
+	"Idaho"	"16"	"2021"	"2021"	"September"	"9"	1896
+	"Idaho"	"16"	"2021"	"2021"	"October"	"10"	1848
+	"Idaho"	"16"	"2021"	"2021"	"November"	"11"	1819
+	"Idaho"	"16"	"2021"	"2021"	"December"	"12"	1850
+"Total"	"Idaho"	"16"	"2021"	"2021"			22427
+	"Idaho"	"16"	"2022"	"2022"	"January"	"1"	1786
+	"Idaho"	"16"	"2022"	"2022"	"February"	"2"	1648
+	"Idaho"	"16"	"2022"	"2022"	"March"	"3"	1894
+	"Idaho"	"16"	"2022"	"2022"	"April"	"4"	1835
+	"Idaho"	"16"	"2022"	"2022"	"May"	"5"	1881
+	"Idaho"	"16"	"2022"	"2022"	"June"	"6"	1932
+	"Idaho"	"16"	"2022"	"2022"	"July"	"7"	2012
+	"Idaho"	"16"	"2022"	"2022"	"August"	"8"	2045
+	"Idaho"	"16"	"2022"	"2022"	"September"	"9"	1903
+	"Idaho"	"16"	"2022"	"2022"	"October"	"10"	1866
+	"Idaho"	"16"	"2022"	"2022"	"November"	"11"	1736
+	"Idaho"	"16"	"2022"	"2022"	"December"	"12"	1853
+"Total"	"Idaho"	"16"	"2022"	"2022"			22391
+"Total"	"Idaho"	"16"					66351
+	"Illinois"	"17"	"2020"	"2020"	"January"	"1"	11121
+	"Illinois"	"17"	"2020"	"2020"	"February"	"2"	10434
+	"Illinois"	"17"	"2020"	"2020"	"March"	"3"	11117
+	"Illinois"	"17"	"2020"	"2020"	"April"	"4"	10787
+	"Illinois"	"17"	"2020"	"2020"	"May"	"5"	11455
+	"Illinois"	"17"	"2020"	"2020"	"June"	"6"	11199
+	"Illinois"	"17"	"2020"	"2020"	"July"	"7"	11965
+	"Illinois"	"17"	"2020"	"2020"	"August"	"8"	12048
+	"Illinois"	"17"	"2020"	"2020"	"September"	"9"	11356
+	"Illinois"	"17"	"2020"	"2020"	"October"	"10"	11021
+	"Illinois"	"17"	"2020"	"2020"	"November"	"11"	10327
+	"Illinois"	"17"	"2020"	"2020"	"December"	"12"	10468
+"Total"	"Illinois"	"17"	"2020"	"2020"			133298
+	"Illinois"	"17"	"2021"	"2021"	"January"	"1"	9798
+	"Illinois"	"17"	"2021"	"2021"	"February"	"2"	9666
+	"Illinois"	"17"	"2021"	"2021"	"March"	"3"	11322
+	"Illinois"	"17"	"2021"	"2021"	"April"	"4"	10907
+	"Illinois"	"17"	"2021"	"2021"	"May"	"5"	11075
+	"Illinois"	"17"	"2021"	"2021"	"June"	"6"	11921
+	"Illinois"	"17"	"2021"	"2021"	"July"	"7"	12000
+	"Illinois"	"17"	"2021"	"2021"	"August"	"8"	11838
+	"Illinois"	"17"	"2021"	"2021"	"September"	"9"	11416
+	"Illinois"	"17"	"2021"	"2021"	"October"	"10"	11092
+	"Illinois"	"17"	"2021"	"2021"	"November"	"11"	10416
+	"Illinois"	"17"	"2021"	"2021"	"December"	"12"	10738
+"Total"	"Illinois"	"17"	"2021"	"2021"			132189
+	"Illinois"	"17"	"2022"	"2022"	"January"	"1"	10117
+	"Illinois"	"17"	"2022"	"2022"	"February"	"2"	9603
+	"Illinois"	"17"	"2022"	"2022"	"March"	"3"	10681
+	"Illinois"	"17"	"2022"	"2022"	"April"	"4"	10166
+	"Illinois"	"17"	"2022"	"2022"	"May"	"5"	10743
+	"Illinois"	"17"	"2022"	"2022"	"June"	"6"	11028
+	"Illinois"	"17"	"2022"	"2022"	"July"	"7"	11315
+	"Illinois"	"17"	"2022"	"2022"	"August"	"8"	11721
+	"Illinois"	"17"	"2022"	"2022"	"September"	"9"	10823
+	"Illinois"	"17"	"2022"	"2022"	"October"	"10"	10714
+	"Illinois"	"17"	"2022"	"2022"	"November"	"11"	10766
+	"Illinois"	"17"	"2022"	"2022"	"December"	"12"	10673
+"Total"	"Illinois"	"17"	"2022"	"2022"			128350
+"Total"	"Illinois"	"17"					393837
+	"Indiana"	"18"	"2020"	"2020"	"January"	"1"	6608
+	"Indiana"	"18"	"2020"	"2020"	"February"	"2"	6264
+	"Indiana"	"18"	"2020"	"2020"	"March"	"3"	6556
+	"Indiana"	"18"	"2020"	"2020"	"April"	"4"	6273
+	"Indiana"	"18"	"2020"	"2020"	"May"	"5"	6683
+	"Indiana"	"18"	"2020"	"2020"	"June"	"6"	6480
+	"Indiana"	"18"	"2020"	"2020"	"July"	"7"	7195
+	"Indiana"	"18"	"2020"	"2020"	"August"	"8"	6958
+	"Indiana"	"18"	"2020"	"2020"	"September"	"9"	6804
+	"Indiana"	"18"	"2020"	"2020"	"October"	"10"	6556
+	"Indiana"	"18"	"2020"	"2020"	"November"	"11"	6059
+	"Indiana"	"18"	"2020"	"2020"	"December"	"12"	6180
+"Total"	"Indiana"	"18"	"2020"	"2020"			78616
+	"Indiana"	"18"	"2021"	"2021"	"January"	"1"	6169
+	"Indiana"	"18"	"2021"	"2021"	"February"	"2"	5657
+	"Indiana"	"18"	"2021"	"2021"	"March"	"3"	6323
+	"Indiana"	"18"	"2021"	"2021"	"April"	"4"	6314
+	"Indiana"	"18"	"2021"	"2021"	"May"	"5"	6584
+	"Indiana"	"18"	"2021"	"2021"	"June"	"6"	6963
+	"Indiana"	"18"	"2021"	"2021"	"July"	"7"	7248
+	"Indiana"	"18"	"2021"	"2021"	"August"	"8"	7204
+	"Indiana"	"18"	"2021"	"2021"	"September"	"9"	7161
+	"Indiana"	"18"	"2021"	"2021"	"October"	"10"	7002
+	"Indiana"	"18"	"2021"	"2021"	"November"	"11"	6593
+	"Indiana"	"18"	"2021"	"2021"	"December"	"12"	6728
+"Total"	"Indiana"	"18"	"2021"	"2021"			79946
+	"Indiana"	"18"	"2022"	"2022"	"January"	"1"	6218
+	"Indiana"	"18"	"2022"	"2022"	"February"	"2"	5974
+	"Indiana"	"18"	"2022"	"2022"	"March"	"3"	6790
+	"Indiana"	"18"	"2022"	"2022"	"April"	"4"	6360
+	"Indiana"	"18"	"2022"	"2022"	"May"	"5"	6522
+	"Indiana"	"18"	"2022"	"2022"	"June"	"6"	6736
+	"Indiana"	"18"	"2022"	"2022"	"July"	"7"	6795
+	"Indiana"	"18"	"2022"	"2022"	"August"	"8"	7351
+	"Indiana"	"18"	"2022"	"2022"	"September"	"9"	6696
+	"Indiana"	"18"	"2022"	"2022"	"October"	"10"	6752
+	"Indiana"	"18"	"2022"	"2022"	"November"	"11"	6626
+	"Indiana"	"18"	"2022"	"2022"	"December"	"12"	6829
+"Total"	"Indiana"	"18"	"2022"	"2022"			79649
+"Total"	"Indiana"	"18"					238211
+	"Iowa"	"19"	"2020"	"2020"	"January"	"1"	3035
+	"Iowa"	"19"	"2020"	"2020"	"February"	"2"	2844
+	"Iowa"	"19"	"2020"	"2020"	"March"	"3"	3029
+	"Iowa"	"19"	"2020"	"2020"	"April"	"4"	2871
+	"Iowa"	"19"	"2020"	"2020"	"May"	"5"	3216
+	"Iowa"	"19"	"2020"	"2020"	"June"	"6"	3030
+	"Iowa"	"19"	"2020"	"2020"	"July"	"7"	3153
+	"Iowa"	"19"	"2020"	"2020"	"August"	"8"	3190
+	"Iowa"	"19"	"2020"	"2020"	"September"	"9"	3095
+	"Iowa"	"19"	"2020"	"2020"	"October"	"10"	2988
+	"Iowa"	"19"	"2020"	"2020"	"November"	"11"	2764
+	"Iowa"	"19"	"2020"	"2020"	"December"	"12"	2899
+"Total"	"Iowa"	"19"	"2020"	"2020"			36114
+	"Iowa"	"19"	"2021"	"2021"	"January"	"1"	2807
+	"Iowa"	"19"	"2021"	"2021"	"February"	"2"	2730
+	"Iowa"	"19"	"2021"	"2021"	"March"	"3"	3080
+	"Iowa"	"19"	"2021"	"2021"	"April"	"4"	2971
+	"Iowa"	"19"	"2021"	"2021"	"May"	"5"	3040
+	"Iowa"	"19"	"2021"	"2021"	"June"	"6"	3196
+	"Iowa"	"19"	"2021"	"2021"	"July"	"7"	3328
+	"Iowa"	"19"	"2021"	"2021"	"August"	"8"	3312
+	"Iowa"	"19"	"2021"	"2021"	"September"	"9"	3257
+	"Iowa"	"19"	"2021"	"2021"	"October"	"10"	3143
+	"Iowa"	"19"	"2021"	"2021"	"November"	"11"	3002
+	"Iowa"	"19"	"2021"	"2021"	"December"	"12"	2969
+"Total"	"Iowa"	"19"	"2021"	"2021"			36835
+	"Iowa"	"19"	"2022"	"2022"	"January"	"1"	2930
+	"Iowa"	"19"	"2022"	"2022"	"February"	"2"	2736
+	"Iowa"	"19"	"2022"	"2022"	"March"	"3"	3156
+	"Iowa"	"19"	"2022"	"2022"	"April"	"4"	2976
+	"Iowa"	"19"	"2022"	"2022"	"May"	"5"	2974
+	"Iowa"	"19"	"2022"	"2022"	"June"	"6"	3044
+	"Iowa"	"19"	"2022"	"2022"	"July"	"7"	3217
+	"Iowa"	"19"	"2022"	"2022"	"August"	"8"	3269
+	"Iowa"	"19"	"2022"	"2022"	"September"	"9"	3074
+	"Iowa"	"19"	"2022"	"2022"	"October"	"10"	3017
+	"Iowa"	"19"	"2022"	"2022"	"November"	"11"	3041
+	"Iowa"	"19"	"2022"	"2022"	"December"	"12"	3072
+"Total"	"Iowa"	"19"	"2022"	"2022"			36506
+"Total"	"Iowa"	"19"					109455
+	"Kansas"	"20"	"2020"	"2020"	"January"	"1"	2780
+	"Kansas"	"20"	"2020"	"2020"	"February"	"2"	2671
+	"Kansas"	"20"	"2020"	"2020"	"March"	"3"	2962
+	"Kansas"	"20"	"2020"	"2020"	"April"	"4"	2790
+	"Kansas"	"20"	"2020"	"2020"	"May"	"5"	2878
+	"Kansas"	"20"	"2020"	"2020"	"June"	"6"	2845
+	"Kansas"	"20"	"2020"	"2020"	"July"	"7"	3032
+	"Kansas"	"20"	"2020"	"2020"	"August"	"8"	3040
+	"Kansas"	"20"	"2020"	"2020"	"September"	"9"	2984
+	"Kansas"	"20"	"2020"	"2020"	"October"	"10"	2834
+	"Kansas"	"20"	"2020"	"2020"	"November"	"11"	2731
+	"Kansas"	"20"	"2020"	"2020"	"December"	"12"	2829
+"Total"	"Kansas"	"20"	"2020"	"2020"			34376
+	"Kansas"	"20"	"2021"	"2021"	"January"	"1"	2597
+	"Kansas"	"20"	"2021"	"2021"	"February"	"2"	2547
+	"Kansas"	"20"	"2021"	"2021"	"March"	"3"	2939
+	"Kansas"	"20"	"2021"	"2021"	"April"	"4"	2855
+	"Kansas"	"20"	"2021"	"2021"	"May"	"5"	2829
+	"Kansas"	"20"	"2021"	"2021"	"June"	"6"	2952
+	"Kansas"	"20"	"2021"	"2021"	"July"	"7"	3112
+	"Kansas"	"20"	"2021"	"2021"	"August"	"8"	3024
+	"Kansas"	"20"	"2021"	"2021"	"September"	"9"	3038
+	"Kansas"	"20"	"2021"	"2021"	"October"	"10"	2937
+	"Kansas"	"20"	"2021"	"2021"	"November"	"11"	2884
+	"Kansas"	"20"	"2021"	"2021"	"December"	"12"	2991
+"Total"	"Kansas"	"20"	"2021"	"2021"			34705
+	"Kansas"	"20"	"2022"	"2022"	"January"	"1"	2805
+	"Kansas"	"20"	"2022"	"2022"	"February"	"2"	2545
+	"Kansas"	"20"	"2022"	"2022"	"March"	"3"	2872
+	"Kansas"	"20"	"2022"	"2022"	"April"	"4"	2629
+	"Kansas"	"20"	"2022"	"2022"	"May"	"5"	2689
+	"Kansas"	"20"	"2022"	"2022"	"June"	"6"	2842
+	"Kansas"	"20"	"2022"	"2022"	"July"	"7"	2898
+	"Kansas"	"20"	"2022"	"2022"	"August"	"8"	3260
+	"Kansas"	"20"	"2022"	"2022"	"September"	"9"	3110
+	"Kansas"	"20"	"2022"	"2022"	"October"	"10"	2775
+	"Kansas"	"20"	"2022"	"2022"	"November"	"11"	2995
+	"Kansas"	"20"	"2022"	"2022"	"December"	"12"	2981
+"Total"	"Kansas"	"20"	"2022"	"2022"			34401
+"Total"	"Kansas"	"20"					103482
+	"Kentucky"	"21"	"2020"	"2020"	"January"	"1"	4309
+	"Kentucky"	"21"	"2020"	"2020"	"February"	"2"	4067
+	"Kentucky"	"21"	"2020"	"2020"	"March"	"3"	4245
+	"Kentucky"	"21"	"2020"	"2020"	"April"	"4"	4092
+	"Kentucky"	"21"	"2020"	"2020"	"May"	"5"	4181
+	"Kentucky"	"21"	"2020"	"2020"	"June"	"6"	4333
+	"Kentucky"	"21"	"2020"	"2020"	"July"	"7"	4659
+	"Kentucky"	"21"	"2020"	"2020"	"August"	"8"	4544
+	"Kentucky"	"21"	"2020"	"2020"	"September"	"9"	4499
+	"Kentucky"	"21"	"2020"	"2020"	"October"	"10"	4409
+	"Kentucky"	"21"	"2020"	"2020"	"November"	"11"	4061
+	"Kentucky"	"21"	"2020"	"2020"	"December"	"12"	4269
+"Total"	"Kentucky"	"21"	"2020"	"2020"			51668
+	"Kentucky"	"21"	"2021"	"2021"	"January"	"1"	4120
+	"Kentucky"	"21"	"2021"	"2021"	"February"	"2"	3892
+	"Kentucky"	"21"	"2021"	"2021"	"March"	"3"	4343
+	"Kentucky"	"21"	"2021"	"2021"	"April"	"4"	4108
+	"Kentucky"	"21"	"2021"	"2021"	"May"	"5"	4232
+	"Kentucky"	"21"	"2021"	"2021"	"June"	"6"	4339
+	"Kentucky"	"21"	"2021"	"2021"	"July"	"7"	4760
+	"Kentucky"	"21"	"2021"	"2021"	"August"	"8"	4730
+	"Kentucky"	"21"	"2021"	"2021"	"September"	"9"	4721
+	"Kentucky"	"21"	"2021"	"2021"	"October"	"10"	4463
+	"Kentucky"	"21"	"2021"	"2021"	"November"	"11"	4204
+	"Kentucky"	"21"	"2021"	"2021"	"December"	"12"	4302
+"Total"	"Kentucky"	"21"	"2021"	"2021"			52214
+	"Kentucky"	"21"	"2022"	"2022"	"January"	"1"	4278
+	"Kentucky"	"21"	"2022"	"2022"	"February"	"2"	4022
+	"Kentucky"	"21"	"2022"	"2022"	"March"	"3"	4395
+	"Kentucky"	"21"	"2022"	"2022"	"April"	"4"	4118
+	"Kentucky"	"21"	"2022"	"2022"	"May"	"5"	4126
+	"Kentucky"	"21"	"2022"	"2022"	"June"	"6"	4251
+	"Kentucky"	"21"	"2022"	"2022"	"July"	"7"	4483
+	"Kentucky"	"21"	"2022"	"2022"	"August"	"8"	4906
+	"Kentucky"	"21"	"2022"	"2022"	"September"	"9"	4535
+	"Kentucky"	"21"	"2022"	"2022"	"October"	"10"	4296
+	"Kentucky"	"21"	"2022"	"2022"	"November"	"11"	4366
+	"Kentucky"	"21"	"2022"	"2022"	"December"	"12"	4539
+"Total"	"Kentucky"	"21"	"2022"	"2022"			52315
+"Total"	"Kentucky"	"21"					156197
+	"Louisiana"	"22"	"2020"	"2020"	"January"	"1"	5020
+	"Louisiana"	"22"	"2020"	"2020"	"February"	"2"	4426
+	"Louisiana"	"22"	"2020"	"2020"	"March"	"3"	4640
+	"Louisiana"	"22"	"2020"	"2020"	"April"	"4"	4395
+	"Louisiana"	"22"	"2020"	"2020"	"May"	"5"	4581
+	"Louisiana"	"22"	"2020"	"2020"	"June"	"6"	4572
+	"Louisiana"	"22"	"2020"	"2020"	"July"	"7"	4952
+	"Louisiana"	"22"	"2020"	"2020"	"August"	"8"	5096
+	"Louisiana"	"22"	"2020"	"2020"	"September"	"9"	5098
+	"Louisiana"	"22"	"2020"	"2020"	"October"	"10"	4869
+	"Louisiana"	"22"	"2020"	"2020"	"November"	"11"	4774
+	"Louisiana"	"22"	"2020"	"2020"	"December"	"12"	4905
+"Total"	"Louisiana"	"22"	"2020"	"2020"			57328
+	"Louisiana"	"22"	"2021"	"2021"	"January"	"1"	4659
+	"Louisiana"	"22"	"2021"	"2021"	"February"	"2"	4409
+	"Louisiana"	"22"	"2021"	"2021"	"March"	"3"	4893
+	"Louisiana"	"22"	"2021"	"2021"	"April"	"4"	4225
+	"Louisiana"	"22"	"2021"	"2021"	"May"	"5"	4385
+	"Louisiana"	"22"	"2021"	"2021"	"June"	"6"	4739
+	"Louisiana"	"22"	"2021"	"2021"	"July"	"7"	5036
+	"Louisiana"	"22"	"2021"	"2021"	"August"	"8"	5113
+	"Louisiana"	"22"	"2021"	"2021"	"September"	"9"	5261
+	"Louisiana"	"22"	"2021"	"2021"	"October"	"10"	4893
+	"Louisiana"	"22"	"2021"	"2021"	"November"	"11"	4858
+	"Louisiana"	"22"	"2021"	"2021"	"December"	"12"	4966
+"Total"	"Louisiana"	"22"	"2021"	"2021"			57437
+	"Louisiana"	"22"	"2022"	"2022"	"January"	"1"	4564
+	"Louisiana"	"22"	"2022"	"2022"	"February"	"2"	4366
+	"Louisiana"	"22"	"2022"	"2022"	"March"	"3"	4468
+	"Louisiana"	"22"	"2022"	"2022"	"April"	"4"	4154
+	"Louisiana"	"22"	"2022"	"2022"	"May"	"5"	4384
+	"Louisiana"	"22"	"2022"	"2022"	"June"	"6"	4418
+	"Louisiana"	"22"	"2022"	"2022"	"July"	"7"	4949
+	"Louisiana"	"22"	"2022"	"2022"	"August"	"8"	5406
+	"Louisiana"	"22"	"2022"	"2022"	"September"	"9"	4926
+	"Louisiana"	"22"	"2022"	"2022"	"October"	"10"	4777
+	"Louisiana"	"22"	"2022"	"2022"	"November"	"11"	4919
+	"Louisiana"	"22"	"2022"	"2022"	"December"	"12"	5148
+"Total"	"Louisiana"	"22"	"2022"	"2022"			56479
+"Total"	"Louisiana"	"22"					171244
+	"Maine"	"23"	"2020"	"2020"	"January"	"1"	881
+	"Maine"	"23"	"2020"	"2020"	"February"	"2"	845
+	"Maine"	"23"	"2020"	"2020"	"March"	"3"	954
+	"Maine"	"23"	"2020"	"2020"	"April"	"4"	906
+	"Maine"	"23"	"2020"	"2020"	"May"	"5"	1013
+	"Maine"	"23"	"2020"	"2020"	"June"	"6"	1084
+	"Maine"	"23"	"2020"	"2020"	"July"	"7"	1110
+	"Maine"	"23"	"2020"	"2020"	"August"	"8"	997
+	"Maine"	"23"	"2020"	"2020"	"September"	"9"	1001
+	"Maine"	"23"	"2020"	"2020"	"October"	"10"	960
+	"Maine"	"23"	"2020"	"2020"	"November"	"11"	898
+	"Maine"	"23"	"2020"	"2020"	"December"	"12"	890
+"Total"	"Maine"	"23"	"2020"	"2020"			11539
+	"Maine"	"23"	"2021"	"2021"	"January"	"1"	885
+	"Maine"	"23"	"2021"	"2021"	"February"	"2"	812
+	"Maine"	"23"	"2021"	"2021"	"March"	"3"	960
+	"Maine"	"23"	"2021"	"2021"	"April"	"4"	1007
+	"Maine"	"23"	"2021"	"2021"	"May"	"5"	1045
+	"Maine"	"23"	"2021"	"2021"	"June"	"6"	1073
+	"Maine"	"23"	"2021"	"2021"	"July"	"7"	1135
+	"Maine"	"23"	"2021"	"2021"	"August"	"8"	1112
+	"Maine"	"23"	"2021"	"2021"	"September"	"9"	1103
+	"Maine"	"23"	"2021"	"2021"	"October"	"10"	979
+	"Maine"	"23"	"2021"	"2021"	"November"	"11"	992
+	"Maine"	"23"	"2021"	"2021"	"December"	"12"	903
+"Total"	"Maine"	"23"	"2021"	"2021"			12006
+	"Maine"	"23"	"2022"	"2022"	"January"	"1"	871
+	"Maine"	"23"	"2022"	"2022"	"February"	"2"	884
+	"Maine"	"23"	"2022"	"2022"	"March"	"3"	1025
+	"Maine"	"23"	"2022"	"2022"	"April"	"4"	973
+	"Maine"	"23"	"2022"	"2022"	"May"	"5"	1053
+	"Maine"	"23"	"2022"	"2022"	"June"	"6"	1063
+	"Maine"	"23"	"2022"	"2022"	"July"	"7"	1061
+	"Maine"	"23"	"2022"	"2022"	"August"	"8"	1095
+	"Maine"	"23"	"2022"	"2022"	"September"	"9"	1020
+	"Maine"	"23"	"2022"	"2022"	"October"	"10"	980
+	"Maine"	"23"	"2022"	"2022"	"November"	"11"	1016
+	"Maine"	"23"	"2022"	"2022"	"December"	"12"	1052
+"Total"	"Maine"	"23"	"2022"	"2022"			12093
+"Total"	"Maine"	"23"					35638
+	"Maryland"	"24"	"2020"	"2020"	"January"	"1"	5876
+	"Maryland"	"24"	"2020"	"2020"	"February"	"2"	5269
+	"Maryland"	"24"	"2020"	"2020"	"March"	"3"	5730
+	"Maryland"	"24"	"2020"	"2020"	"April"	"4"	5572
+	"Maryland"	"24"	"2020"	"2020"	"May"	"5"	5762
+	"Maryland"	"24"	"2020"	"2020"	"June"	"6"	5805
+	"Maryland"	"24"	"2020"	"2020"	"July"	"7"	6198
+	"Maryland"	"24"	"2020"	"2020"	"August"	"8"	6213
+	"Maryland"	"24"	"2020"	"2020"	"September"	"9"	5741
+	"Maryland"	"24"	"2020"	"2020"	"October"	"10"	5629
+	"Maryland"	"24"	"2020"	"2020"	"November"	"11"	5266
+	"Maryland"	"24"	"2020"	"2020"	"December"	"12"	5493
+"Total"	"Maryland"	"24"	"2020"	"2020"			68554
+	"Maryland"	"24"	"2021"	"2021"	"January"	"1"	5142
+	"Maryland"	"24"	"2021"	"2021"	"February"	"2"	4893
+	"Maryland"	"24"	"2021"	"2021"	"March"	"3"	5656
+	"Maryland"	"24"	"2021"	"2021"	"April"	"4"	5447
+	"Maryland"	"24"	"2021"	"2021"	"May"	"5"	5700
+	"Maryland"	"24"	"2021"	"2021"	"June"	"6"	5963
+	"Maryland"	"24"	"2021"	"2021"	"July"	"7"	6216
+	"Maryland"	"24"	"2021"	"2021"	"August"	"8"	6153
+	"Maryland"	"24"	"2021"	"2021"	"September"	"9"	5997
+	"Maryland"	"24"	"2021"	"2021"	"October"	"10"	5953
+	"Maryland"	"24"	"2021"	"2021"	"November"	"11"	5529
+	"Maryland"	"24"	"2021"	"2021"	"December"	"12"	5636
+"Total"	"Maryland"	"24"	"2021"	"2021"			68285
+	"Maryland"	"24"	"2022"	"2022"	"January"	"1"	5595
+	"Maryland"	"24"	"2022"	"2022"	"February"	"2"	5220
+	"Maryland"	"24"	"2022"	"2022"	"March"	"3"	5802
+	"Maryland"	"24"	"2022"	"2022"	"April"	"4"	5465
+	"Maryland"	"24"	"2022"	"2022"	"May"	"5"	5661
+	"Maryland"	"24"	"2022"	"2022"	"June"	"6"	5791
+	"Maryland"	"24"	"2022"	"2022"	"July"	"7"	6080
+	"Maryland"	"24"	"2022"	"2022"	"August"	"8"	6208
+	"Maryland"	"24"	"2022"	"2022"	"September"	"9"	5679
+	"Maryland"	"24"	"2022"	"2022"	"October"	"10"	5754
+	"Maryland"	"24"	"2022"	"2022"	"November"	"11"	5671
+	"Maryland"	"24"	"2022"	"2022"	"December"	"12"	5856
+"Total"	"Maryland"	"24"	"2022"	"2022"			68782
+"Total"	"Maryland"	"24"					205621
+	"Massachusetts"	"25"	"2020"	"2020"	"January"	"1"	5480
+	"Massachusetts"	"25"	"2020"	"2020"	"February"	"2"	5203
+	"Massachusetts"	"25"	"2020"	"2020"	"March"	"3"	5567
+	"Massachusetts"	"25"	"2020"	"2020"	"April"	"4"	5367
+	"Massachusetts"	"25"	"2020"	"2020"	"May"	"5"	5816
+	"Massachusetts"	"25"	"2020"	"2020"	"June"	"6"	5933
+	"Massachusetts"	"25"	"2020"	"2020"	"July"	"7"	6069
+	"Massachusetts"	"25"	"2020"	"2020"	"August"	"8"	5904
+	"Massachusetts"	"25"	"2020"	"2020"	"September"	"9"	5684
+	"Massachusetts"	"25"	"2020"	"2020"	"October"	"10"	5433
+	"Massachusetts"	"25"	"2020"	"2020"	"November"	"11"	5092
+	"Massachusetts"	"25"	"2020"	"2020"	"December"	"12"	4880
+"Total"	"Massachusetts"	"25"	"2020"	"2020"			66428
+	"Massachusetts"	"25"	"2021"	"2021"	"January"	"1"	4905
+	"Massachusetts"	"25"	"2021"	"2021"	"February"	"2"	4791
+	"Massachusetts"	"25"	"2021"	"2021"	"March"	"3"	5728
+	"Massachusetts"	"25"	"2021"	"2021"	"April"	"4"	5673
+	"Massachusetts"	"25"	"2021"	"2021"	"May"	"5"	6098
+	"Massachusetts"	"25"	"2021"	"2021"	"June"	"6"	6194
+	"Massachusetts"	"25"	"2021"	"2021"	"July"	"7"	6266
+	"Massachusetts"	"25"	"2021"	"2021"	"August"	"8"	6276
+	"Massachusetts"	"25"	"2021"	"2021"	"September"	"9"	6200
+	"Massachusetts"	"25"	"2021"	"2021"	"October"	"10"	5900
+	"Massachusetts"	"25"	"2021"	"2021"	"November"	"11"	5620
+	"Massachusetts"	"25"	"2021"	"2021"	"December"	"12"	5486
+"Total"	"Massachusetts"	"25"	"2021"	"2021"			69137
+	"Massachusetts"	"25"	"2022"	"2022"	"January"	"1"	5293
+	"Massachusetts"	"25"	"2022"	"2022"	"February"	"2"	5016
+	"Massachusetts"	"25"	"2022"	"2022"	"March"	"3"	5798
+	"Massachusetts"	"25"	"2022"	"2022"	"April"	"4"	5567
+	"Massachusetts"	"25"	"2022"	"2022"	"May"	"5"	5756
+	"Massachusetts"	"25"	"2022"	"2022"	"June"	"6"	5800
+	"Massachusetts"	"25"	"2022"	"2022"	"July"	"7"	6047
+	"Massachusetts"	"25"	"2022"	"2022"	"August"	"8"	6294
+	"Massachusetts"	"25"	"2022"	"2022"	"September"	"9"	5995
+	"Massachusetts"	"25"	"2022"	"2022"	"October"	"10"	5737
+	"Massachusetts"	"25"	"2022"	"2022"	"November"	"11"	5637
+	"Massachusetts"	"25"	"2022"	"2022"	"December"	"12"	5644
+"Total"	"Massachusetts"	"25"	"2022"	"2022"			68584
+"Total"	"Massachusetts"	"25"					204149
+	"Michigan"	"26"	"2020"	"2020"	"January"	"1"	8652
+	"Michigan"	"26"	"2020"	"2020"	"February"	"2"	8283
+	"Michigan"	"26"	"2020"	"2020"	"March"	"3"	8783
+	"Michigan"	"26"	"2020"	"2020"	"April"	"4"	8516
+	"Michigan"	"26"	"2020"	"2020"	"May"	"5"	9016
+	"Michigan"	"26"	"2020"	"2020"	"June"	"6"	9036
+	"Michigan"	"26"	"2020"	"2020"	"July"	"7"	9382
+	"Michigan"	"26"	"2020"	"2020"	"August"	"8"	9105
+	"Michigan"	"26"	"2020"	"2020"	"September"	"9"	8873
+	"Michigan"	"26"	"2020"	"2020"	"October"	"10"	8657
+	"Michigan"	"26"	"2020"	"2020"	"November"	"11"	7822
+	"Michigan"	"26"	"2020"	"2020"	"December"	"12"	7949
+"Total"	"Michigan"	"26"	"2020"	"2020"			104074
+	"Michigan"	"26"	"2021"	"2021"	"January"	"1"	7710
+	"Michigan"	"26"	"2021"	"2021"	"February"	"2"	7623
+	"Michigan"	"26"	"2021"	"2021"	"March"	"3"	8622
+	"Michigan"	"26"	"2021"	"2021"	"April"	"4"	8583
+	"Michigan"	"26"	"2021"	"2021"	"May"	"5"	8923
+	"Michigan"	"26"	"2021"	"2021"	"June"	"6"	9498
+	"Michigan"	"26"	"2021"	"2021"	"July"	"7"	9728
+	"Michigan"	"26"	"2021"	"2021"	"August"	"8"	9459
+	"Michigan"	"26"	"2021"	"2021"	"September"	"9"	9133
+	"Michigan"	"26"	"2021"	"2021"	"October"	"10"	8607
+	"Michigan"	"26"	"2021"	"2021"	"November"	"11"	8417
+	"Michigan"	"26"	"2021"	"2021"	"December"	"12"	8677
+"Total"	"Michigan"	"26"	"2021"	"2021"			104980
+	"Michigan"	"26"	"2022"	"2022"	"January"	"1"	7901
+	"Michigan"	"26"	"2022"	"2022"	"February"	"2"	7683
+	"Michigan"	"26"	"2022"	"2022"	"March"	"3"	8738
+	"Michigan"	"26"	"2022"	"2022"	"April"	"4"	8341
+	"Michigan"	"26"	"2022"	"2022"	"May"	"5"	8812
+	"Michigan"	"26"	"2022"	"2022"	"June"	"6"	8935
+	"Michigan"	"26"	"2022"	"2022"	"July"	"7"	9029
+	"Michigan"	"26"	"2022"	"2022"	"August"	"8"	9072
+	"Michigan"	"26"	"2022"	"2022"	"September"	"9"	8632
+	"Michigan"	"26"	"2022"	"2022"	"October"	"10"	8412
+	"Michigan"	"26"	"2022"	"2022"	"November"	"11"	8272
+	"Michigan"	"26"	"2022"	"2022"	"December"	"12"	8494
+"Total"	"Michigan"	"26"	"2022"	"2022"			102321
+"Total"	"Michigan"	"26"					311375
+	"Minnesota"	"27"	"2020"	"2020"	"January"	"1"	5031
+	"Minnesota"	"27"	"2020"	"2020"	"February"	"2"	4910
+	"Minnesota"	"27"	"2020"	"2020"	"March"	"3"	5392
+	"Minnesota"	"27"	"2020"	"2020"	"April"	"4"	5311
+	"Minnesota"	"27"	"2020"	"2020"	"May"	"5"	5602
+	"Minnesota"	"27"	"2020"	"2020"	"June"	"6"	5554
+	"Minnesota"	"27"	"2020"	"2020"	"July"	"7"	5752
+	"Minnesota"	"27"	"2020"	"2020"	"August"	"8"	5563
+	"Minnesota"	"27"	"2020"	"2020"	"September"	"9"	5297
+	"Minnesota"	"27"	"2020"	"2020"	"October"	"10"	5272
+	"Minnesota"	"27"	"2020"	"2020"	"November"	"11"	4783
+	"Minnesota"	"27"	"2020"	"2020"	"December"	"12"	4976
+"Total"	"Minnesota"	"27"	"2020"	"2020"			63443
+	"Minnesota"	"27"	"2021"	"2021"	"January"	"1"	4655
+	"Minnesota"	"27"	"2021"	"2021"	"February"	"2"	4672
+	"Minnesota"	"27"	"2021"	"2021"	"March"	"3"	5399
+	"Minnesota"	"27"	"2021"	"2021"	"April"	"4"	5282
+	"Minnesota"	"27"	"2021"	"2021"	"May"	"5"	5580
+	"Minnesota"	"27"	"2021"	"2021"	"June"	"6"	5806
+	"Minnesota"	"27"	"2021"	"2021"	"July"	"7"	5862
+	"Minnesota"	"27"	"2021"	"2021"	"August"	"8"	5759
+	"Minnesota"	"27"	"2021"	"2021"	"September"	"9"	5599
+	"Minnesota"	"27"	"2021"	"2021"	"October"	"10"	5411
+	"Minnesota"	"27"	"2021"	"2021"	"November"	"11"	5226
+	"Minnesota"	"27"	"2021"	"2021"	"December"	"12"	5174
+"Total"	"Minnesota"	"27"	"2021"	"2021"			64425
+	"Minnesota"	"27"	"2022"	"2022"	"January"	"1"	4905
+	"Minnesota"	"27"	"2022"	"2022"	"February"	"2"	4915
+	"Minnesota"	"27"	"2022"	"2022"	"March"	"3"	5355
+	"Minnesota"	"27"	"2022"	"2022"	"April"	"4"	5209
+	"Minnesota"	"27"	"2022"	"2022"	"May"	"5"	5588
+	"Minnesota"	"27"	"2022"	"2022"	"June"	"6"	5632
+	"Minnesota"	"27"	"2022"	"2022"	"July"	"7"	5667
+	"Minnesota"	"27"	"2022"	"2022"	"August"	"8"	5542
+	"Minnesota"	"27"	"2022"	"2022"	"September"	"9"	5361
+	"Minnesota"	"27"	"2022"	"2022"	"October"	"10"	5296
+	"Minnesota"	"27"	"2022"	"2022"	"November"	"11"	5181
+	"Minnesota"	"27"	"2022"	"2022"	"December"	"12"	5364
+"Total"	"Minnesota"	"27"	"2022"	"2022"			64015
+"Total"	"Minnesota"	"27"					191883
+	"Mississippi"	"28"	"2020"	"2020"	"January"	"1"	3111
+	"Mississippi"	"28"	"2020"	"2020"	"February"	"2"	2684
+	"Mississippi"	"28"	"2020"	"2020"	"March"	"3"	2899
+	"Mississippi"	"28"	"2020"	"2020"	"April"	"4"	2700
+	"Mississippi"	"28"	"2020"	"2020"	"May"	"5"	2779
+	"Mississippi"	"28"	"2020"	"2020"	"June"	"6"	3020
+	"Mississippi"	"28"	"2020"	"2020"	"July"	"7"	3141
+	"Mississippi"	"28"	"2020"	"2020"	"August"	"8"	3143
+	"Mississippi"	"28"	"2020"	"2020"	"September"	"9"	3166
+	"Mississippi"	"28"	"2020"	"2020"	"October"	"10"	3060
+	"Mississippi"	"28"	"2020"	"2020"	"November"	"11"	2838
+	"Mississippi"	"28"	"2020"	"2020"	"December"	"12"	2932
+"Total"	"Mississippi"	"28"	"2020"	"2020"			35473
+	"Mississippi"	"28"	"2021"	"2021"	"January"	"1"	2742
+	"Mississippi"	"28"	"2021"	"2021"	"February"	"2"	2652
+	"Mississippi"	"28"	"2021"	"2021"	"March"	"3"	2922
+	"Mississippi"	"28"	"2021"	"2021"	"April"	"4"	2606
+	"Mississippi"	"28"	"2021"	"2021"	"May"	"5"	2760
+	"Mississippi"	"28"	"2021"	"2021"	"June"	"6"	3000
+	"Mississippi"	"28"	"2021"	"2021"	"July"	"7"	3117
+	"Mississippi"	"28"	"2021"	"2021"	"August"	"8"	3187
+	"Mississippi"	"28"	"2021"	"2021"	"September"	"9"	3173
+	"Mississippi"	"28"	"2021"	"2021"	"October"	"10"	3120
+	"Mississippi"	"28"	"2021"	"2021"	"November"	"11"	2889
+	"Mississippi"	"28"	"2021"	"2021"	"December"	"12"	2988
+"Total"	"Mississippi"	"28"	"2021"	"2021"			35156
+	"Mississippi"	"28"	"2022"	"2022"	"January"	"1"	2853
+	"Mississippi"	"28"	"2022"	"2022"	"February"	"2"	2656
+	"Mississippi"	"28"	"2022"	"2022"	"March"	"3"	2824
+	"Mississippi"	"28"	"2022"	"2022"	"April"	"4"	2566
+	"Mississippi"	"28"	"2022"	"2022"	"May"	"5"	2660
+	"Mississippi"	"28"	"2022"	"2022"	"June"	"6"	2862
+	"Mississippi"	"28"	"2022"	"2022"	"July"	"7"	3028
+	"Mississippi"	"28"	"2022"	"2022"	"August"	"8"	3392
+	"Mississippi"	"28"	"2022"	"2022"	"September"	"9"	2991
+	"Mississippi"	"28"	"2022"	"2022"	"October"	"10"	2783
+	"Mississippi"	"28"	"2022"	"2022"	"November"	"11"	2924
+	"Mississippi"	"28"	"2022"	"2022"	"December"	"12"	3136
+"Total"	"Mississippi"	"28"	"2022"	"2022"			34675
+"Total"	"Mississippi"	"28"					105304
+	"Missouri"	"29"	"2020"	"2020"	"January"	"1"	5819
+	"Missouri"	"29"	"2020"	"2020"	"February"	"2"	5448
+	"Missouri"	"29"	"2020"	"2020"	"March"	"3"	5752
+	"Missouri"	"29"	"2020"	"2020"	"April"	"4"	5552
+	"Missouri"	"29"	"2020"	"2020"	"May"	"5"	5785
+	"Missouri"	"29"	"2020"	"2020"	"June"	"6"	5878
+	"Missouri"	"29"	"2020"	"2020"	"July"	"7"	6284
+	"Missouri"	"29"	"2020"	"2020"	"August"	"8"	6333
+	"Missouri"	"29"	"2020"	"2020"	"September"	"9"	5923
+	"Missouri"	"29"	"2020"	"2020"	"October"	"10"	5819
+	"Missouri"	"29"	"2020"	"2020"	"November"	"11"	5190
+	"Missouri"	"29"	"2020"	"2020"	"December"	"12"	5502
+"Total"	"Missouri"	"29"	"2020"	"2020"			69285
+	"Missouri"	"29"	"2021"	"2021"	"January"	"1"	5431
+	"Missouri"	"29"	"2021"	"2021"	"February"	"2"	4997
+	"Missouri"	"29"	"2021"	"2021"	"March"	"3"	5869
+	"Missouri"	"29"	"2021"	"2021"	"April"	"4"	5523
+	"Missouri"	"29"	"2021"	"2021"	"May"	"5"	5852
+	"Missouri"	"29"	"2021"	"2021"	"June"	"6"	6050
+	"Missouri"	"29"	"2021"	"2021"	"July"	"7"	6291
+	"Missouri"	"29"	"2021"	"2021"	"August"	"8"	6235
+	"Missouri"	"29"	"2021"	"2021"	"September"	"9"	6041
+	"Missouri"	"29"	"2021"	"2021"	"October"	"10"	5913
+	"Missouri"	"29"	"2021"	"2021"	"November"	"11"	5537
+	"Missouri"	"29"	"2021"	"2021"	"December"	"12"	5714
+"Total"	"Missouri"	"29"	"2021"	"2021"			69453
+	"Missouri"	"29"	"2022"	"2022"	"January"	"1"	5443
+	"Missouri"	"29"	"2022"	"2022"	"February"	"2"	5041
+	"Missouri"	"29"	"2022"	"2022"	"March"	"3"	5779
+	"Missouri"	"29"	"2022"	"2022"	"April"	"4"	5457
+	"Missouri"	"29"	"2022"	"2022"	"May"	"5"	5559
+	"Missouri"	"29"	"2022"	"2022"	"June"	"6"	5941
+	"Missouri"	"29"	"2022"	"2022"	"July"	"7"	6156
+	"Missouri"	"29"	"2022"	"2022"	"August"	"8"	6401
+	"Missouri"	"29"	"2022"	"2022"	"September"	"9"	5956
+	"Missouri"	"29"	"2022"	"2022"	"October"	"10"	5732
+	"Missouri"	"29"	"2022"	"2022"	"November"	"11"	5581
+	"Missouri"	"29"	"2022"	"2022"	"December"	"12"	5939
+"Total"	"Missouri"	"29"	"2022"	"2022"			68985
+"Total"	"Missouri"	"29"					207723
+	"Montana"	"30"	"2020"	"2020"	"January"	"1"	865
+	"Montana"	"30"	"2020"	"2020"	"February"	"2"	882
+	"Montana"	"30"	"2020"	"2020"	"March"	"3"	930
+	"Montana"	"30"	"2020"	"2020"	"April"	"4"	915
+	"Montana"	"30"	"2020"	"2020"	"May"	"5"	940
+	"Montana"	"30"	"2020"	"2020"	"June"	"6"	967
+	"Montana"	"30"	"2020"	"2020"	"July"	"7"	959
+	"Montana"	"30"	"2020"	"2020"	"August"	"8"	928
+	"Montana"	"30"	"2020"	"2020"	"September"	"9"	860
+	"Montana"	"30"	"2020"	"2020"	"October"	"10"	863
+	"Montana"	"30"	"2020"	"2020"	"November"	"11"	826
+	"Montana"	"30"	"2020"	"2020"	"December"	"12"	856
+"Total"	"Montana"	"30"	"2020"	"2020"			10791
+	"Montana"	"30"	"2021"	"2021"	"January"	"1"	837
+	"Montana"	"30"	"2021"	"2021"	"February"	"2"	826
+	"Montana"	"30"	"2021"	"2021"	"March"	"3"	965
+	"Montana"	"30"	"2021"	"2021"	"April"	"4"	955
+	"Montana"	"30"	"2021"	"2021"	"May"	"5"	949
+	"Montana"	"30"	"2021"	"2021"	"June"	"6"	1025
+	"Montana"	"30"	"2021"	"2021"	"July"	"7"	1012
+	"Montana"	"30"	"2021"	"2021"	"August"	"8"	963
+	"Montana"	"30"	"2021"	"2021"	"September"	"9"	972
+	"Montana"	"30"	"2021"	"2021"	"October"	"10"	901
+	"Montana"	"30"	"2021"	"2021"	"November"	"11"	854
+	"Montana"	"30"	"2021"	"2021"	"December"	"12"	972
+"Total"	"Montana"	"30"	"2021"	"2021"			11231
+	"Montana"	"30"	"2022"	"2022"	"January"	"1"	842
+	"Montana"	"30"	"2022"	"2022"	"February"	"2"	832
+	"Montana"	"30"	"2022"	"2022"	"March"	"3"	947
+	"Montana"	"30"	"2022"	"2022"	"April"	"4"	891
+	"Montana"	"30"	"2022"	"2022"	"May"	"5"	1015
+	"Montana"	"30"	"2022"	"2022"	"June"	"6"	1013
+	"Montana"	"30"	"2022"	"2022"	"July"	"7"	1014
+	"Montana"	"30"	"2022"	"2022"	"August"	"8"	947
+	"Montana"	"30"	"2022"	"2022"	"September"	"9"	974
+	"Montana"	"30"	"2022"	"2022"	"October"	"10"	886
+	"Montana"	"30"	"2022"	"2022"	"November"	"11"	867
+	"Montana"	"30"	"2022"	"2022"	"December"	"12"	947
+"Total"	"Montana"	"30"	"2022"	"2022"			11175
+"Total"	"Montana"	"30"					33197
+	"Nebraska"	"31"	"2020"	"2020"	"January"	"1"	2050
+	"Nebraska"	"31"	"2020"	"2020"	"February"	"2"	1824
+	"Nebraska"	"31"	"2020"	"2020"	"March"	"3"	2162
+	"Nebraska"	"31"	"2020"	"2020"	"April"	"4"	1992
+	"Nebraska"	"31"	"2020"	"2020"	"May"	"5"	2039
+	"Nebraska"	"31"	"2020"	"2020"	"June"	"6"	2024
+	"Nebraska"	"31"	"2020"	"2020"	"July"	"7"	2143
+	"Nebraska"	"31"	"2020"	"2020"	"August"	"8"	2129
+	"Nebraska"	"31"	"2020"	"2020"	"September"	"9"	2041
+	"Nebraska"	"31"	"2020"	"2020"	"October"	"10"	2093
+	"Nebraska"	"31"	"2020"	"2020"	"November"	"11"	1857
+	"Nebraska"	"31"	"2020"	"2020"	"December"	"12"	1937
+"Total"	"Nebraska"	"31"	"2020"	"2020"			24291
+	"Nebraska"	"31"	"2021"	"2021"	"January"	"1"	1826
+	"Nebraska"	"31"	"2021"	"2021"	"February"	"2"	1877
+	"Nebraska"	"31"	"2021"	"2021"	"March"	"3"	2080
+	"Nebraska"	"31"	"2021"	"2021"	"April"	"4"	2053
+	"Nebraska"	"31"	"2021"	"2021"	"May"	"5"	2151
+	"Nebraska"	"31"	"2021"	"2021"	"June"	"6"	2188
+	"Nebraska"	"31"	"2021"	"2021"	"July"	"7"	2179
+	"Nebraska"	"31"	"2021"	"2021"	"August"	"8"	2129
+	"Nebraska"	"31"	"2021"	"2021"	"September"	"9"	2112
+	"Nebraska"	"31"	"2021"	"2021"	"October"	"10"	2067
+	"Nebraska"	"31"	"2021"	"2021"	"November"	"11"	1926
+	"Nebraska"	"31"	"2021"	"2021"	"December"	"12"	2021
+"Total"	"Nebraska"	"31"	"2021"	"2021"			24609
+	"Nebraska"	"31"	"2022"	"2022"	"January"	"1"	1857
+	"Nebraska"	"31"	"2022"	"2022"	"February"	"2"	1845
+	"Nebraska"	"31"	"2022"	"2022"	"March"	"3"	2054
+	"Nebraska"	"31"	"2022"	"2022"	"April"	"4"	1920
+	"Nebraska"	"31"	"2022"	"2022"	"May"	"5"	1992
+	"Nebraska"	"31"	"2022"	"2022"	"June"	"6"	2095
+	"Nebraska"	"31"	"2022"	"2022"	"July"	"7"	2153
+	"Nebraska"	"31"	"2022"	"2022"	"August"	"8"	2250
+	"Nebraska"	"31"	"2022"	"2022"	"September"	"9"	2067
+	"Nebraska"	"31"	"2022"	"2022"	"October"	"10"	2080
+	"Nebraska"	"31"	"2022"	"2022"	"November"	"11"	2003
+	"Nebraska"	"31"	"2022"	"2022"	"December"	"12"	2029
+"Total"	"Nebraska"	"31"	"2022"	"2022"			24345
+"Total"	"Nebraska"	"31"					73245
+	"Nevada"	"32"	"2020"	"2020"	"January"	"1"	2761
+	"Nevada"	"32"	"2020"	"2020"	"February"	"2"	2619
+	"Nevada"	"32"	"2020"	"2020"	"March"	"3"	2821
+	"Nevada"	"32"	"2020"	"2020"	"April"	"4"	2669
+	"Nevada"	"32"	"2020"	"2020"	"May"	"5"	2739
+	"Nevada"	"32"	"2020"	"2020"	"June"	"6"	2747
+	"Nevada"	"32"	"2020"	"2020"	"July"	"7"	3070
+	"Nevada"	"32"	"2020"	"2020"	"August"	"8"	2955
+	"Nevada"	"32"	"2020"	"2020"	"September"	"9"	2924
+	"Nevada"	"32"	"2020"	"2020"	"October"	"10"	2910
+	"Nevada"	"32"	"2020"	"2020"	"November"	"11"	2673
+	"Nevada"	"32"	"2020"	"2020"	"December"	"12"	2765
+"Total"	"Nevada"	"32"	"2020"	"2020"			33653
+	"Nevada"	"32"	"2021"	"2021"	"January"	"1"	2566
+	"Nevada"	"32"	"2021"	"2021"	"February"	"2"	2444
+	"Nevada"	"32"	"2021"	"2021"	"March"	"3"	2765
+	"Nevada"	"32"	"2021"	"2021"	"April"	"4"	2610
+	"Nevada"	"32"	"2021"	"2021"	"May"	"5"	2798
+	"Nevada"	"32"	"2021"	"2021"	"June"	"6"	2852
+	"Nevada"	"32"	"2021"	"2021"	"July"	"7"	2977
+	"Nevada"	"32"	"2021"	"2021"	"August"	"8"	3098
+	"Nevada"	"32"	"2021"	"2021"	"September"	"9"	2914
+	"Nevada"	"32"	"2021"	"2021"	"October"	"10"	2967
+	"Nevada"	"32"	"2021"	"2021"	"November"	"11"	2812
+	"Nevada"	"32"	"2021"	"2021"	"December"	"12"	2883
+"Total"	"Nevada"	"32"	"2021"	"2021"			33686
+	"Nevada"	"32"	"2022"	"2022"	"January"	"1"	2759
+	"Nevada"	"32"	"2022"	"2022"	"February"	"2"	2496
+	"Nevada"	"32"	"2022"	"2022"	"March"	"3"	2647
+	"Nevada"	"32"	"2022"	"2022"	"April"	"4"	2632
+	"Nevada"	"32"	"2022"	"2022"	"May"	"5"	2668
+	"Nevada"	"32"	"2022"	"2022"	"June"	"6"	2651
+	"Nevada"	"32"	"2022"	"2022"	"July"	"7"	2917
+	"Nevada"	"32"	"2022"	"2022"	"August"	"8"	3028
+	"Nevada"	"32"	"2022"	"2022"	"September"	"9"	2865
+	"Nevada"	"32"	"2022"	"2022"	"October"	"10"	2830
+	"Nevada"	"32"	"2022"	"2022"	"November"	"11"	2850
+	"Nevada"	"32"	"2022"	"2022"	"December"	"12"	2850
+"Total"	"Nevada"	"32"	"2022"	"2022"			33193
+"Total"	"Nevada"	"32"					100532
+	"New Hampshire"	"33"	"2020"	"2020"	"January"	"1"	911
+	"New Hampshire"	"33"	"2020"	"2020"	"February"	"2"	857
+	"New Hampshire"	"33"	"2020"	"2020"	"March"	"3"	1018
+	"New Hampshire"	"33"	"2020"	"2020"	"April"	"4"	985
+	"New Hampshire"	"33"	"2020"	"2020"	"May"	"5"	1010
+	"New Hampshire"	"33"	"2020"	"2020"	"June"	"6"	1007
+	"New Hampshire"	"33"	"2020"	"2020"	"July"	"7"	1163
+	"New Hampshire"	"33"	"2020"	"2020"	"August"	"8"	1054
+	"New Hampshire"	"33"	"2020"	"2020"	"September"	"9"	1012
+	"New Hampshire"	"33"	"2020"	"2020"	"October"	"10"	1018
+	"New Hampshire"	"33"	"2020"	"2020"	"November"	"11"	894
+	"New Hampshire"	"33"	"2020"	"2020"	"December"	"12"	862
+"Total"	"New Hampshire"	"33"	"2020"	"2020"			11791
+	"New Hampshire"	"33"	"2021"	"2021"	"January"	"1"	838
+	"New Hampshire"	"33"	"2021"	"2021"	"February"	"2"	944
+	"New Hampshire"	"33"	"2021"	"2021"	"March"	"3"	994
+	"New Hampshire"	"33"	"2021"	"2021"	"April"	"4"	1084
+	"New Hampshire"	"33"	"2021"	"2021"	"May"	"5"	1098
+	"New Hampshire"	"33"	"2021"	"2021"	"June"	"6"	1134
+	"New Hampshire"	"33"	"2021"	"2021"	"July"	"7"	1185
+	"New Hampshire"	"33"	"2021"	"2021"	"August"	"8"	1181
+	"New Hampshire"	"33"	"2021"	"2021"	"September"	"9"	1104
+	"New Hampshire"	"33"	"2021"	"2021"	"October"	"10"	1095
+	"New Hampshire"	"33"	"2021"	"2021"	"November"	"11"	1021
+	"New Hampshire"	"33"	"2021"	"2021"	"December"	"12"	947
+"Total"	"New Hampshire"	"33"	"2021"	"2021"			12625
+	"New Hampshire"	"33"	"2022"	"2022"	"January"	"1"	883
+	"New Hampshire"	"33"	"2022"	"2022"	"February"	"2"	895
+	"New Hampshire"	"33"	"2022"	"2022"	"March"	"3"	984
+	"New Hampshire"	"33"	"2022"	"2022"	"April"	"4"	967
+	"New Hampshire"	"33"	"2022"	"2022"	"May"	"5"	1059
+	"New Hampshire"	"33"	"2022"	"2022"	"June"	"6"	1017
+	"New Hampshire"	"33"	"2022"	"2022"	"July"	"7"	1138
+	"New Hampshire"	"33"	"2022"	"2022"	"August"	"8"	1082
+	"New Hampshire"	"33"	"2022"	"2022"	"September"	"9"	1061
+	"New Hampshire"	"33"	"2022"	"2022"	"October"	"10"	1003
+	"New Hampshire"	"33"	"2022"	"2022"	"November"	"11"	990
+	"New Hampshire"	"33"	"2022"	"2022"	"December"	"12"	998
+"Total"	"New Hampshire"	"33"	"2022"	"2022"			12077
+"Total"	"New Hampshire"	"33"					36493
+	"New Jersey"	"34"	"2020"	"2020"	"January"	"1"	8161
+	"New Jersey"	"34"	"2020"	"2020"	"February"	"2"	7555
+	"New Jersey"	"34"	"2020"	"2020"	"March"	"3"	8174
+	"New Jersey"	"34"	"2020"	"2020"	"April"	"4"	7849
+	"New Jersey"	"34"	"2020"	"2020"	"May"	"5"	8398
+	"New Jersey"	"34"	"2020"	"2020"	"June"	"6"	8446
+	"New Jersey"	"34"	"2020"	"2020"	"July"	"7"	8719
+	"New Jersey"	"34"	"2020"	"2020"	"August"	"8"	8657
+	"New Jersey"	"34"	"2020"	"2020"	"September"	"9"	8652
+	"New Jersey"	"34"	"2020"	"2020"	"October"	"10"	7943
+	"New Jersey"	"34"	"2020"	"2020"	"November"	"11"	7784
+	"New Jersey"	"34"	"2020"	"2020"	"December"	"12"	7616
+"Total"	"New Jersey"	"34"	"2020"	"2020"			97954
+	"New Jersey"	"34"	"2021"	"2021"	"January"	"1"	7189
+	"New Jersey"	"34"	"2021"	"2021"	"February"	"2"	7377
+	"New Jersey"	"34"	"2021"	"2021"	"March"	"3"	8447
+	"New Jersey"	"34"	"2021"	"2021"	"April"	"4"	8376
+	"New Jersey"	"34"	"2021"	"2021"	"May"	"5"	8337
+	"New Jersey"	"34"	"2021"	"2021"	"June"	"6"	8852
+	"New Jersey"	"34"	"2021"	"2021"	"July"	"7"	9161
+	"New Jersey"	"34"	"2021"	"2021"	"August"	"8"	9210
+	"New Jersey"	"34"	"2021"	"2021"	"September"	"9"	9024
+	"New Jersey"	"34"	"2021"	"2021"	"October"	"10"	8783
+	"New Jersey"	"34"	"2021"	"2021"	"November"	"11"	8297
+	"New Jersey"	"34"	"2021"	"2021"	"December"	"12"	8444
+"Total"	"New Jersey"	"34"	"2021"	"2021"			101497
+	"New Jersey"	"34"	"2022"	"2022"	"January"	"1"	8154
+	"New Jersey"	"34"	"2022"	"2022"	"February"	"2"	7739
+	"New Jersey"	"34"	"2022"	"2022"	"March"	"3"	8661
+	"New Jersey"	"34"	"2022"	"2022"	"April"	"4"	8192
+	"New Jersey"	"34"	"2022"	"2022"	"May"	"5"	8332
+	"New Jersey"	"34"	"2022"	"2022"	"June"	"6"	8638
+	"New Jersey"	"34"	"2022"	"2022"	"July"	"7"	9114
+	"New Jersey"	"34"	"2022"	"2022"	"August"	"8"	9298
+	"New Jersey"	"34"	"2022"	"2022"	"September"	"9"	8580
+	"New Jersey"	"34"	"2022"	"2022"	"October"	"10"	8716
+	"New Jersey"	"34"	"2022"	"2022"	"November"	"11"	8695
+	"New Jersey"	"34"	"2022"	"2022"	"December"	"12"	8774
+"Total"	"New Jersey"	"34"	"2022"	"2022"			102893
+"Total"	"New Jersey"	"34"					302344
+	"New Mexico"	"35"	"2020"	"2020"	"January"	"1"	1816
+	"New Mexico"	"35"	"2020"	"2020"	"February"	"2"	1722
+	"New Mexico"	"35"	"2020"	"2020"	"March"	"3"	1861
+	"New Mexico"	"35"	"2020"	"2020"	"April"	"4"	1756
+	"New Mexico"	"35"	"2020"	"2020"	"May"	"5"	1818
+	"New Mexico"	"35"	"2020"	"2020"	"June"	"6"	1783
+	"New Mexico"	"35"	"2020"	"2020"	"July"	"7"	1943
+	"New Mexico"	"35"	"2020"	"2020"	"August"	"8"	1999
+	"New Mexico"	"35"	"2020"	"2020"	"September"	"9"	1931
+	"New Mexico"	"35"	"2020"	"2020"	"October"	"10"	1870
+	"New Mexico"	"35"	"2020"	"2020"	"November"	"11"	1647
+	"New Mexico"	"35"	"2020"	"2020"	"December"	"12"	1757
+"Total"	"New Mexico"	"35"	"2020"	"2020"			21903
+	"New Mexico"	"35"	"2021"	"2021"	"January"	"1"	1671
+	"New Mexico"	"35"	"2021"	"2021"	"February"	"2"	1573
+	"New Mexico"	"35"	"2021"	"2021"	"March"	"3"	1729
+	"New Mexico"	"35"	"2021"	"2021"	"April"	"4"	1734
+	"New Mexico"	"35"	"2021"	"2021"	"May"	"5"	1732
+	"New Mexico"	"35"	"2021"	"2021"	"June"	"6"	1828
+	"New Mexico"	"35"	"2021"	"2021"	"July"	"7"	1877
+	"New Mexico"	"35"	"2021"	"2021"	"August"	"8"	1863
+	"New Mexico"	"35"	"2021"	"2021"	"September"	"9"	1910
+	"New Mexico"	"35"	"2021"	"2021"	"October"	"10"	1818
+	"New Mexico"	"35"	"2021"	"2021"	"November"	"11"	1793
+	"New Mexico"	"35"	"2021"	"2021"	"December"	"12"	1863
+"Total"	"New Mexico"	"35"	"2021"	"2021"			21391
+	"New Mexico"	"35"	"2022"	"2022"	"January"	"1"	1728
+	"New Mexico"	"35"	"2022"	"2022"	"February"	"2"	1580
+	"New Mexico"	"35"	"2022"	"2022"	"March"	"3"	1812
+	"New Mexico"	"35"	"2022"	"2022"	"April"	"4"	1699
+	"New Mexico"	"35"	"2022"	"2022"	"May"	"5"	1769
+	"New Mexico"	"35"	"2022"	"2022"	"June"	"6"	1729
+	"New Mexico"	"35"	"2022"	"2022"	"July"	"7"	2028
+	"New Mexico"	"35"	"2022"	"2022"	"August"	"8"	2018
+	"New Mexico"	"35"	"2022"	"2022"	"September"	"9"	1827
+	"New Mexico"	"35"	"2022"	"2022"	"October"	"10"	1822
+	"New Mexico"	"35"	"2022"	"2022"	"November"	"11"	1799
+	"New Mexico"	"35"	"2022"	"2022"	"December"	"12"	1803
+"Total"	"New Mexico"	"35"	"2022"	"2022"			21614
+"Total"	"New Mexico"	"35"					64908
+	"New York"	"36"	"2020"	"2020"	"January"	"1"	17981
+	"New York"	"36"	"2020"	"2020"	"February"	"2"	16693
+	"New York"	"36"	"2020"	"2020"	"March"	"3"	17746
+	"New York"	"36"	"2020"	"2020"	"April"	"4"	17164
+	"New York"	"36"	"2020"	"2020"	"May"	"5"	17871
+	"New York"	"36"	"2020"	"2020"	"June"	"6"	18077
+	"New York"	"36"	"2020"	"2020"	"July"	"7"	18834
+	"New York"	"36"	"2020"	"2020"	"August"	"8"	18016
+	"New York"	"36"	"2020"	"2020"	"September"	"9"	17908
+	"New York"	"36"	"2020"	"2020"	"October"	"10"	17526
+	"New York"	"36"	"2020"	"2020"	"November"	"11"	16031
+	"New York"	"36"	"2020"	"2020"	"December"	"12"	15491
+"Total"	"New York"	"36"	"2020"	"2020"			209338
+	"New York"	"36"	"2021"	"2021"	"January"	"1"	15172
+	"New York"	"36"	"2021"	"2021"	"February"	"2"	15248
+	"New York"	"36"	"2021"	"2021"	"March"	"3"	17804
+	"New York"	"36"	"2021"	"2021"	"April"	"4"	17293
+	"New York"	"36"	"2021"	"2021"	"May"	"5"	17790
+	"New York"	"36"	"2021"	"2021"	"June"	"6"	18496
+	"New York"	"36"	"2021"	"2021"	"July"	"7"	18860
+	"New York"	"36"	"2021"	"2021"	"August"	"8"	18797
+	"New York"	"36"	"2021"	"2021"	"September"	"9"	18305
+	"New York"	"36"	"2021"	"2021"	"October"	"10"	18229
+	"New York"	"36"	"2021"	"2021"	"November"	"11"	17155
+	"New York"	"36"	"2021"	"2021"	"December"	"12"	17593
+"Total"	"New York"	"36"	"2021"	"2021"			210742
+	"New York"	"36"	"2022"	"2022"	"January"	"1"	16623
+	"New York"	"36"	"2022"	"2022"	"February"	"2"	15595
+	"New York"	"36"	"2022"	"2022"	"March"	"3"	17147
+	"New York"	"36"	"2022"	"2022"	"April"	"4"	16680
+	"New York"	"36"	"2022"	"2022"	"May"	"5"	17340
+	"New York"	"36"	"2022"	"2022"	"June"	"6"	17650
+	"New York"	"36"	"2022"	"2022"	"July"	"7"	18450
+	"New York"	"36"	"2022"	"2022"	"August"	"8"	18442
+	"New York"	"36"	"2022"	"2022"	"September"	"9"	17189
+	"New York"	"36"	"2022"	"2022"	"October"	"10"	17724
+	"New York"	"36"	"2022"	"2022"	"November"	"11"	17278
+	"New York"	"36"	"2022"	"2022"	"December"	"12"	17656
+"Total"	"New York"	"36"	"2022"	"2022"			207774
+"Total"	"New York"	"36"					627854
+	"North Carolina"	"37"	"2020"	"2020"	"January"	"1"	9831
+	"North Carolina"	"37"	"2020"	"2020"	"February"	"2"	9143
+	"North Carolina"	"37"	"2020"	"2020"	"March"	"3"	9786
+	"North Carolina"	"37"	"2020"	"2020"	"April"	"4"	9311
+	"North Carolina"	"37"	"2020"	"2020"	"May"	"5"	9645
+	"North Carolina"	"37"	"2020"	"2020"	"June"	"6"	9701
+	"North Carolina"	"37"	"2020"	"2020"	"July"	"7"	10230
+	"North Carolina"	"37"	"2020"	"2020"	"August"	"8"	10502
+	"North Carolina"	"37"	"2020"	"2020"	"September"	"9"	10203
+	"North Carolina"	"37"	"2020"	"2020"	"October"	"10"	9803
+	"North Carolina"	"37"	"2020"	"2020"	"November"	"11"	8868
+	"North Carolina"	"37"	"2020"	"2020"	"December"	"12"	9707
+"Total"	"North Carolina"	"37"	"2020"	"2020"			116730
+	"North Carolina"	"37"	"2021"	"2021"	"January"	"1"	9276
+	"North Carolina"	"37"	"2021"	"2021"	"February"	"2"	8801
+	"North Carolina"	"37"	"2021"	"2021"	"March"	"3"	9708
+	"North Carolina"	"37"	"2021"	"2021"	"April"	"4"	9559
+	"North Carolina"	"37"	"2021"	"2021"	"May"	"5"	9809
+	"North Carolina"	"37"	"2021"	"2021"	"June"	"6"	10239
+	"North Carolina"	"37"	"2021"	"2021"	"July"	"7"	10610
+	"North Carolina"	"37"	"2021"	"2021"	"August"	"8"	10964
+	"North Carolina"	"37"	"2021"	"2021"	"September"	"9"	10758
+	"North Carolina"	"37"	"2021"	"2021"	"October"	"10"	10281
+	"North Carolina"	"37"	"2021"	"2021"	"November"	"11"	9958
+	"North Carolina"	"37"	"2021"	"2021"	"December"	"12"	10503
+"Total"	"North Carolina"	"37"	"2021"	"2021"			120466
+	"North Carolina"	"37"	"2022"	"2022"	"January"	"1"	10022
+	"North Carolina"	"37"	"2022"	"2022"	"February"	"2"	9218
+	"North Carolina"	"37"	"2022"	"2022"	"March"	"3"	10218
+	"North Carolina"	"37"	"2022"	"2022"	"April"	"4"	9550
+	"North Carolina"	"37"	"2022"	"2022"	"May"	"5"	9673
+	"North Carolina"	"37"	"2022"	"2022"	"June"	"6"	9809
+	"North Carolina"	"37"	"2022"	"2022"	"July"	"7"	10618
+	"North Carolina"	"37"	"2022"	"2022"	"August"	"8"	11240
+	"North Carolina"	"37"	"2022"	"2022"	"September"	"9"	10518
+	"North Carolina"	"37"	"2022"	"2022"	"October"	"10"	9938
+	"North Carolina"	"37"	"2022"	"2022"	"November"	"11"	10267
+	"North Carolina"	"37"	"2022"	"2022"	"December"	"12"	10491
+"Total"	"North Carolina"	"37"	"2022"	"2022"			121562
+"Total"	"North Carolina"	"37"					358758
+	"North Dakota"	"38"	"2020"	"2020"	"January"	"1"	803
+	"North Dakota"	"38"	"2020"	"2020"	"February"	"2"	818
+	"North Dakota"	"38"	"2020"	"2020"	"March"	"3"	840
+	"North Dakota"	"38"	"2020"	"2020"	"April"	"4"	824
+	"North Dakota"	"38"	"2020"	"2020"	"May"	"5"	878
+	"North Dakota"	"38"	"2020"	"2020"	"June"	"6"	854
+	"North Dakota"	"38"	"2020"	"2020"	"July"	"7"	902
+	"North Dakota"	"38"	"2020"	"2020"	"August"	"8"	910
+	"North Dakota"	"38"	"2020"	"2020"	"September"	"9"	803
+	"North Dakota"	"38"	"2020"	"2020"	"October"	"10"	831
+	"North Dakota"	"38"	"2020"	"2020"	"November"	"11"	771
+	"North Dakota"	"38"	"2020"	"2020"	"December"	"12"	825
+"Total"	"North Dakota"	"38"	"2020"	"2020"			10059
+	"North Dakota"	"38"	"2021"	"2021"	"January"	"1"	790
+	"North Dakota"	"38"	"2021"	"2021"	"February"	"2"	764
+	"North Dakota"	"38"	"2021"	"2021"	"March"	"3"	905
+	"North Dakota"	"38"	"2021"	"2021"	"April"	"4"	847
+	"North Dakota"	"38"	"2021"	"2021"	"May"	"5"	838
+	"North Dakota"	"38"	"2021"	"2021"	"June"	"6"	866
+	"North Dakota"	"38"	"2021"	"2021"	"July"	"7"	866
+	"North Dakota"	"38"	"2021"	"2021"	"August"	"8"	853
+	"North Dakota"	"38"	"2021"	"2021"	"September"	"9"	860
+	"North Dakota"	"38"	"2021"	"2021"	"October"	"10"	830
+	"North Dakota"	"38"	"2021"	"2021"	"November"	"11"	821
+	"North Dakota"	"38"	"2021"	"2021"	"December"	"12"	872
+"Total"	"North Dakota"	"38"	"2021"	"2021"			10112
+	"North Dakota"	"38"	"2022"	"2022"	"January"	"1"	787
+	"North Dakota"	"38"	"2022"	"2022"	"February"	"2"	693
+	"North Dakota"	"38"	"2022"	"2022"	"March"	"3"	793
+	"North Dakota"	"38"	"2022"	"2022"	"April"	"4"	780
+	"North Dakota"	"38"	"2022"	"2022"	"May"	"5"	851
+	"North Dakota"	"38"	"2022"	"2022"	"June"	"6"	778
+	"North Dakota"	"38"	"2022"	"2022"	"July"	"7"	815
+	"North Dakota"	"38"	"2022"	"2022"	"August"	"8"	885
+	"North Dakota"	"38"	"2022"	"2022"	"September"	"9"	826
+	"North Dakota"	"38"	"2022"	"2022"	"October"	"10"	763
+	"North Dakota"	"38"	"2022"	"2022"	"November"	"11"	767
+	"North Dakota"	"38"	"2022"	"2022"	"December"	"12"	829
+"Total"	"North Dakota"	"38"	"2022"	"2022"			9567
+"Total"	"North Dakota"	"38"					29738
+	"Ohio"	"39"	"2020"	"2020"	"January"	"1"	10661
+	"Ohio"	"39"	"2020"	"2020"	"February"	"2"	10152
+	"Ohio"	"39"	"2020"	"2020"	"March"	"3"	10714
+	"Ohio"	"39"	"2020"	"2020"	"April"	"4"	10349
+	"Ohio"	"39"	"2020"	"2020"	"May"	"5"	10960
+	"Ohio"	"39"	"2020"	"2020"	"June"	"6"	11043
+	"Ohio"	"39"	"2020"	"2020"	"July"	"7"	11648
+	"Ohio"	"39"	"2020"	"2020"	"August"	"8"	11534
+	"Ohio"	"39"	"2020"	"2020"	"September"	"9"	11103
+	"Ohio"	"39"	"2020"	"2020"	"October"	"10"	10759
+	"Ohio"	"39"	"2020"	"2020"	"November"	"11"	9951
+	"Ohio"	"39"	"2020"	"2020"	"December"	"12"	10317
+"Total"	"Ohio"	"39"	"2020"	"2020"			129191
+	"Ohio"	"39"	"2021"	"2021"	"January"	"1"	9875
+	"Ohio"	"39"	"2021"	"2021"	"February"	"2"	9732
+	"Ohio"	"39"	"2021"	"2021"	"March"	"3"	10824
+	"Ohio"	"39"	"2021"	"2021"	"April"	"4"	10489
+	"Ohio"	"39"	"2021"	"2021"	"May"	"5"	10841
+	"Ohio"	"39"	"2021"	"2021"	"June"	"6"	11256
+	"Ohio"	"39"	"2021"	"2021"	"July"	"7"	11672
+	"Ohio"	"39"	"2021"	"2021"	"August"	"8"	11518
+	"Ohio"	"39"	"2021"	"2021"	"September"	"9"	11444
+	"Ohio"	"39"	"2021"	"2021"	"October"	"10"	11010
+	"Ohio"	"39"	"2021"	"2021"	"November"	"11"	10375
+	"Ohio"	"39"	"2021"	"2021"	"December"	"12"	10755
+"Total"	"Ohio"	"39"	"2021"	"2021"			129791
+	"Ohio"	"39"	"2022"	"2022"	"January"	"1"	10002
+	"Ohio"	"39"	"2022"	"2022"	"February"	"2"	9472
+	"Ohio"	"39"	"2022"	"2022"	"March"	"3"	10885
+	"Ohio"	"39"	"2022"	"2022"	"April"	"4"	10230
+	"Ohio"	"39"	"2022"	"2022"	"May"	"5"	10633
+	"Ohio"	"39"	"2022"	"2022"	"June"	"6"	10909
+	"Ohio"	"39"	"2022"	"2022"	"July"	"7"	11187
+	"Ohio"	"39"	"2022"	"2022"	"August"	"8"	11729
+	"Ohio"	"39"	"2022"	"2022"	"September"	"9"	10719
+	"Ohio"	"39"	"2022"	"2022"	"October"	"10"	10628
+	"Ohio"	"39"	"2022"	"2022"	"November"	"11"	10664
+	"Ohio"	"39"	"2022"	"2022"	"December"	"12"	11173
+"Total"	"Ohio"	"39"	"2022"	"2022"			128231
+"Total"	"Ohio"	"39"					387213
+	"Oklahoma"	"40"	"2020"	"2020"	"January"	"1"	4065
+	"Oklahoma"	"40"	"2020"	"2020"	"February"	"2"	3684
+	"Oklahoma"	"40"	"2020"	"2020"	"March"	"3"	4026
+	"Oklahoma"	"40"	"2020"	"2020"	"April"	"4"	3851
+	"Oklahoma"	"40"	"2020"	"2020"	"May"	"5"	3811
+	"Oklahoma"	"40"	"2020"	"2020"	"June"	"6"	3934
+	"Oklahoma"	"40"	"2020"	"2020"	"July"	"7"	4183
+	"Oklahoma"	"40"	"2020"	"2020"	"August"	"8"	4205
+	"Oklahoma"	"40"	"2020"	"2020"	"September"	"9"	4142
+	"Oklahoma"	"40"	"2020"	"2020"	"October"	"10"	4028
+	"Oklahoma"	"40"	"2020"	"2020"	"November"	"11"	3772
+	"Oklahoma"	"40"	"2020"	"2020"	"December"	"12"	3922
+"Total"	"Oklahoma"	"40"	"2020"	"2020"			47623
+	"Oklahoma"	"40"	"2021"	"2021"	"January"	"1"	3760
+	"Oklahoma"	"40"	"2021"	"2021"	"February"	"2"	3507
+	"Oklahoma"	"40"	"2021"	"2021"	"March"	"3"	4060
+	"Oklahoma"	"40"	"2021"	"2021"	"April"	"4"	3781
+	"Oklahoma"	"40"	"2021"	"2021"	"May"	"5"	3961
+	"Oklahoma"	"40"	"2021"	"2021"	"June"	"6"	4172
+	"Oklahoma"	"40"	"2021"	"2021"	"July"	"7"	4326
+	"Oklahoma"	"40"	"2021"	"2021"	"August"	"8"	4317
+	"Oklahoma"	"40"	"2021"	"2021"	"September"	"9"	4245
+	"Oklahoma"	"40"	"2021"	"2021"	"October"	"10"	4068
+	"Oklahoma"	"40"	"2021"	"2021"	"November"	"11"	3994
+	"Oklahoma"	"40"	"2021"	"2021"	"December"	"12"	4219
+"Total"	"Oklahoma"	"40"	"2021"	"2021"			48410
+	"Oklahoma"	"40"	"2022"	"2022"	"January"	"1"	3962
+	"Oklahoma"	"40"	"2022"	"2022"	"February"	"2"	3588
+	"Oklahoma"	"40"	"2022"	"2022"	"March"	"3"	4039
+	"Oklahoma"	"40"	"2022"	"2022"	"April"	"4"	3735
+	"Oklahoma"	"40"	"2022"	"2022"	"May"	"5"	3807
+	"Oklahoma"	"40"	"2022"	"2022"	"June"	"6"	3926
+	"Oklahoma"	"40"	"2022"	"2022"	"July"	"7"	4275
+	"Oklahoma"	"40"	"2022"	"2022"	"August"	"8"	4552
+	"Oklahoma"	"40"	"2022"	"2022"	"September"	"9"	4078
+	"Oklahoma"	"40"	"2022"	"2022"	"October"	"10"	3950
+	"Oklahoma"	"40"	"2022"	"2022"	"November"	"11"	4142
+	"Oklahoma"	"40"	"2022"	"2022"	"December"	"12"	4278
+"Total"	"Oklahoma"	"40"	"2022"	"2022"			48332
+"Total"	"Oklahoma"	"40"					144365
+	"Oregon"	"41"	"2020"	"2020"	"January"	"1"	3239
+	"Oregon"	"41"	"2020"	"2020"	"February"	"2"	3104
+	"Oregon"	"41"	"2020"	"2020"	"March"	"3"	3364
+	"Oregon"	"41"	"2020"	"2020"	"April"	"4"	3384
+	"Oregon"	"41"	"2020"	"2020"	"May"	"5"	3495
+	"Oregon"	"41"	"2020"	"2020"	"June"	"6"	3413
+	"Oregon"	"41"	"2020"	"2020"	"July"	"7"	3638
+	"Oregon"	"41"	"2020"	"2020"	"August"	"8"	3462
+	"Oregon"	"41"	"2020"	"2020"	"September"	"9"	3306
+	"Oregon"	"41"	"2020"	"2020"	"October"	"10"	3316
+	"Oregon"	"41"	"2020"	"2020"	"November"	"11"	2954
+	"Oregon"	"41"	"2020"	"2020"	"December"	"12"	3145
+"Total"	"Oregon"	"41"	"2020"	"2020"			39820
+	"Oregon"	"41"	"2021"	"2021"	"January"	"1"	3102
+	"Oregon"	"41"	"2021"	"2021"	"February"	"2"	2873
+	"Oregon"	"41"	"2021"	"2021"	"March"	"3"	3419
+	"Oregon"	"41"	"2021"	"2021"	"April"	"4"	3361
+	"Oregon"	"41"	"2021"	"2021"	"May"	"5"	3525
+	"Oregon"	"41"	"2021"	"2021"	"June"	"6"	3551
+	"Oregon"	"41"	"2021"	"2021"	"July"	"7"	3681
+	"Oregon"	"41"	"2021"	"2021"	"August"	"8"	3677
+	"Oregon"	"41"	"2021"	"2021"	"September"	"9"	3550
+	"Oregon"	"41"	"2021"	"2021"	"October"	"10"	3515
+	"Oregon"	"41"	"2021"	"2021"	"November"	"11"	3330
+	"Oregon"	"41"	"2021"	"2021"	"December"	"12"	3330
+"Total"	"Oregon"	"41"	"2021"	"2021"			40914
+	"Oregon"	"41"	"2022"	"2022"	"January"	"1"	3139
+	"Oregon"	"41"	"2022"	"2022"	"February"	"2"	2998
+	"Oregon"	"41"	"2022"	"2022"	"March"	"3"	3373
+	"Oregon"	"41"	"2022"	"2022"	"April"	"4"	3173
+	"Oregon"	"41"	"2022"	"2022"	"May"	"5"	3321
+	"Oregon"	"41"	"2022"	"2022"	"June"	"6"	3367
+	"Oregon"	"41"	"2022"	"2022"	"July"	"7"	3406
+	"Oregon"	"41"	"2022"	"2022"	"August"	"8"	3537
+	"Oregon"	"41"	"2022"	"2022"	"September"	"9"	3428
+	"Oregon"	"41"	"2022"	"2022"	"October"	"10"	3151
+	"Oregon"	"41"	"2022"	"2022"	"November"	"11"	3298
+	"Oregon"	"41"	"2022"	"2022"	"December"	"12"	3302
+"Total"	"Oregon"	"41"	"2022"	"2022"			39493
+"Total"	"Oregon"	"41"					120227
+	"Pennsylvania"	"42"	"2020"	"2020"	"January"	"1"	10875
+	"Pennsylvania"	"42"	"2020"	"2020"	"February"	"2"	10073
+	"Pennsylvania"	"42"	"2020"	"2020"	"March"	"3"	10824
+	"Pennsylvania"	"42"	"2020"	"2020"	"April"	"4"	10574
+	"Pennsylvania"	"42"	"2020"	"2020"	"May"	"5"	11163
+	"Pennsylvania"	"42"	"2020"	"2020"	"June"	"6"	11158
+	"Pennsylvania"	"42"	"2020"	"2020"	"July"	"7"	11773
+	"Pennsylvania"	"42"	"2020"	"2020"	"August"	"8"	11552
+	"Pennsylvania"	"42"	"2020"	"2020"	"September"	"9"	11087
+	"Pennsylvania"	"42"	"2020"	"2020"	"October"	"10"	11060
+	"Pennsylvania"	"42"	"2020"	"2020"	"November"	"11"	10259
+	"Pennsylvania"	"42"	"2020"	"2020"	"December"	"12"	10295
+"Total"	"Pennsylvania"	"42"	"2020"	"2020"			130693
+	"Pennsylvania"	"42"	"2021"	"2021"	"January"	"1"	10145
+	"Pennsylvania"	"42"	"2021"	"2021"	"February"	"2"	9647
+	"Pennsylvania"	"42"	"2021"	"2021"	"March"	"3"	11000
+	"Pennsylvania"	"42"	"2021"	"2021"	"April"	"4"	10851
+	"Pennsylvania"	"42"	"2021"	"2021"	"May"	"5"	11055
+	"Pennsylvania"	"42"	"2021"	"2021"	"June"	"6"	11510
+	"Pennsylvania"	"42"	"2021"	"2021"	"July"	"7"	12222
+	"Pennsylvania"	"42"	"2021"	"2021"	"August"	"8"	11785
+	"Pennsylvania"	"42"	"2021"	"2021"	"September"	"9"	11555
+	"Pennsylvania"	"42"	"2021"	"2021"	"October"	"10"	11285
+	"Pennsylvania"	"42"	"2021"	"2021"	"November"	"11"	10752
+	"Pennsylvania"	"42"	"2021"	"2021"	"December"	"12"	10815
+"Total"	"Pennsylvania"	"42"	"2021"	"2021"			132622
+	"Pennsylvania"	"42"	"2022"	"2022"	"January"	"1"	10351
+	"Pennsylvania"	"42"	"2022"	"2022"	"February"	"2"	9701
+	"Pennsylvania"	"42"	"2022"	"2022"	"March"	"3"	10794
+	"Pennsylvania"	"42"	"2022"	"2022"	"April"	"4"	10599
+	"Pennsylvania"	"42"	"2022"	"2022"	"May"	"5"	10809
+	"Pennsylvania"	"42"	"2022"	"2022"	"June"	"6"	10991
+	"Pennsylvania"	"42"	"2022"	"2022"	"July"	"7"	11613
+	"Pennsylvania"	"42"	"2022"	"2022"	"August"	"8"	11817
+	"Pennsylvania"	"42"	"2022"	"2022"	"September"	"9"	11114
+	"Pennsylvania"	"42"	"2022"	"2022"	"October"	"10"	10806
+	"Pennsylvania"	"42"	"2022"	"2022"	"November"	"11"	10780
+	"Pennsylvania"	"42"	"2022"	"2022"	"December"	"12"	10877
+"Total"	"Pennsylvania"	"42"	"2022"	"2022"			130252
+"Total"	"Pennsylvania"	"42"					393567
+	"Rhode Island"	"44"	"2020"	"2020"	"January"	"1"	824
+	"Rhode Island"	"44"	"2020"	"2020"	"February"	"2"	823
+	"Rhode Island"	"44"	"2020"	"2020"	"March"	"3"	866
+	"Rhode Island"	"44"	"2020"	"2020"	"April"	"4"	822
+	"Rhode Island"	"44"	"2020"	"2020"	"May"	"5"	874
+	"Rhode Island"	"44"	"2020"	"2020"	"June"	"6"	855
+	"Rhode Island"	"44"	"2020"	"2020"	"July"	"7"	913
+	"Rhode Island"	"44"	"2020"	"2020"	"August"	"8"	945
+	"Rhode Island"	"44"	"2020"	"2020"	"September"	"9"	821
+	"Rhode Island"	"44"	"2020"	"2020"	"October"	"10"	845
+	"Rhode Island"	"44"	"2020"	"2020"	"November"	"11"	757
+	"Rhode Island"	"44"	"2020"	"2020"	"December"	"12"	756
+"Total"	"Rhode Island"	"44"	"2020"	"2020"			10101
+	"Rhode Island"	"44"	"2021"	"2021"	"January"	"1"	731
+	"Rhode Island"	"44"	"2021"	"2021"	"February"	"2"	694
+	"Rhode Island"	"44"	"2021"	"2021"	"March"	"3"	870
+	"Rhode Island"	"44"	"2021"	"2021"	"April"	"4"	880
+	"Rhode Island"	"44"	"2021"	"2021"	"May"	"5"	883
+	"Rhode Island"	"44"	"2021"	"2021"	"June"	"6"	942
+	"Rhode Island"	"44"	"2021"	"2021"	"July"	"7"	957
+	"Rhode Island"	"44"	"2021"	"2021"	"August"	"8"	987
+	"Rhode Island"	"44"	"2021"	"2021"	"September"	"9"	938
+	"Rhode Island"	"44"	"2021"	"2021"	"October"	"10"	897
+	"Rhode Island"	"44"	"2021"	"2021"	"November"	"11"	837
+	"Rhode Island"	"44"	"2021"	"2021"	"December"	"12"	848
+"Total"	"Rhode Island"	"44"	"2021"	"2021"			10464
+	"Rhode Island"	"44"	"2022"	"2022"	"January"	"1"	829
+	"Rhode Island"	"44"	"2022"	"2022"	"February"	"2"	784
+	"Rhode Island"	"44"	"2022"	"2022"	"March"	"3"	848
+	"Rhode Island"	"44"	"2022"	"2022"	"April"	"4"	797
+	"Rhode Island"	"44"	"2022"	"2022"	"May"	"5"	847
+	"Rhode Island"	"44"	"2022"	"2022"	"June"	"6"	893
+	"Rhode Island"	"44"	"2022"	"2022"	"July"	"7"	933
+	"Rhode Island"	"44"	"2022"	"2022"	"August"	"8"	926
+	"Rhode Island"	"44"	"2022"	"2022"	"September"	"9"	843
+	"Rhode Island"	"44"	"2022"	"2022"	"October"	"10"	886
+	"Rhode Island"	"44"	"2022"	"2022"	"November"	"11"	845
+	"Rhode Island"	"44"	"2022"	"2022"	"December"	"12"	838
+"Total"	"Rhode Island"	"44"	"2022"	"2022"			10269
+"Total"	"Rhode Island"	"44"					30834
+	"South Carolina"	"45"	"2020"	"2020"	"January"	"1"	4707
+	"South Carolina"	"45"	"2020"	"2020"	"February"	"2"	4269
+	"South Carolina"	"45"	"2020"	"2020"	"March"	"3"	4680
+	"South Carolina"	"45"	"2020"	"2020"	"April"	"4"	4383
+	"South Carolina"	"45"	"2020"	"2020"	"May"	"5"	4535
+	"South Carolina"	"45"	"2020"	"2020"	"June"	"6"	4578
+	"South Carolina"	"45"	"2020"	"2020"	"July"	"7"	4809
+	"South Carolina"	"45"	"2020"	"2020"	"August"	"8"	4953
+	"South Carolina"	"45"	"2020"	"2020"	"September"	"9"	4903
+	"South Carolina"	"45"	"2020"	"2020"	"October"	"10"	4725
+	"South Carolina"	"45"	"2020"	"2020"	"November"	"11"	4358
+	"South Carolina"	"45"	"2020"	"2020"	"December"	"12"	4804
+"Total"	"South Carolina"	"45"	"2020"	"2020"			55704
+	"South Carolina"	"45"	"2021"	"2021"	"January"	"1"	4559
+	"South Carolina"	"45"	"2021"	"2021"	"February"	"2"	4236
+	"South Carolina"	"45"	"2021"	"2021"	"March"	"3"	4621
+	"South Carolina"	"45"	"2021"	"2021"	"April"	"4"	4456
+	"South Carolina"	"45"	"2021"	"2021"	"May"	"5"	4578
+	"South Carolina"	"45"	"2021"	"2021"	"June"	"6"	4804
+	"South Carolina"	"45"	"2021"	"2021"	"July"	"7"	5064
+	"South Carolina"	"45"	"2021"	"2021"	"August"	"8"	5271
+	"South Carolina"	"45"	"2021"	"2021"	"September"	"9"	5129
+	"South Carolina"	"45"	"2021"	"2021"	"October"	"10"	4811
+	"South Carolina"	"45"	"2021"	"2021"	"November"	"11"	4834
+	"South Carolina"	"45"	"2021"	"2021"	"December"	"12"	4822
+"Total"	"South Carolina"	"45"	"2021"	"2021"			57185
+	"South Carolina"	"45"	"2022"	"2022"	"January"	"1"	4671
+	"South Carolina"	"45"	"2022"	"2022"	"February"	"2"	4344
+	"South Carolina"	"45"	"2022"	"2022"	"March"	"3"	4835
+	"South Carolina"	"45"	"2022"	"2022"	"April"	"4"	4583
+	"South Carolina"	"45"	"2022"	"2022"	"May"	"5"	4583
+	"South Carolina"	"45"	"2022"	"2022"	"June"	"6"	4676
+	"South Carolina"	"45"	"2022"	"2022"	"July"	"7"	5012
+	"South Carolina"	"45"	"2022"	"2022"	"August"	"8"	5551
+	"South Carolina"	"45"	"2022"	"2022"	"September"	"9"	4826
+	"South Carolina"	"45"	"2022"	"2022"	"October"	"10"	4731
+	"South Carolina"	"45"	"2022"	"2022"	"November"	"11"	4861
+	"South Carolina"	"45"	"2022"	"2022"	"December"	"12"	5147
+"Total"	"South Carolina"	"45"	"2022"	"2022"			57820
+"Total"	"South Carolina"	"45"					170709
+	"South Dakota"	"46"	"2020"	"2020"	"January"	"1"	910
+	"South Dakota"	"46"	"2020"	"2020"	"February"	"2"	862
+	"South Dakota"	"46"	"2020"	"2020"	"March"	"3"	910
+	"South Dakota"	"46"	"2020"	"2020"	"April"	"4"	939
+	"South Dakota"	"46"	"2020"	"2020"	"May"	"5"	947
+	"South Dakota"	"46"	"2020"	"2020"	"June"	"6"	952
+	"South Dakota"	"46"	"2020"	"2020"	"July"	"7"	1007
+	"South Dakota"	"46"	"2020"	"2020"	"August"	"8"	911
+	"South Dakota"	"46"	"2020"	"2020"	"September"	"9"	969
+	"South Dakota"	"46"	"2020"	"2020"	"October"	"10"	859
+	"South Dakota"	"46"	"2020"	"2020"	"November"	"11"	821
+	"South Dakota"	"46"	"2020"	"2020"	"December"	"12"	873
+"Total"	"South Dakota"	"46"	"2020"	"2020"			10960
+	"South Dakota"	"46"	"2021"	"2021"	"January"	"1"	887
+	"South Dakota"	"46"	"2021"	"2021"	"February"	"2"	833
+	"South Dakota"	"46"	"2021"	"2021"	"March"	"3"	946
+	"South Dakota"	"46"	"2021"	"2021"	"April"	"4"	997
+	"South Dakota"	"46"	"2021"	"2021"	"May"	"5"	952
+	"South Dakota"	"46"	"2021"	"2021"	"June"	"6"	1027
+	"South Dakota"	"46"	"2021"	"2021"	"July"	"7"	992
+	"South Dakota"	"46"	"2021"	"2021"	"August"	"8"	978
+	"South Dakota"	"46"	"2021"	"2021"	"September"	"9"	1022
+	"South Dakota"	"46"	"2021"	"2021"	"October"	"10"	940
+	"South Dakota"	"46"	"2021"	"2021"	"November"	"11"	917
+	"South Dakota"	"46"	"2021"	"2021"	"December"	"12"	878
+"Total"	"South Dakota"	"46"	"2021"	"2021"			11369
+	"South Dakota"	"46"	"2022"	"2022"	"January"	"1"	861
+	"South Dakota"	"46"	"2022"	"2022"	"February"	"2"	764
+	"South Dakota"	"46"	"2022"	"2022"	"March"	"3"	996
+	"South Dakota"	"46"	"2022"	"2022"	"April"	"4"	922
+	"South Dakota"	"46"	"2022"	"2022"	"May"	"5"	1001
+	"South Dakota"	"46"	"2022"	"2022"	"June"	"6"	997
+	"South Dakota"	"46"	"2022"	"2022"	"July"	"7"	1008
+	"South Dakota"	"46"	"2022"	"2022"	"August"	"8"	969
+	"South Dakota"	"46"	"2022"	"2022"	"September"	"9"	916
+	"South Dakota"	"46"	"2022"	"2022"	"October"	"10"	940
+	"South Dakota"	"46"	"2022"	"2022"	"November"	"11"	895
+	"South Dakota"	"46"	"2022"	"2022"	"December"	"12"	932
+"Total"	"South Dakota"	"46"	"2022"	"2022"			11201
+"Total"	"South Dakota"	"46"					33530
+	"Tennessee"	"47"	"2020"	"2020"	"January"	"1"	6582
+	"Tennessee"	"47"	"2020"	"2020"	"February"	"2"	6006
+	"Tennessee"	"47"	"2020"	"2020"	"March"	"3"	6392
+	"Tennessee"	"47"	"2020"	"2020"	"April"	"4"	6189
+	"Tennessee"	"47"	"2020"	"2020"	"May"	"5"	6480
+	"Tennessee"	"47"	"2020"	"2020"	"June"	"6"	6599
+	"Tennessee"	"47"	"2020"	"2020"	"July"	"7"	6924
+	"Tennessee"	"47"	"2020"	"2020"	"August"	"8"	6968
+	"Tennessee"	"47"	"2020"	"2020"	"September"	"9"	6881
+	"Tennessee"	"47"	"2020"	"2020"	"October"	"10"	6605
+	"Tennessee"	"47"	"2020"	"2020"	"November"	"11"	6269
+	"Tennessee"	"47"	"2020"	"2020"	"December"	"12"	6794
+"Total"	"Tennessee"	"47"	"2020"	"2020"			78689
+	"Tennessee"	"47"	"2021"	"2021"	"January"	"1"	6326
+	"Tennessee"	"47"	"2021"	"2021"	"February"	"2"	6058
+	"Tennessee"	"47"	"2021"	"2021"	"March"	"3"	6809
+	"Tennessee"	"47"	"2021"	"2021"	"April"	"4"	6360
+	"Tennessee"	"47"	"2021"	"2021"	"May"	"5"	6552
+	"Tennessee"	"47"	"2021"	"2021"	"June"	"6"	6892
+	"Tennessee"	"47"	"2021"	"2021"	"July"	"7"	7183
+	"Tennessee"	"47"	"2021"	"2021"	"August"	"8"	7354
+	"Tennessee"	"47"	"2021"	"2021"	"September"	"9"	7425
+	"Tennessee"	"47"	"2021"	"2021"	"October"	"10"	6947
+	"Tennessee"	"47"	"2021"	"2021"	"November"	"11"	6675
+	"Tennessee"	"47"	"2021"	"2021"	"December"	"12"	7136
+"Total"	"Tennessee"	"47"	"2021"	"2021"			81717
+	"Tennessee"	"47"	"2022"	"2022"	"January"	"1"	6853
+	"Tennessee"	"47"	"2022"	"2022"	"February"	"2"	6029
+	"Tennessee"	"47"	"2022"	"2022"	"March"	"3"	6898
+	"Tennessee"	"47"	"2022"	"2022"	"April"	"4"	6460
+	"Tennessee"	"47"	"2022"	"2022"	"May"	"5"	6431
+	"Tennessee"	"47"	"2022"	"2022"	"June"	"6"	6772
+	"Tennessee"	"47"	"2022"	"2022"	"July"	"7"	7109
+	"Tennessee"	"47"	"2022"	"2022"	"August"	"8"	7545
+	"Tennessee"	"47"	"2022"	"2022"	"September"	"9"	7137
+	"Tennessee"	"47"	"2022"	"2022"	"October"	"10"	6841
+	"Tennessee"	"47"	"2022"	"2022"	"November"	"11"	6914
+	"Tennessee"	"47"	"2022"	"2022"	"December"	"12"	7276
+"Total"	"Tennessee"	"47"	"2022"	"2022"			82265
+"Total"	"Tennessee"	"47"					242671
+	"Texas"	"48"	"2020"	"2020"	"January"	"1"	31514
+	"Texas"	"48"	"2020"	"2020"	"February"	"2"	28462
+	"Texas"	"48"	"2020"	"2020"	"March"	"3"	30309
+	"Texas"	"48"	"2020"	"2020"	"April"	"4"	29011
+	"Texas"	"48"	"2020"	"2020"	"May"	"5"	29461
+	"Texas"	"48"	"2020"	"2020"	"June"	"6"	29663
+	"Texas"	"48"	"2020"	"2020"	"July"	"7"	32483
+	"Texas"	"48"	"2020"	"2020"	"August"	"8"	32708
+	"Texas"	"48"	"2020"	"2020"	"September"	"9"	32451
+	"Texas"	"48"	"2020"	"2020"	"October"	"10"	31956
+	"Texas"	"48"	"2020"	"2020"	"November"	"11"	29808
+	"Texas"	"48"	"2020"	"2020"	"December"	"12"	30364
+"Total"	"Texas"	"48"	"2020"	"2020"			368190
+	"Texas"	"48"	"2021"	"2021"	"January"	"1"	28426
+	"Texas"	"48"	"2021"	"2021"	"February"	"2"	26792
+	"Texas"	"48"	"2021"	"2021"	"March"	"3"	30340
+	"Texas"	"48"	"2021"	"2021"	"April"	"4"	28647
+	"Texas"	"48"	"2021"	"2021"	"May"	"5"	29387
+	"Texas"	"48"	"2021"	"2021"	"June"	"6"	31080
+	"Texas"	"48"	"2021"	"2021"	"July"	"7"	33019
+	"Texas"	"48"	"2021"	"2021"	"August"	"8"	33864
+	"Texas"	"48"	"2021"	"2021"	"September"	"9"	33904
+	"Texas"	"48"	"2021"	"2021"	"October"	"10"	32661
+	"Texas"	"48"	"2021"	"2021"	"November"	"11"	32111
+	"Texas"	"48"	"2021"	"2021"	"December"	"12"	33363
+"Total"	"Texas"	"48"	"2021"	"2021"			373594
+	"Texas"	"48"	"2022"	"2022"	"January"	"1"	31375
+	"Texas"	"48"	"2022"	"2022"	"February"	"2"	28856
+	"Texas"	"48"	"2022"	"2022"	"March"	"3"	32268
+	"Texas"	"48"	"2022"	"2022"	"April"	"4"	29814
+	"Texas"	"48"	"2022"	"2022"	"May"	"5"	30452
+	"Texas"	"48"	"2022"	"2022"	"June"	"6"	32148
+	"Texas"	"48"	"2022"	"2022"	"July"	"7"	33486
+	"Texas"	"48"	"2022"	"2022"	"August"	"8"	36498
+	"Texas"	"48"	"2022"	"2022"	"September"	"9"	33875
+	"Texas"	"48"	"2022"	"2022"	"October"	"10"	33019
+	"Texas"	"48"	"2022"	"2022"	"November"	"11"	33353
+	"Texas"	"48"	"2022"	"2022"	"December"	"12"	34597
+"Total"	"Texas"	"48"	"2022"	"2022"			389741
+"Total"	"Texas"	"48"					1131525
+	"Utah"	"49"	"2020"	"2020"	"January"	"1"	3682
+	"Utah"	"49"	"2020"	"2020"	"February"	"2"	3531
+	"Utah"	"49"	"2020"	"2020"	"March"	"3"	3995
+	"Utah"	"49"	"2020"	"2020"	"April"	"4"	3882
+	"Utah"	"49"	"2020"	"2020"	"May"	"5"	3880
+	"Utah"	"49"	"2020"	"2020"	"June"	"6"	4114
+	"Utah"	"49"	"2020"	"2020"	"July"	"7"	4218
+	"Utah"	"49"	"2020"	"2020"	"August"	"8"	4022
+	"Utah"	"49"	"2020"	"2020"	"September"	"9"	3805
+	"Utah"	"49"	"2020"	"2020"	"October"	"10"	3779
+	"Utah"	"49"	"2020"	"2020"	"November"	"11"	3367
+	"Utah"	"49"	"2020"	"2020"	"December"	"12"	3427
+"Total"	"Utah"	"49"	"2020"	"2020"			45702
+	"Utah"	"49"	"2021"	"2021"	"January"	"1"	3346
+	"Utah"	"49"	"2021"	"2021"	"February"	"2"	3427
+	"Utah"	"49"	"2021"	"2021"	"March"	"3"	4101
+	"Utah"	"49"	"2021"	"2021"	"April"	"4"	3908
+	"Utah"	"49"	"2021"	"2021"	"May"	"5"	4097
+	"Utah"	"49"	"2021"	"2021"	"June"	"6"	4216
+	"Utah"	"49"	"2021"	"2021"	"July"	"7"	4197
+	"Utah"	"49"	"2021"	"2021"	"August"	"8"	4153
+	"Utah"	"49"	"2021"	"2021"	"September"	"9"	4015
+	"Utah"	"49"	"2021"	"2021"	"October"	"10"	3838
+	"Utah"	"49"	"2021"	"2021"	"November"	"11"	3656
+	"Utah"	"49"	"2021"	"2021"	"December"	"12"	3758
+"Total"	"Utah"	"49"	"2021"	"2021"			46712
+	"Utah"	"49"	"2022"	"2022"	"January"	"1"	3553
+	"Utah"	"49"	"2022"	"2022"	"February"	"2"	3404
+	"Utah"	"49"	"2022"	"2022"	"March"	"3"	4032
+	"Utah"	"49"	"2022"	"2022"	"April"	"4"	3822
+	"Utah"	"49"	"2022"	"2022"	"May"	"5"	3921
+	"Utah"	"49"	"2022"	"2022"	"June"	"6"	3946
+	"Utah"	"49"	"2022"	"2022"	"July"	"7"	4082
+	"Utah"	"49"	"2022"	"2022"	"August"	"8"	4044
+	"Utah"	"49"	"2022"	"2022"	"September"	"9"	3765
+	"Utah"	"49"	"2022"	"2022"	"October"	"10"	3804
+	"Utah"	"49"	"2022"	"2022"	"November"	"11"	3698
+	"Utah"	"49"	"2022"	"2022"	"December"	"12"	3697
+"Total"	"Utah"	"49"	"2022"	"2022"			45768
+"Total"	"Utah"	"49"					138182
+	"Vermont"	"50"	"2020"	"2020"	"January"	"1"	426
+	"Vermont"	"50"	"2020"	"2020"	"February"	"2"	378
+	"Vermont"	"50"	"2020"	"2020"	"March"	"3"	465
+	"Vermont"	"50"	"2020"	"2020"	"April"	"4"	409
+	"Vermont"	"50"	"2020"	"2020"	"May"	"5"	460
+	"Vermont"	"50"	"2020"	"2020"	"June"	"6"	442
+	"Vermont"	"50"	"2020"	"2020"	"July"	"7"	471
+	"Vermont"	"50"	"2020"	"2020"	"August"	"8"	484
+	"Vermont"	"50"	"2020"	"2020"	"September"	"9"	432
+	"Vermont"	"50"	"2020"	"2020"	"October"	"10"	394
+	"Vermont"	"50"	"2020"	"2020"	"November"	"11"	369
+	"Vermont"	"50"	"2020"	"2020"	"December"	"12"	403
+"Total"	"Vermont"	"50"	"2020"	"2020"			5133
+	"Vermont"	"50"	"2021"	"2021"	"January"	"1"	400
+	"Vermont"	"50"	"2021"	"2021"	"February"	"2"	361
+	"Vermont"	"50"	"2021"	"2021"	"March"	"3"	423
+	"Vermont"	"50"	"2021"	"2021"	"April"	"4"	468
+	"Vermont"	"50"	"2021"	"2021"	"May"	"5"	446
+	"Vermont"	"50"	"2021"	"2021"	"June"	"6"	523
+	"Vermont"	"50"	"2021"	"2021"	"July"	"7"	514
+	"Vermont"	"50"	"2021"	"2021"	"August"	"8"	540
+	"Vermont"	"50"	"2021"	"2021"	"September"	"9"	469
+	"Vermont"	"50"	"2021"	"2021"	"October"	"10"	427
+	"Vermont"	"50"	"2021"	"2021"	"November"	"11"	390
+	"Vermont"	"50"	"2021"	"2021"	"December"	"12"	423
+"Total"	"Vermont"	"50"	"2021"	"2021"			5384
+	"Vermont"	"50"	"2022"	"2022"	"January"	"1"	452
+	"Vermont"	"50"	"2022"	"2022"	"February"	"2"	359
+	"Vermont"	"50"	"2022"	"2022"	"March"	"3"	469
+	"Vermont"	"50"	"2022"	"2022"	"April"	"4"	437
+	"Vermont"	"50"	"2022"	"2022"	"May"	"5"	466
+	"Vermont"	"50"	"2022"	"2022"	"June"	"6"	491
+	"Vermont"	"50"	"2022"	"2022"	"July"	"7"	471
+	"Vermont"	"50"	"2022"	"2022"	"August"	"8"	474
+	"Vermont"	"50"	"2022"	"2022"	"September"	"9"	464
+	"Vermont"	"50"	"2022"	"2022"	"October"	"10"	418
+	"Vermont"	"50"	"2022"	"2022"	"November"	"11"	408
+	"Vermont"	"50"	"2022"	"2022"	"December"	"12"	407
+"Total"	"Vermont"	"50"	"2022"	"2022"			5316
+"Total"	"Vermont"	"50"					15833
+	"Virginia"	"51"	"2020"	"2020"	"January"	"1"	7894
+	"Virginia"	"51"	"2020"	"2020"	"February"	"2"	7489
+	"Virginia"	"51"	"2020"	"2020"	"March"	"3"	7889
+	"Virginia"	"51"	"2020"	"2020"	"April"	"4"	7723
+	"Virginia"	"51"	"2020"	"2020"	"May"	"5"	7938
+	"Virginia"	"51"	"2020"	"2020"	"June"	"6"	7930
+	"Virginia"	"51"	"2020"	"2020"	"July"	"7"	8438
+	"Virginia"	"51"	"2020"	"2020"	"August"	"8"	8429
+	"Virginia"	"51"	"2020"	"2020"	"September"	"9"	8110
+	"Virginia"	"51"	"2020"	"2020"	"October"	"10"	8068
+	"Virginia"	"51"	"2020"	"2020"	"November"	"11"	7328
+	"Virginia"	"51"	"2020"	"2020"	"December"	"12"	7513
+"Total"	"Virginia"	"51"	"2020"	"2020"			94749
+	"Virginia"	"51"	"2021"	"2021"	"January"	"1"	7304
+	"Virginia"	"51"	"2021"	"2021"	"February"	"2"	6946
+	"Virginia"	"51"	"2021"	"2021"	"March"	"3"	8063
+	"Virginia"	"51"	"2021"	"2021"	"April"	"4"	7793
+	"Virginia"	"51"	"2021"	"2021"	"May"	"5"	7916
+	"Virginia"	"51"	"2021"	"2021"	"June"	"6"	8395
+	"Virginia"	"51"	"2021"	"2021"	"July"	"7"	8469
+	"Virginia"	"51"	"2021"	"2021"	"August"	"8"	8525
+	"Virginia"	"51"	"2021"	"2021"	"September"	"9"	8590
+	"Virginia"	"51"	"2021"	"2021"	"October"	"10"	8092
+	"Virginia"	"51"	"2021"	"2021"	"November"	"11"	7683
+	"Virginia"	"51"	"2021"	"2021"	"December"	"12"	8049
+"Total"	"Virginia"	"51"	"2021"	"2021"			95825
+	"Virginia"	"51"	"2022"	"2022"	"January"	"1"	7600
+	"Virginia"	"51"	"2022"	"2022"	"February"	"2"	7316
+	"Virginia"	"51"	"2022"	"2022"	"March"	"3"	7808
+	"Virginia"	"51"	"2022"	"2022"	"April"	"4"	7572
+	"Virginia"	"51"	"2022"	"2022"	"May"	"5"	7777
+	"Virginia"	"51"	"2022"	"2022"	"June"	"6"	8182
+	"Virginia"	"51"	"2022"	"2022"	"July"	"7"	8459
+	"Virginia"	"51"	"2022"	"2022"	"August"	"8"	8925
+	"Virginia"	"51"	"2022"	"2022"	"September"	"9"	8140
+	"Virginia"	"51"	"2022"	"2022"	"October"	"10"	7887
+	"Virginia"	"51"	"2022"	"2022"	"November"	"11"	7873
+	"Virginia"	"51"	"2022"	"2022"	"December"	"12"	8091
+"Total"	"Virginia"	"51"	"2022"	"2022"			95630
+"Total"	"Virginia"	"51"					286204
+	"Washington"	"53"	"2020"	"2020"	"January"	"1"	6825
+	"Washington"	"53"	"2020"	"2020"	"February"	"2"	6542
+	"Washington"	"53"	"2020"	"2020"	"March"	"3"	7043
+	"Washington"	"53"	"2020"	"2020"	"April"	"4"	6850
+	"Washington"	"53"	"2020"	"2020"	"May"	"5"	7095
+	"Washington"	"53"	"2020"	"2020"	"June"	"6"	7129
+	"Washington"	"53"	"2020"	"2020"	"July"	"7"	7602
+	"Washington"	"53"	"2020"	"2020"	"August"	"8"	7222
+	"Washington"	"53"	"2020"	"2020"	"September"	"9"	6868
+	"Washington"	"53"	"2020"	"2020"	"October"	"10"	7034
+	"Washington"	"53"	"2020"	"2020"	"November"	"11"	6348
+	"Washington"	"53"	"2020"	"2020"	"December"	"12"	6528
+"Total"	"Washington"	"53"	"2020"	"2020"			83086
+	"Washington"	"53"	"2021"	"2021"	"January"	"1"	6370
+	"Washington"	"53"	"2021"	"2021"	"February"	"2"	6131
+	"Washington"	"53"	"2021"	"2021"	"March"	"3"	6916
+	"Washington"	"53"	"2021"	"2021"	"April"	"4"	7082
+	"Washington"	"53"	"2021"	"2021"	"May"	"5"	7238
+	"Washington"	"53"	"2021"	"2021"	"June"	"6"	7200
+	"Washington"	"53"	"2021"	"2021"	"July"	"7"	7466
+	"Washington"	"53"	"2021"	"2021"	"August"	"8"	7587
+	"Washington"	"53"	"2021"	"2021"	"September"	"9"	7313
+	"Washington"	"53"	"2021"	"2021"	"October"	"10"	7044
+	"Washington"	"53"	"2021"	"2021"	"November"	"11"	6672
+	"Washington"	"53"	"2021"	"2021"	"December"	"12"	6892
+"Total"	"Washington"	"53"	"2021"	"2021"			83911
+	"Washington"	"53"	"2022"	"2022"	"January"	"1"	6625
+	"Washington"	"53"	"2022"	"2022"	"February"	"2"	6283
+	"Washington"	"53"	"2022"	"2022"	"March"	"3"	7044
+	"Washington"	"53"	"2022"	"2022"	"April"	"4"	6861
+	"Washington"	"53"	"2022"	"2022"	"May"	"5"	7043
+	"Washington"	"53"	"2022"	"2022"	"June"	"6"	7088
+	"Washington"	"53"	"2022"	"2022"	"July"	"7"	7408
+	"Washington"	"53"	"2022"	"2022"	"August"	"8"	7533
+	"Washington"	"53"	"2022"	"2022"	"September"	"9"	7006
+	"Washington"	"53"	"2022"	"2022"	"October"	"10"	6896
+	"Washington"	"53"	"2022"	"2022"	"November"	"11"	6686
+	"Washington"	"53"	"2022"	"2022"	"December"	"12"	6860
+"Total"	"Washington"	"53"	"2022"	"2022"			83333
+"Total"	"Washington"	"53"					250330
+	"West Virginia"	"54"	"2020"	"2020"	"January"	"1"	1512
+	"West Virginia"	"54"	"2020"	"2020"	"February"	"2"	1306
+	"West Virginia"	"54"	"2020"	"2020"	"March"	"3"	1404
+	"West Virginia"	"54"	"2020"	"2020"	"April"	"4"	1407
+	"West Virginia"	"54"	"2020"	"2020"	"May"	"5"	1428
+	"West Virginia"	"54"	"2020"	"2020"	"June"	"6"	1473
+	"West Virginia"	"54"	"2020"	"2020"	"July"	"7"	1545
+	"West Virginia"	"54"	"2020"	"2020"	"August"	"8"	1507
+	"West Virginia"	"54"	"2020"	"2020"	"September"	"9"	1522
+	"West Virginia"	"54"	"2020"	"2020"	"October"	"10"	1460
+	"West Virginia"	"54"	"2020"	"2020"	"November"	"11"	1337
+	"West Virginia"	"54"	"2020"	"2020"	"December"	"12"	1422
+"Total"	"West Virginia"	"54"	"2020"	"2020"			17323
+	"West Virginia"	"54"	"2021"	"2021"	"January"	"1"	1298
+	"West Virginia"	"54"	"2021"	"2021"	"February"	"2"	1241
+	"West Virginia"	"54"	"2021"	"2021"	"March"	"3"	1456
+	"West Virginia"	"54"	"2021"	"2021"	"April"	"4"	1395
+	"West Virginia"	"54"	"2021"	"2021"	"May"	"5"	1380
+	"West Virginia"	"54"	"2021"	"2021"	"June"	"6"	1541
+	"West Virginia"	"54"	"2021"	"2021"	"July"	"7"	1545
+	"West Virginia"	"54"	"2021"	"2021"	"August"	"8"	1526
+	"West Virginia"	"54"	"2021"	"2021"	"September"	"9"	1507
+	"West Virginia"	"54"	"2021"	"2021"	"October"	"10"	1476
+	"West Virginia"	"54"	"2021"	"2021"	"November"	"11"	1369
+	"West Virginia"	"54"	"2021"	"2021"	"December"	"12"	1464
+"Total"	"West Virginia"	"54"	"2021"	"2021"			17198
+	"West Virginia"	"54"	"2022"	"2022"	"January"	"1"	1328
+	"West Virginia"	"54"	"2022"	"2022"	"February"	"2"	1294
+	"West Virginia"	"54"	"2022"	"2022"	"March"	"3"	1406
+	"West Virginia"	"54"	"2022"	"2022"	"April"	"4"	1374
+	"West Virginia"	"54"	"2022"	"2022"	"May"	"5"	1351
+	"West Virginia"	"54"	"2022"	"2022"	"June"	"6"	1421
+	"West Virginia"	"54"	"2022"	"2022"	"July"	"7"	1496
+	"West Virginia"	"54"	"2022"	"2022"	"August"	"8"	1571
+	"West Virginia"	"54"	"2022"	"2022"	"September"	"9"	1477
+	"West Virginia"	"54"	"2022"	"2022"	"October"	"10"	1432
+	"West Virginia"	"54"	"2022"	"2022"	"November"	"11"	1387
+	"West Virginia"	"54"	"2022"	"2022"	"December"	"12"	1392
+"Total"	"West Virginia"	"54"	"2022"	"2022"			16929
+"Total"	"West Virginia"	"54"					51450
+	"Wisconsin"	"55"	"2020"	"2020"	"January"	"1"	4925
+	"Wisconsin"	"55"	"2020"	"2020"	"February"	"2"	4787
+	"Wisconsin"	"55"	"2020"	"2020"	"March"	"3"	5263
+	"Wisconsin"	"55"	"2020"	"2020"	"April"	"4"	4984
+	"Wisconsin"	"55"	"2020"	"2020"	"May"	"5"	5346
+	"Wisconsin"	"55"	"2020"	"2020"	"June"	"6"	5263
+	"Wisconsin"	"55"	"2020"	"2020"	"July"	"7"	5466
+	"Wisconsin"	"55"	"2020"	"2020"	"August"	"8"	5305
+	"Wisconsin"	"55"	"2020"	"2020"	"September"	"9"	5039
+	"Wisconsin"	"55"	"2020"	"2020"	"October"	"10"	4978
+	"Wisconsin"	"55"	"2020"	"2020"	"November"	"11"	4463
+	"Wisconsin"	"55"	"2020"	"2020"	"December"	"12"	4775
+"Total"	"Wisconsin"	"55"	"2020"	"2020"			60594
+	"Wisconsin"	"55"	"2021"	"2021"	"January"	"1"	4550
+	"Wisconsin"	"55"	"2021"	"2021"	"February"	"2"	4414
+	"Wisconsin"	"55"	"2021"	"2021"	"March"	"3"	5132
+	"Wisconsin"	"55"	"2021"	"2021"	"April"	"4"	5181
+	"Wisconsin"	"55"	"2021"	"2021"	"May"	"5"	5356
+	"Wisconsin"	"55"	"2021"	"2021"	"June"	"6"	5553
+	"Wisconsin"	"55"	"2021"	"2021"	"July"	"7"	5522
+	"Wisconsin"	"55"	"2021"	"2021"	"August"	"8"	5438
+	"Wisconsin"	"55"	"2021"	"2021"	"September"	"9"	5376
+	"Wisconsin"	"55"	"2021"	"2021"	"October"	"10"	5207
+	"Wisconsin"	"55"	"2021"	"2021"	"November"	"11"	4983
+	"Wisconsin"	"55"	"2021"	"2021"	"December"	"12"	5069
+"Total"	"Wisconsin"	"55"	"2021"	"2021"			61781
+	"Wisconsin"	"55"	"2022"	"2022"	"January"	"1"	4718
+	"Wisconsin"	"55"	"2022"	"2022"	"February"	"2"	4480
+	"Wisconsin"	"55"	"2022"	"2022"	"March"	"3"	5116
+	"Wisconsin"	"55"	"2022"	"2022"	"April"	"4"	4850
+	"Wisconsin"	"55"	"2022"	"2022"	"May"	"5"	5041
+	"Wisconsin"	"55"	"2022"	"2022"	"June"	"6"	5144
+	"Wisconsin"	"55"	"2022"	"2022"	"July"	"7"	5254
+	"Wisconsin"	"55"	"2022"	"2022"	"August"	"8"	5501
+	"Wisconsin"	"55"	"2022"	"2022"	"September"	"9"	4994
+	"Wisconsin"	"55"	"2022"	"2022"	"October"	"10"	5007
+	"Wisconsin"	"55"	"2022"	"2022"	"November"	"11"	4953
+	"Wisconsin"	"55"	"2022"	"2022"	"December"	"12"	4991
+"Total"	"Wisconsin"	"55"	"2022"	"2022"			60049
+"Total"	"Wisconsin"	"55"					182424
+	"Wyoming"	"56"	"2020"	"2020"	"January"	"1"	497
+	"Wyoming"	"56"	"2020"	"2020"	"February"	"2"	460
+	"Wyoming"	"56"	"2020"	"2020"	"March"	"3"	488
+	"Wyoming"	"56"	"2020"	"2020"	"April"	"4"	530
+	"Wyoming"	"56"	"2020"	"2020"	"May"	"5"	537
+	"Wyoming"	"56"	"2020"	"2020"	"June"	"6"	516
+	"Wyoming"	"56"	"2020"	"2020"	"July"	"7"	571
+	"Wyoming"	"56"	"2020"	"2020"	"August"	"8"	563
+	"Wyoming"	"56"	"2020"	"2020"	"September"	"9"	515
+	"Wyoming"	"56"	"2020"	"2020"	"October"	"10"	499
+	"Wyoming"	"56"	"2020"	"2020"	"November"	"11"	432
+	"Wyoming"	"56"	"2020"	"2020"	"December"	"12"	520
+"Total"	"Wyoming"	"56"	"2020"	"2020"			6128
+	"Wyoming"	"56"	"2021"	"2021"	"January"	"1"	457
+	"Wyoming"	"56"	"2021"	"2021"	"February"	"2"	445
+	"Wyoming"	"56"	"2021"	"2021"	"March"	"3"	551
+	"Wyoming"	"56"	"2021"	"2021"	"April"	"4"	529
+	"Wyoming"	"56"	"2021"	"2021"	"May"	"5"	549
+	"Wyoming"	"56"	"2021"	"2021"	"June"	"6"	536
+	"Wyoming"	"56"	"2021"	"2021"	"July"	"7"	582
+	"Wyoming"	"56"	"2021"	"2021"	"August"	"8"	561
+	"Wyoming"	"56"	"2021"	"2021"	"September"	"9"	514
+	"Wyoming"	"56"	"2021"	"2021"	"October"	"10"	494
+	"Wyoming"	"56"	"2021"	"2021"	"November"	"11"	493
+	"Wyoming"	"56"	"2021"	"2021"	"December"	"12"	526
+"Total"	"Wyoming"	"56"	"2021"	"2021"			6237
+	"Wyoming"	"56"	"2022"	"2022"	"January"	"1"	430
+	"Wyoming"	"56"	"2022"	"2022"	"February"	"2"	491
+	"Wyoming"	"56"	"2022"	"2022"	"March"	"3"	526
+	"Wyoming"	"56"	"2022"	"2022"	"April"	"4"	489
+	"Wyoming"	"56"	"2022"	"2022"	"May"	"5"	549
+	"Wyoming"	"56"	"2022"	"2022"	"June"	"6"	487
+	"Wyoming"	"56"	"2022"	"2022"	"July"	"7"	560
+	"Wyoming"	"56"	"2022"	"2022"	"August"	"8"	534
+	"Wyoming"	"56"	"2022"	"2022"	"September"	"9"	534
+	"Wyoming"	"56"	"2022"	"2022"	"October"	"10"	494
+	"Wyoming"	"56"	"2022"	"2022"	"November"	"11"	450
+	"Wyoming"	"56"	"2022"	"2022"	"December"	"12"	505
+"Total"	"Wyoming"	"56"	"2022"	"2022"			6049
+"Total"	"Wyoming"	"56"					18414
+"Total"							10945697
+"---"
+"Dataset: Natality, 2016-2022 expanded"
+"Query Parameters:"
+"Month: January; February; March; April; May; June; July; August; September; October; November; December"
+"Year: 2020; 2021; 2022"
+"Group By: State of Residence; Year; Month"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 1,000"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/Natality-expanded.html for more information."
+"---"
+"Query Date: Nov 14, 2023 8:33:44 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Natality on CDC WONDER Online Database. Data are from the Natality Records 2016-2022, as compiled from data provided by"
+"the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed at"
+"http://wonder.cdc.gov/natality-expanded-current.html on Nov 14, 2023 8:33:44 AM"
+"---"
+Caveats:
+"1. Each birth record represents one liveborn infant."

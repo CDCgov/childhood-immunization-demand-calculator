@@ -1,0 +1,35 @@
+[tool.ruff]
+per-file-ignores = {"src/__init__.py" = ["F401"]}
+
+[tool.poetry]
+name = "drugdemand"
+version = "0.1.0"
+description = "Tools for computing expected ranges of drug demand based on assumptions about population make up"
+authors = ["Scott Olesen <ulp7@cdc.gov>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+polars = "0.20.4"
+python-dateutil = "2.8.2"
+numpy = "1.26.3"
+pyyaml = "^6.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.4.4"
+mkdocs = "^1.6.0"
+mkdocstrings = "^0.25.1"
+mkdocs-material = "^9.5.28"
+mkdocstrings-python = "^1.10.5"
+
+[tool.poetry.group.scripts]
+optional = true
+
+[tool.poetry.group.scripts.dependencies]
+pyarrow = "^15.0.0"
+vl-convert-python = "^1.2.4"
+altair = "^5.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
