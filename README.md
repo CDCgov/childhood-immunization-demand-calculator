@@ -18,6 +18,15 @@ Nirsevimab is a long-acting monoclonal antibody that protects infants and young 
 
 The example code for nirsevimab demonstrates how one could use this modeling framework to generate hypothetical projections of nirsevimab demand for the 2024/2025 season.
 
+### Getting started with the example
+
+1. Set up a Python environment with `poetry install`.
+2. Run preprocessing script `scripts/preprocess.py`. This cleans the raw data in `data/` into ready-to-analyze data in `input/`.
+3. Write the scenarios with `scripts/write_scenarios.py`. Examine the parameter sets in `input/scenarios.yaml`.
+4. Run and analyze the scenarios with `scripts/scenarios.py`. This runs the demand calculations for multiple scenarios and then produces tables and figures.
+5. See output in `output/`.
+
+
 ### Population attributes
 
 The modeled population attributes are:
@@ -83,13 +92,6 @@ The scenarios and parameter values are encoded in `scripts/scenarios.py`.
 - Ignore maternal RSV vaccination.
 - Do not includes territories/FASs.
 - Do not model the relationship between patients' demand for treatment, providers' demand for shipments of drug, and manufacturers' shipping timelines.
-
-## Getting started with the example
-
-1. Run preprocessing script `scripts/preprocess.py`. This cleans the raw data in `data/` into ready-to-analyze data in `input/`.
-2. Write the scenarios with `scripts/write_scenarios.py`. Examine the parameter sets in `input/scenarios.yaml`.
-3. Run and analyze the scenarios with `scripts/scenarios.py`. This runs the demand calculations for multiple scenarios and then produces tables and figures.
-4. See output in `output/`.
 
 ## File structure
 
