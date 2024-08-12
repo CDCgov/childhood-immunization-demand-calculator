@@ -21,11 +21,11 @@ The example code for nirsevimab demonstrates how one could use this modeling fra
 ### Getting started with the example
 
 1. Set up a Python environment with `poetry install`.
-2. Run preprocessing script `scripts/preprocess.py`. This cleans the raw data in `data/` into ready-to-analyze data in `input/`.
-3. Write the scenarios with `scripts/write_scenarios.py`. Examine the parameter sets in `input/scenarios.yaml`.
-4. Run and analyze the scenarios with `scripts/scenarios.py`. This runs the demand calculations for multiple scenarios and then produces tables and figures.
-5. See output in `output/`.
-
+2. Run `make`. This will:
+   - Run the preprocessing script `scripts/preprocess.py`, that cleans the raw data in `data/` into ready-to-analyze data in `input/`.
+   - Write the scenarios with `scripts/write_scenarios.py`, using the parameter sets in `input/scenarios.yaml`.
+   - Run and analyze the scenarios with `scripts/scenarios.py`.
+3. See output in `output/`.
 
 ### Population attributes
 
