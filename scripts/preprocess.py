@@ -8,9 +8,13 @@ from pathlib import Path
 
 import polars as pl
 import yaml
+import shutil
 
 # Get path to top level of repo
 repo_dir = Path(__file__).resolve().parents[1]
+
+# just copy over the births
+shutil.copy(repo_dir / "data" / "weights.csv", repo_dir / "input" / "weights.csv")
 
 # load HHS regions ------------------------------------------------------------
 
