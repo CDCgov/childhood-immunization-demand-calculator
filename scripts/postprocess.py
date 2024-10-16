@@ -45,7 +45,10 @@ demand_by_birth = (
     .with_columns(time_type=pl.lit("birth"))
 )
 
-time_width = 150
+# plot properties
+time_width = 100
+bar_width = 3.5
+height = 150
 
 time_axis = alt.Axis(
     format="%b %Y", tickCount="month", labelAngle=90, labelSeparation=1
@@ -55,6 +58,7 @@ row_encoding = alt.Row(
     sort=["lowest_100", "middle_100", "highest_100"],
     title=None,
     header=None,
+    spacing=50,
 )
 
 plot_demand_by_time = (
@@ -65,8 +69,8 @@ plot_demand_by_time = (
         alt.Color("drug_dosage", title="Dosage"),
         row_encoding,
     )
-    .mark_bar(width=5)
-    .properties(width=time_width)
+    .mark_bar(width=bar_width)
+    .properties(width=time_width, height=height)
 )
 
 plot_demand_by_birth = (
@@ -77,11 +81,11 @@ plot_demand_by_birth = (
         alt.Color("drug_dosage"),
         row_encoding,
     )
-    .mark_bar(width=5)
+    .mark_bar(width=bar_width)
     # there are 6 months in the season but 24 months of births
-    .properties(width=24 / 6 * time_width)
+    .properties(width=24 / 6 * time_width, height=height)
 )
 
-alt.hconcat(plot_demand_by_time, plot_demand_by_birth, autosize="pad").save(
+alt.hconcat(plot_demand_by_time, plot_demand_by_birth, spacing=35).save(
     repo_dir / "output" / "demand.png"
 )
