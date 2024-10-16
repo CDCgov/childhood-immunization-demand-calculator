@@ -30,49 +30,51 @@ season_demand = (
 
 season_demand.write_csv(repo_dir / "output" / "season_demand.csv")
 
-# demand by time of demand, and by scenario and dosage
+# demand by time type (demand date or birth date), and by scenario and dosage
 demand_by_time = (
     results.group_by(["scenario", "drug_dosage", "time"])
     .agg(pl.col("n_doses").sum())
     .sort(["scenario", "drug_dosage", "time"])
+    .with_columns(time_type=pl.lit("demand"))
 )
 
-date_axis = alt.Axis(format="%b %Y")
+demand_by_birth = (
+    results.group_by(["scenario", "drug_dosage", "birth_date"])
+    .agg(pl.col("n_doses").sum())
+    .rename({"birth_date": "time"})
+    .with_columns(time_type=pl.lit("birth"))
+)
 
 plot_demand_by_time = (
     alt.Chart(demand_by_time)
     .encode(
-        x=alt.X("time", title="Week of demand", axis=date_axis),
-        y="n_doses",
-        color="drug_dosage",
+        alt.X("time", title="Week of demand", axis=alt.Axis(format="%b %Y")),
+        alt.Y("n_doses", title="No. of doses"),
+        alt.Color("drug_dosage", title="Dosage"),
+        alt.Row(
+            "scenario",
+            sort=["lowest_100", "middle_100", "highest_100"],
+            title=None,
+            header=None,
+        ),
     )
     .mark_bar()
-    .properties(title="Nirsevimab demand, 2024/2025")
-    .facet(row=alt.Facet("scenario", sort=["lowest_100", "middle_100", "highest_100"]))
-    .resolve_scale(y="independent")
-    .properties(title="Nirsevimab demand by week, 2024/2025")
-)
-
-plot_demand_by_time.save(repo_dir / "output" / "demand_by_time.png", ppi=300)
-
-# demand by birth date, and by scenario and dosage
-demand_by_birth = results.group_by(["scenario", "drug_dosage", "birth_date"]).agg(
-    pl.col("n_doses").sum()
 )
 
 plot_demand_by_birth = (
     alt.Chart(demand_by_birth)
     .encode(
-        x=alt.X("birth_date", title="Week of birth", axis=date_axis),
-        y="n_doses",
-        color="drug_dosage",
+        alt.X("time", title="Week of birth", axis=alt.Axis(format="%b %Y")),
+        alt.Y("n_doses", title="No. of doses"),
+        alt.Color("drug_dosage"),
+        alt.Row(
+            "scenario",
+            sort=["lowest_100", "middle_100", "highest_100"],
+            title=None,
+            header=None,
+        ),
     )
     .mark_bar()
-    .properties(title="Nirsevimab demand, 2024/2025")
-    .facet(
-        row=alt.Facet("scenario", sort=["lowest_100", "middle_100", "highest_100"]),
-    )
-    .resolve_scale(y="independent")
 )
 
-plot_demand_by_birth.save(repo_dir / "output" / "demand_by_birth.png", ppi=300)
+(plot_demand_by_time | plot_demand_by_birth).save(repo_dir / "output" / "demand.png")
