@@ -45,36 +45,43 @@ demand_by_birth = (
     .with_columns(time_type=pl.lit("birth"))
 )
 
+time_width = 150
+
+time_axis = alt.Axis(
+    format="%b %Y", tickCount="month", labelAngle=90, labelSeparation=1
+)
+row_encoding = alt.Row(
+    "scenario",
+    sort=["lowest_100", "middle_100", "highest_100"],
+    title=None,
+    header=None,
+)
+
 plot_demand_by_time = (
     alt.Chart(demand_by_time)
     .encode(
-        alt.X("time", title="Week of demand", axis=alt.Axis(format="%b %Y")),
-        alt.Y("n_doses", title="No. of doses"),
+        alt.X("time", title="Week of demand", axis=time_axis),
+        alt.Y("n_doses", title="Weekly no. of doses"),
         alt.Color("drug_dosage", title="Dosage"),
-        alt.Row(
-            "scenario",
-            sort=["lowest_100", "middle_100", "highest_100"],
-            title=None,
-            header=None,
-        ),
+        row_encoding,
     )
-    .mark_bar()
+    .mark_bar(width=5)
+    .properties(width=time_width)
 )
 
 plot_demand_by_birth = (
     alt.Chart(demand_by_birth)
     .encode(
-        alt.X("time", title="Week of birth", axis=alt.Axis(format="%b %Y")),
-        alt.Y("n_doses", title="No. of doses"),
+        alt.X("time", title="Week of birth", axis=time_axis),
+        alt.Y("n_doses", title=None),
         alt.Color("drug_dosage"),
-        alt.Row(
-            "scenario",
-            sort=["lowest_100", "middle_100", "highest_100"],
-            title=None,
-            header=None,
-        ),
+        row_encoding,
     )
-    .mark_bar()
+    .mark_bar(width=5)
+    # there are 6 months in the season but 24 months of births
+    .properties(width=24 / 6 * time_width)
 )
 
-(plot_demand_by_time | plot_demand_by_birth).save(repo_dir / "output" / "demand.png")
+alt.hconcat(plot_demand_by_time, plot_demand_by_birth, autosize="pad").save(
+    repo_dir / "output" / "demand.png"
+)
