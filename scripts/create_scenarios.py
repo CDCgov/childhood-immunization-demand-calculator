@@ -11,7 +11,7 @@ repo_dir = Path(__file__).resolve().parents[1]
 
 # parameters constant across all scenarios
 fixed_pars = {
-    "uptake": 0.8,
+    "uptake": 1.0,
     "season_start": date(2024, 10, 1),
     "season_end": date(2025, 3, 31),
     "births_path": str(repo_dir / "input" / "births.csv"),

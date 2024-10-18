@@ -70,7 +70,7 @@ The demand over populations can be summarized to produce aggregate demand for ea
 To illustrate a range of demand projections, the following parameters were varied across scenarios:
 
 - Time interval used for birth cohorts: In the main analysis, weekly birth cohorts were used. Monthly birth cohorts were used to explore the effect of that model structure on projections.
-- Uptake: In the main analysis, a robust 80% uptake was assumed.
+- Uptake: In the main analysis, 100% uptake was assumed, in order to estimate the total number of eligible children, rather than demand.
 - Prevalence of "high risk" criteria: Ranged from 2% to 4% prevalence across scenarios.
 - Weight-for-age tables (i.e., distribution of times after birth that a population reaches 5 kg): WHO growth charts were used in the main analysis. CDC growth charts were used in sensitivity analyses.
 - Delays from eligibility to immunization: In the main analysis, 80% of eligible children had a <1 week delay and the remaining 20% had a 2-month delay.
