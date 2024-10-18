@@ -8,7 +8,7 @@ The modeling framework centers around _populations_ of children. Each population
 
 The code consists of these classes:
 
-- `Population` is a data class contains a population's size (i.e., number of people) and attributes (e.g., birth date, "willing"-ness).
+- `Population` is a data class contains a population's size (i.e., number of people) and attributes (e.g., birth date, will uptake).
 - `IndependentSubpopulations` is a data manager that subdivides a list of `Population`s into smaller populations based on lists of attributes.
 - `DrugDosage`, `DrugQuantity`, and `DrugDemand` are data classes that account for dosages (e.g., 50mg vs. 100mg), numbers of doses, and times of demand.
 
@@ -32,13 +32,13 @@ The example code for nirsevimab demonstrates how one could use this modeling fra
 The modeled population attributes are:
 
 - **Birth date**: Populations are grouped into weekly birth cohorts between March 2023 and March 2025.
-- **"Willingness"** (yes/no): Only "willing," eligible populations demand nirsevimab. "Willing" is merely a convenience label; the real-world implication is more about which populations are willing and able to receive the immunization.
-- **Risk level** (low/high): High risk children in their second season are eligible for 2x100mg dosage.
+- **Uptake** (yes/no): Only some proportion of eligible children will actually receive nirsevimab. (Note that this parameter is not the same as the proportion of children who could be eligible who receive nirsevimab, which is also a function of the delay from eligibility to immunization.)
+- **Risk level** (high/not high): High risk children in their second season are eligible for 2x100mg dosage.
 - **Weight-for-age**: Age (in weeks, or months) at which infant will reach 5 kg weight.
 - **Delay from eligibility to immunization**: Some children born during the season are immunized at birth, while others are immunized at a later checkup. Some children born before the season will be immunized at the start of the season, while others will be immunized somewhat later.
 - **Place of birth**: 50 states and DC, optionally grouped into HHS regions. In certain scenarios, nirsevimab may be made available at different times in different parts of the country.
 
-In this implementation of the model, there are approximately 80,000 populations, one for each combination of birth week, willingness, risk level, weight-for-age, delay, and place of birth. Every child in the US is modeled as being part of one of these populations, and the members of each populations are treated as identical for purposes of the model.
+In this implementation of the model, there are approximately 80,000 populations, one for each combination of birth week, binary uptake, risk level, weight-for-age, delay, and place of birth. Every child in the US is modeled as being part of one of these populations, and the members of each populations are treated as identical for purposes of the model.
 
 ### Demand function
 
@@ -46,7 +46,7 @@ In this implementation of the model, there are approximately 80,000 populations,
 
 In this implementation, the demand function follows this logic:
 
-1. If a population is not "willing," it does not demand nirsevimab.
+1. If a population will not uptake, it does not demand nirsevimab.
 2. A "first eligibility" date is computed for each population.
    - If a population is born before the start of the RSV season, their first eligibility is the start of the RSV season.
    - If a population is born during the RSV season, their first eligibility is at birth.
@@ -70,7 +70,7 @@ The demand over populations can be summarized to produce aggregate demand for ea
 To illustrate a range of demand projections, the following parameters were varied across scenarios:
 
 - Time interval used for birth cohorts: In the main analysis, weekly birth cohorts were used. Monthly birth cohorts were used to explore the effect of that model structure on projections.
-- Uptake (i.e., proportion of each birth cohort that is "willing"): In the main analysis, a robust 80% uptake was assumed.
+- Uptake: In the main analysis, a robust 80% uptake was assumed.
 - Prevalence of "high risk" criteria: Ranged from 2% to 4% prevalence across scenarios.
 - Weight-for-age tables (i.e., distribution of times after birth that a population reaches 5 kg): WHO growth charts were used in the main analysis. CDC growth charts were used in sensitivity analyses.
 - Delays from eligibility to immunization: In the main analysis, 80% of eligible children had a <1 week delay and the remaining 20% had a 2-month delay.
@@ -88,7 +88,7 @@ The scenarios and parameter values are encoded in `scripts/scenarios.py`.
   - Interpolate weekly birth counts from monthly counts (see `script/preprocess.py`).
     - _N.B._: NCHS does not make births by exact date available for analysis, not even to CDC employees.
 - Weight by age: Use R packages `childsds` and `anthro`, via the R script `scripts/pct_heavier_by_age.R`.
-- Assume population attributes are statistically independent (e.g., if 80% of children are willing, and 20% of patients delay immunization by 8 weeks after eligibility, then 64% of each cohort are immunized at birth and 16% are immunized 8 weeks later, and 20% are not immunized).
+- Assume population attributes are statistically independent (e.g., if 80% of children will uptake, and 20% of patients delay immunization by 8 weeks after eligibility, then 64% of each cohort are immunized at birth and 16% are immunized 8 weeks later, and 20% are not immunized).
 - Ignore maternal RSV vaccination.
 - Do not includes territories/FASs.
 - Do not model the relationship between patients' demand for treatment, providers' demand for shipments of drug, and manufacturers' shipping timelines.

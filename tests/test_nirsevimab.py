@@ -38,7 +38,10 @@ def test_all():
         pl.read_parquet("tests/data/results.parquet")
         .with_columns(interval=pl.lit("month"))
         .filter(pl.col("n_doses") > 0)
+        # note that "willing" is present as a column name in the test data; this is `will_receive`
+        # in the code
         .filter(pl.col("willing"))
+        .rename({"willing": "will_receive"})
     )
 
     season_starts = [
@@ -88,7 +91,7 @@ def test_in_season():
     result = NirsevimabCalculator.calculate_demand(
         Population(
             size=size,
-            attributes={"birth_date": birth_date, "age_at_5kg": 1, "willing": True},
+            attributes={"birth_date": birth_date, "age_at_5kg": 1, "will_uptake": True},
         ),
         pars={
             "season_start": date(2024, 10, 1),
@@ -110,7 +113,7 @@ def test_after_season():
     result = NirsevimabCalculator.calculate_demand(
         Population(
             size=size,
-            attributes={"birth_date": birth_date, "age_at_5kg": 1, "willing": True},
+            attributes={"birth_date": birth_date, "age_at_5kg": 1, "will_uptake": True},
         ),
         pars={
             "season_start": date(2024, 10, 1),
@@ -133,7 +136,7 @@ def test_before_season():
     result = NirsevimabCalculator.calculate_demand(
         Population(
             size=size,
-            attributes={"birth_date": birth_date, "age_at_5kg": 1, "willing": True},
+            attributes={"birth_date": birth_date, "age_at_5kg": 1, "will_uptake": True},
         ),
         pars={
             "season_start": date(2024, 10, 1),
@@ -163,7 +166,7 @@ def test_feb_2024():
             attributes={
                 "birth_date": birth_date,
                 "age_at_5kg": 1,
-                "willing": True,
+                "will_uptake": True,
                 "risk_level": "high",
             },
         ),
@@ -200,7 +203,7 @@ def test_simple_delay():
     result1 = NirsevimabCalculator.calculate_demand(
         Population(
             size=size,
-            attributes={"birth_date": birth_date, "age_at_5kg": 1, "willing": True},
+            attributes={"birth_date": birth_date, "age_at_5kg": 1, "will_uptake": True},
         ),
         pars={
             "season_start": date(2024, 10, 1),
@@ -217,7 +220,7 @@ def test_simple_delay():
             attributes={
                 "birth_date": birth_date,
                 "age_at_5kg": 1,
-                "willing": True,
+                "will_uptake": True,
                 "delay": 1,
             },
         ),
@@ -241,7 +244,7 @@ def test_delay_props():
 
     pop = Population(
         size=size,
-        attributes={"birth_date": birth_date, "age_at_5kg": 1, "willing": True},
+        attributes={"birth_date": birth_date, "age_at_5kg": 1, "will_uptake": True},
     )
 
     subpops = IndependentSubpopulations(

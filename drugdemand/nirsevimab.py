@@ -103,8 +103,8 @@ class NirsevimabCalculator:
         Returns:
             DrugDemand: amount and timing of demand, or None
         """
-        # if population is not willing, stop right away
-        if not pop.attributes["willing"]:
+        # if population will not uptake, stop right away
+        if not pop.attributes["will_receive"]:
             return None
 
         # season start and end can be a single date (same for all HHS regions), or
@@ -211,9 +211,9 @@ class NirsevimabCalculator:
 
         # parse scenario parameters into attribute levels for the subpopulations. eg, if
         # scenario parameter "uptake" is 80%, that means each population will be subdivided
-        # 80/20 into "willing" and not "willing" subpopulations.
+        # 80/20 into `will_receive=True` and `False` subpopulations.
         subpop_attribute_levels = {
-            "willing": {True: pars["uptake"], False: 1.0 - pars["uptake"]},
+            "will_receive": {True: pars["uptake"], False: 1.0 - pars["uptake"]},
             "risk_level": {
                 "high": pars["p_high_risk"],
                 "baseline": 1 - pars["p_high_risk"],
