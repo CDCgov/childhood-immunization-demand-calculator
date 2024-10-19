@@ -7,10 +7,7 @@ import altair as alt
 # Get path to top level of repo
 repo_dir = Path(__file__).resolve().parents[1]
 
-results_raw = pl.read_csv(repo_dir / "output" / "results.csv", try_parse_dates=True)
-
-# we only need to report on the weekly results, not monthly
-results = results_raw.filter(pl.col("interval") == pl.lit("week"))
+results = pl.read_csv(repo_dir / "output" / "results.csv", try_parse_dates=True)
 
 # summarize demand over the season, by scenario and dosage
 season_demand = (
