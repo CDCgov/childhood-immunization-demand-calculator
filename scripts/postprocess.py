@@ -52,7 +52,7 @@ time_axis = alt.Axis(
 )
 row_encoding = alt.Row(
     "scenario",
-    sort=["lowest_100", "middle_100", "highest_100"],
+    sort=["middle_100", "lowest_100", "highest_100"],
     title=None,
     header=None,
     spacing=50,
@@ -84,5 +84,5 @@ plot_demand_by_birth = (
 )
 
 alt.hconcat(plot_demand_by_time, plot_demand_by_birth, spacing=35).save(
-    repo_dir / "output" / "demand.png"
+    repo_dir / "output" / "demand.png", ppi=300
 )
