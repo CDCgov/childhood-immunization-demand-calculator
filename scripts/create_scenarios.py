@@ -12,8 +12,8 @@ repo_dir = Path(__file__).resolve().parents[1]
 # parameters constant across all scenarios
 fixed_pars = {
     "uptake": 1.0,
-    "season_start": date(2024, 10, 1),
-    "season_end": date(2025, 3, 31),
+    "season_start": date(2024, 9, 29),
+    "season_end": date(2025, 3, 23),
     "births_path": str(repo_dir / "input" / "births.csv"),
     "weights_path": str(repo_dir / "data" / "weights.csv"),
     "interval": "week",  # birth cohort interval
