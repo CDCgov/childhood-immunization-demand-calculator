@@ -20,13 +20,7 @@ def test_all():
     parameters, expect some particular outcomes"""
     births = (
         pl.read_parquet("tests/data/births.parquet")
-        .with_columns(
-            pl.when(pl.col("hhs_region").is_in([4, 6]))
-            .then(pl.lit("4_or_6"))
-            .otherwise(pl.lit("rest_of_US"))
-            .alias("hhs_region")
-        )
-        .group_by(["hhs_region", "date"])
+        .group_by(["date"])
         .agg(pl.col("births").sum())
     )
     weights = (
@@ -42,41 +36,48 @@ def test_all():
         # in the code
         .filter(pl.col("willing"))
         .rename({"willing": "will_receive"})
+        # note that old data had both a uniform start and starts separated by HHS region; we have
+        # jettisoned that but want to keep the same test data file
+        .filter(pl.col("season_start") == pl.lit("uniform"))
+        .group_by(
+            [
+                "season_start",
+                "interval",
+                "birth_date",
+                "will_receive",
+                "risk_level",
+                "age_at_5kg",
+                "drug_dosage",
+                "time",
+                "uptake",
+                "p_high_risk",
+            ]
+        )
+        .agg([pl.col("n_doses").sum(), pl.col("size").sum()])
     )
-
-    season_starts = [
-        date(2024, 10, 1),
-        {"4_or_6": date(2024, 9, 1), "rest_of_US": date(2024, 10, 1)},
-    ]
 
     scenario_pars = [
         {
             "uptake": uptake,
             "p_high_risk": p_high_risk,
-            "season_start": season_start,
+            "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
             "interval": "month",
         }
         for uptake in [0.3, 0.5, 0.7]
         for p_high_risk in [0.01]
-        for season_start in season_starts
     ]
 
-    with pytest.warns(UserWarning, match="Converting season date"):
-        results = (
-            pl.concat(
-                [
-                    NirsevimabCalculator(pars, births, weights, add_pars=True).results
-                    for pars in scenario_pars
-                ]
-            )
-            .drop("season_end")
-            .with_columns(
-                pl.col("season_start").replace(
-                    {"non-uniform": "4_6_first", "2024-10-01": "uniform"}
-                )
-            )
+    results = (
+        pl.concat(
+            [
+                NirsevimabCalculator(pars, births, weights, add_pars=True).results
+                for pars in scenario_pars
+            ]
         )
+        .drop("season_end")
+        .with_columns(pl.col("season_start").replace({"2024-10-01": "uniform"}))
+    )
 
     polars.testing.assert_frame_equal(
         results, expected_results, check_row_order=False, check_column_order=False
