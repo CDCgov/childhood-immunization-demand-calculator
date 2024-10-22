@@ -183,7 +183,7 @@ def test_feb_2024():
             },
         ),
         pars={
-            "season_start": date(2024, 10, 1),
+            "season_start": season_start,
             "season_end": date(2025, 3, 31),
             "interval": "month",
             "uptake": 1.0,
