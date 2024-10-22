@@ -60,7 +60,9 @@ births = (
     )
     .with_columns(date=pl.date(pl.col("year"), pl.col("month"), 1))
     # only include cohorts that could reasonably get nirsevimab
-    .filter(pl.col("date") >= datetime.date(2022, 10, 1))
+    .filter(
+        pl.col("date").is_between(datetime.date(2023, 3, 1), datetime.date(2025, 4, 1))
+    )
     .with_columns(interval=pl.lit("month"))
     .select(["interval", "hhs_region", "date", "births"])
 )
