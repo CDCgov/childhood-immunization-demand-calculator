@@ -36,7 +36,6 @@ The modeled population attributes are:
 - **Risk level** (high/not high): High risk children in their second season are eligible for 2x100mg dosage.
 - **Weight-for-age**: Age (in weeks, or months) at which infant will reach 5 kg weight.
 - **Delay from eligibility to immunization**: Some children born during the season are immunized at birth, while others are immunized at a later checkup. Some children born before the season will be immunized at the start of the season, while others will be immunized somewhat later.
-- **Place of birth**: 50 states and DC, optionally grouped into HHS regions. In certain scenarios, nirsevimab may be made available at different times in different parts of the country.
 
 In this implementation of the model, there are approximately 80,000 populations, one for each combination of birth week, binary uptake, risk level, weight-for-age, delay, and place of birth. Every child in the US is modeled as being part of one of these populations, and the members of each populations are treated as identical for purposes of the model.
 
