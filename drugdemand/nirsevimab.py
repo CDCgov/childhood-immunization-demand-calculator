@@ -19,8 +19,7 @@ class NirsevimabCalculator:
         Args:
             pars (dict): Parameter->value mapping
             births (pl.DataFrame): data for birth cohorts. columns are
-              `hhs_region` (integer 1 through 10), `date` (YYYY-MM-DD),
-              and `births`. csv format.
+              `date` (YYYY-MM-DD), and `births`. csv format.
             weights (pl.DataFrame): data for weights by age. columns are
               `age` (in terms of `pars["interval"]`), `p_gt_5kg` (proportion of children
               that are greater than 5kg weight by that age), `interval` (should be same
@@ -36,7 +35,7 @@ class NirsevimabCalculator:
         assert all(x in self.pars for x in ["uptake", "p_high_risk", "season_start"])
 
         # validate data
-        assert set(["hhs_region", "date", "births"]) <= set(self.births.columns)
+        assert set(["date", "births"]) <= set(self.births.columns)
         assert isinstance(self.births["date"].dtype, pl.Date)
         assert set(["age", "p_gt_5kg", "interval"]) <= set(self.weights.columns)
         assert all(self.weights["interval"] == pars["interval"])
@@ -77,19 +76,6 @@ class NirsevimabCalculator:
         else:
             raise NotImplementedError()
 
-    @staticmethod
-    def get_date_by_region(pop: Population, par) -> date:
-        if isinstance(par, date):
-            # if the parameter is just a date, use that
-            return par
-        elif isinstance(par, dict):
-            # if a dictionary, expect that the region is a key
-            assert "hhs_region" in pop.attributes
-            region = pop.attributes["hhs_region"]
-            assert region in par
-            assert isinstance(par[region], date)
-            return par[region]
-
     @classmethod
     def calculate_demand(cls, pop: Population, pars: dict) -> DrugDemand | None:
         """Calculate amount and timing of demand, for a single population
@@ -107,19 +93,14 @@ class NirsevimabCalculator:
         if not pop.attributes["will_receive"]:
             return None
 
-        # season start and end can be a single date (same for all HHS regions), or
-        # different for the different regions
-        season_start = cls.get_date_by_region(pop, pars["season_start"])
-        season_end = cls.get_date_by_region(pop, pars["season_end"])
-
         # when is the population eligible?
-        if pop.attributes["birth_date"] < season_start:
+        if pop.attributes["birth_date"] < pars["season_start"]:
             # if born before the season, eligibility date is start of the season
-            eligibility_date = season_start
-        elif season_start <= pop.attributes["birth_date"] <= season_end:
+            eligibility_date = pars["season_start"]
+        elif pars["season_start"] <= pop.attributes["birth_date"] <= pars["season_end"]:
             # if born during season, eligibility date is birth date
             eligibility_date = pop.attributes["birth_date"]
-        elif season_end < pop.attributes["birth_date"]:
+        elif pars["season_end"] < pop.attributes["birth_date"]:
             # if born after the season, you aren't eligible for anything; return zero demand
             return None
 
@@ -134,7 +115,7 @@ class NirsevimabCalculator:
             )
 
         # if immunization would be after the season, there is no demand
-        if immunization_date > season_end:
+        if immunization_date > pars["season_end"]:
             return None
 
         # get age and weight at the immunization date
@@ -150,7 +131,7 @@ class NirsevimabCalculator:
 
         # some sanity checks
         assert age_mo_at_immunization >= 0
-        assert season_start <= immunization_date <= season_end
+        assert pars["season_start"] <= immunization_date <= pars["season_end"]
 
         # determine dosage eligibility based on age (in months), weight at time of immunization,
         # and risk level
@@ -204,7 +185,7 @@ class NirsevimabCalculator:
         birth_cohorts = [
             Population(
                 size=x["births"],
-                attributes={"birth_date": x["date"], "hhs_region": x["hhs_region"]},
+                attributes={"birth_date": x["date"]},
             )
             for x in births.iter_rows(named=True)
         ]

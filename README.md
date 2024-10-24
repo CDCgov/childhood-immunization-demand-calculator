@@ -36,7 +36,6 @@ The modeled population attributes are:
 - **Risk level** (high/not high): High risk children in their second season are eligible for 2x100mg dosage.
 - **Weight-for-age**: Age (in weeks, or months) at which infant will reach 5 kg weight.
 - **Delay from eligibility to immunization**: Some children born during the season are immunized at birth, while others are immunized at a later checkup. Some children born before the season will be immunized at the start of the season, while others will be immunized somewhat later.
-- **Place of birth**: 50 states and DC, optionally grouped into HHS regions. In certain scenarios, nirsevimab may be made available at different times in different parts of the country.
 
 In this implementation of the model, there are approximately 80,000 populations, one for each combination of birth week, binary uptake, risk level, weight-for-age, delay, and place of birth. Every child in the US is modeled as being part of one of these populations, and the members of each populations are treated as identical for purposes of the model.
 
@@ -70,7 +69,7 @@ The demand over populations can be summarized to produce aggregate demand for ea
 To illustrate a range of demand projections, the following parameters were varied across scenarios:
 
 - Time interval used for birth cohorts: In the main analysis, weekly birth cohorts were used. Monthly birth cohorts were used to explore the effect of that model structure on projections.
-- Uptake: In the main analysis, a robust 80% uptake was assumed.
+- Uptake: In the main analysis, 100% uptake was assumed, in order to estimate the total number of eligible children, rather than demand.
 - Prevalence of "high risk" criteria: Ranged from 2% to 4% prevalence across scenarios.
 - Weight-for-age tables (i.e., distribution of times after birth that a population reaches 5 kg): WHO growth charts were used in the main analysis. CDC growth charts were used in sensitivity analyses.
 - Delays from eligibility to immunization: In the main analysis, 80% of eligible children had a <1 week delay and the remaining 20% had a 2-month delay.

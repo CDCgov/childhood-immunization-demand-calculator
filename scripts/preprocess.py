@@ -1,4 +1,4 @@
-# - Group births by HHS region and birth month
+# - Group births by birth month
 # - Interpolate births by week
 #   - Assume births in the month are spread evenly over days in the month
 #   - Assign births to weeks by summing up births on each day
@@ -7,7 +7,6 @@ import datetime
 from pathlib import Path
 
 import polars as pl
-import yaml
 import shutil
 
 # Get path to top level of repo
@@ -15,11 +14,6 @@ repo_dir = Path(__file__).resolve().parents[1]
 
 # just copy over the births
 shutil.copy(repo_dir / "data" / "weights.csv", repo_dir / "input" / "weights.csv")
-
-# load HHS regions ------------------------------------------------------------
-
-with open(repo_dir / "data" / "hhs_regions.yaml") as f:
-    hhs_regions = yaml.safe_load(f)
 
 # parse the Wonder data -------------------------------------------------------
 # data by state, year, month
@@ -36,13 +30,9 @@ births_2020_2022 = (
             "Births": "births",
         }
     )
-    .with_columns(
-        # determine which states are in HHS regions 4 or 6, vs. rest of the US
-        hhs_region=pl.col("state").replace(hhs_regions, default=0)
-    )
-    .group_by(["hhs_region", "year", "month"])
+    .group_by(["year", "month"])
     .agg(pl.col("births").sum().cast(pl.Float64))
-    .select(["hhs_region", "year", "month", "births"])
+    .select(["year", "month", "births"])
 )
 
 # pull out the 2022 data, which we'll replicate for 2023 and 2024
@@ -60,9 +50,11 @@ births = (
     )
     .with_columns(date=pl.date(pl.col("year"), pl.col("month"), 1))
     # only include cohorts that could reasonably get nirsevimab
-    .filter(pl.col("date") >= datetime.date(2022, 10, 1))
+    .filter(
+        pl.col("date").is_between(datetime.date(2023, 3, 1), datetime.date(2025, 4, 1))
+    )
     .with_columns(interval=pl.lit("month"))
-    .select(["interval", "hhs_region", "date", "births"])
+    .select(["interval", "date", "births"])
 )
 
 
@@ -102,7 +94,7 @@ births_by_week = (
         week=epiweek(pl.col("date")), month_start=pl.col("date").dt.month_start()
     )
     .join(births_avg_daily, on="month_start")
-    .group_by(["hhs_region", "week"])
+    .group_by(["week"])
     .agg(
         days_in_week=pl.col("week").count(),
         births=pl.col("avg_births_per_day").sum(),
@@ -111,11 +103,11 @@ births_by_week = (
     .filter(pl.col("days_in_week") == 7)
     .with_columns(interval=pl.lit("week"))
     .rename({"week": "date"})
-    .select(["interval", "hhs_region", "date", "births"])
+    .select(["interval", "date", "births"])
 )
 
 (
     pl.concat([births, births_by_week], how="vertical")
-    .sort(["interval", "hhs_region", "date"])
+    .sort(["interval", "date"])
     .write_csv(repo_dir / "input" / "births.csv")
 )
