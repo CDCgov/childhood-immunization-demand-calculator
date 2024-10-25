@@ -6,11 +6,7 @@ import pytest
 from dateutil.relativedelta import relativedelta
 from datetime import date
 
-from drugdemand import (
-    DrugDemand,
-    IndependentSubpopulations,
-    Population,
-)
+from drugdemand import DrugDemand, PopulationManager
 
 from drugdemand.nirsevimab import NirsevimabCalculator
 
@@ -90,14 +86,12 @@ def test_in_season():
     birth_date = datetime.date(2024, 11, 1)
     size = 100
     result = NirsevimabCalculator.calculate_demand(
-        Population(
-            size=size,
-            attributes={
-                "birth_date": birth_date,
-                "age_at_5kg": 1,
-                "will_receive": True,
-            },
-        ),
+        pop={
+            "birth_date": birth_date,
+            "age_at_5kg": 1,
+            "will_receive": True,
+        },
+        size=size,
         pars={
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
@@ -116,14 +110,12 @@ def test_after_season():
     birth_date = datetime.date(2025, 11, 1)
     size = 100
     result = NirsevimabCalculator.calculate_demand(
-        Population(
-            size=size,
-            attributes={
-                "birth_date": birth_date,
-                "age_at_5kg": 1,
-                "will_receive": True,
-            },
-        ),
+        size=size,
+        pop={
+            "birth_date": birth_date,
+            "age_at_5kg": 1,
+            "will_receive": True,
+        },
         pars={
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
@@ -143,14 +135,12 @@ def test_before_season():
     season_start = datetime.date(2024, 10, 1)
     size = 100
     result = NirsevimabCalculator.calculate_demand(
-        Population(
-            size=size,
-            attributes={
-                "birth_date": birth_date,
-                "age_at_5kg": 1,
-                "will_receive": True,
-            },
-        ),
+        size=size,
+        pop={
+            "birth_date": birth_date,
+            "age_at_5kg": 1,
+            "will_receive": True,
+        },
         pars={
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
@@ -174,15 +164,13 @@ def test_feb_2024():
     season_start = datetime.date(2024, 10, 1)
     size = 100
     result = NirsevimabCalculator.calculate_demand(
-        Population(
-            size=size,
-            attributes={
-                "birth_date": birth_date,
-                "age_at_5kg": 1,
-                "will_receive": True,
-                "risk_level": "high",
-            },
-        ),
+        size=size,
+        pop={
+            "birth_date": birth_date,
+            "age_at_5kg": 1,
+            "will_receive": True,
+            "risk_level": "high",
+        },
         pars={
             "season_start": season_start,
             "season_end": date(2025, 3, 31),
@@ -214,14 +202,12 @@ def test_simple_delay():
     birth_date = datetime.date(2024, 11, 1)
     size = 100
     result1 = NirsevimabCalculator.calculate_demand(
-        Population(
-            size=size,
-            attributes={
-                "birth_date": birth_date,
-                "age_at_5kg": 1,
-                "will_receive": True,
-            },
-        ),
+        size=size,
+        pop={
+            "birth_date": birth_date,
+            "age_at_5kg": 1,
+            "will_receive": True,
+        },
         pars={
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
@@ -232,15 +218,13 @@ def test_simple_delay():
     )
 
     result2 = NirsevimabCalculator.calculate_demand(
-        Population(
-            size=size,
-            attributes={
-                "birth_date": birth_date,
-                "age_at_5kg": 1,
-                "will_receive": True,
-                "delay": 1,
-            },
-        ),
+        size=size,
+        pop={
+            "birth_date": birth_date,
+            "age_at_5kg": 1,
+            "will_receive": True,
+            "delay": 1,
+        },
         pars={
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
@@ -259,15 +243,17 @@ def test_delay_props():
     birth_date = datetime.date(2024, 11, 1)
     size = 100
 
-    pop = Population(
+    pm = PopulationManager(
         size=size,
-        attributes={"birth_date": birth_date, "age_at_5kg": 1, "will_receive": True},
+        char_props={
+            "birth_date": {birth_date: 1.0},
+            "age_at_5kg": {1, 1.0},
+            "delay": {0: 0.8, 1: 0.2},
+        },
     )
 
-    subpops = IndependentSubpopulations(
-        pop, attribute_levels={"delay": {0: 0.8, 1: 0.2}}
-    )
-
+    # need to use map here
+    # probably want to allow for args and kwargs
     results = [
         NirsevimabCalculator.calculate_demand(
             subpop,

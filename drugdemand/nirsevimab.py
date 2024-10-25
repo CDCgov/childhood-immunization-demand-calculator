@@ -77,7 +77,9 @@ class NirsevimabCalculator:
             raise NotImplementedError()
 
     @classmethod
-    def calculate_demand(cls, pop: Population, pars: dict) -> DrugDemand | None:
+    def calculate_demand(
+        cls, pop: dict[str, str], size: float, pars: dict
+    ) -> DrugDemand | None:
         """Calculate amount and timing of demand, for a single population
 
         see https://downloads.aap.org/AAP/PDF/Nirsevemab-Visual-Guide.pdf
