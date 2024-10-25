@@ -1,7 +1,9 @@
-import itertools
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Callable
+from collections.abc import Iterator
 import numpy as np
+
+Pop = dict[str, Any]
 
 
 @dataclass
@@ -42,69 +44,124 @@ class DrugDemand:
     time: Any
 
 
-@dataclass
-class Population:
-    """Group of person identical for purposes of the calculation"""
+class CharacteristicProportions(dict):
+    """A dictionary `{characteristic: {level: proportion}}`. Characteristics are
+    strings, levels are anything (hashable), and proportions are floats. Proportions
+    for a characteristic should sum to 1."""
 
-    size: float
-    attributes: dict = None
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.validate()
 
-    def __post_init__(self):
-        if self.attributes is None:
-            self.attributes = {}
+    def validate(self):
+        # all keys (characteristics) should be strings
+        assert all(isinstance(k, str) for k in self.keys())
+        # all values (proportions) should be dictionaries
+        assert all(isinstance(v, dict) for v in self.values())
+        # all proportions of a characteristic should sum to 1
+        for char, props in self.items():
+            assert np.isclose(sum(props.values()), 1.0)
 
 
-@dataclass
-class IndependentSubpopulations:
-    """Statistically independent populations
+class PopulationManager:
+    def __init__(self, size: float, char_props: CharacteristicProportions):
+        self.char_props = char_props
 
-    There are multiple attributes (eg "risk_level", "state"). Each attribute has a proportion
-    associated to each level (eg 1% of population is high risk, 10% live in California). Assume
-    that attributes are statistically independent, ie, the size of a population is equal to the
-    product of the prevalences of each of its attributes.
+        # create a canonical ordering of the characteristics
+        self.chars = list(sorted(self.char_props.keys()))
 
-    Args:
-        size (float): Size of the population
-        attribute_levels (dict[str, dict[Any, float]]): Mapping from attribute to
-            a second mapping. Second mapping is from levels to proportions. E.g.,
-            `{"risk_level": {"high": 0.1, "low": 0.9}}`.
-    """
+        # set up the data, with an initial population with no characteristics
+        self.data = {}
+        self.set_size({}, size)
 
-    population: Population
-    attribute_levels: dict[str, dict[Any, float]]
+    def get_size(self, pop: Pop) -> float:
+        return self.data[self._pop_to_tuple(pop)]
 
-    def __post_init__(self):
-        self.validate_attribute_levels()
+    def set_size(self, pop: Pop, value: float) -> None:
+        self.data[self._pop_to_tuple(pop)] = value
 
-    def validate_attribute_levels(self, eps=1e-6):
-        for attribute, levels in self.attribute_levels.items():
-            assert attribute not in self.population.attributes
-            assert np.isclose(
-                sum(levels.values()), 1.0
-            ), f"proportions for attribute {attribute} sum to {sum(levels.values())}, not 1"
+    def delete_pop(self, pop: Pop) -> None:
+        del self.data[self._pop_to_tuple(pop)]
 
-    def __iter__(self):
-        """Iterate over subpopulations
+    def pops(self) -> Iterator[Pop]:
+        return map(self._tuple_to_pop, self.data.keys())
+
+    def _tuple_to_pop(self, levels: tuple[str, ...]) -> Pop:
+        return dict(zip(self.chars, levels))
+
+    def _pop_to_tuple(self, pop: Pop) -> tuple[str, ...]:
+        return tuple(pop.get(char, None) for char in self.chars)
+
+    def map(
+        self, f: Callable[[Pop, float], dict[str, Any]]
+    ) -> Iterator[tuple[Pop, Any]]:
+        """Map a function over all subpopulations
+
+        Args:
+            f (Callable[dict[str, Any], dict[str, Any]]): The function to be mapped. It
+              should take a dictionary `{characteristic: level}` and the population
+              size and return a
+              dictionary `{"characteristic": characteristic, "value": value}`. If
+              `characteristic` is None, it means the function could successfully
+              interpret the `{characteristic: level}` dictionary. If not, it should
+              be the key of the characteristic that caused the failure and that
+              the population needs to be partitioned on.
 
         Yields:
-            dict: keys are "size" (a float) and "attributes" (a dictionary mapping from attributes
-              to levels, eg `{"risk_level": "high"}`)
+            Iterator: 2-tuples of the population (defined by its `{characteristic: level}`
+              dictionary) and the output of the `f` function for that population
         """
-        # create a list, one item per attribute
-        # each is a list of lists, each sublist is one level & prop
-        attribute_level_iters = [
-            [(attribute, level, prop) for level, prop in levels_props.items()]
-            for attribute, levels_props in self.attribute_levels.items()
-        ]
+        pop_stack = list(self.pops())
 
-        # "subpop" is a list of attribute, level, proportion
-        for subpop in itertools.product(*attribute_level_iters):
-            subpop_prop = np.prod([x for _, _, x in subpop])
+        while pop_stack:
+            pop = pop_stack.pop()
+            result = f(pop, self.get_size(pop))
+            assert set(result.keys()) == {"characteristic", "value"}
+            if result["characteristic"] is None:
+                yield pop, result["value"]
+            else:
+                new_pops = self.partition(pop, result["characteristic"])
+                pop_stack = new_pops + pop_stack
 
-            if subpop_prop > 0:
-                subpop_attributes = {attribute: level for attribute, level, _ in subpop}
+    def partition(self, pop: Pop, char: str) -> [Pop]:
+        """Partition a population on a characteristic
 
-                yield Population(
-                    size=self.population.size * subpop_prop,
-                    attributes=self.population.attributes | subpop_attributes,
-                )
+        Args:
+            pop (tuple): the population ID, i.e., a tuple of characteristic levels
+            char (str): The characteristic to partition on
+
+        Returns:
+            list: A list of new population IDs
+        """
+        # the characteristic we are partitioning on should not have a level
+        assert pop[char] is None
+
+        parent_size = self.get_size(pop)
+
+        new_pops = []
+        for level, prop in self.char_props[char].items():
+            # new population is the parent population, but with this characteristic at this level
+            new_pop = pop | {char: level}
+            new_pops.append(new_pop)
+            self.set_size(new_pop, prop * parent_size)
+
+        self.delete_pop(pop)
+        return new_pops
+
+    @staticmethod
+    def update_tuple(x: tuple, i: int, new_val: Any) -> tuple:
+        """Given a tuple, return a new tuple with one value replaced
+
+        Args:
+            x (tuple): input tuple
+            i (int): index of the value to replace
+            new_val (Any): value to insert
+
+        Returns:
+            tuple: tuple of same length, with new value
+        """
+        assert 0 <= i < len(x)
+        out = tuple(x[:i]) + (new_val,) + tuple(x[i + 1 :])
+        assert len(out) == len(x)
+        assert out[i] == new_val
+        return out
