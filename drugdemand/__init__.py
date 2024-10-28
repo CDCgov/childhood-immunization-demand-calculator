@@ -3,8 +3,6 @@ from typing import Any, Callable
 from collections.abc import Iterator
 import numpy as np
 
-Pop = dict[str, Any]
-
 
 @dataclass
 class DrugDosage:
@@ -63,6 +61,19 @@ class CharacteristicProportions(dict):
             assert np.isclose(sum(props.values()), 1.0)
 
 
+class PopulationID(dict):
+    """Extension of the dictionary class to represent a population ID. The keys
+    are strings (characteristics) and the values are anything (levels).
+    """
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.validate()
+
+    def validate(self):
+        assert all(isinstance(k, str) for k in self.keys())
+
+
 class PopulationManager:
     def __init__(self, size: float, char_props: CharacteristicProportions):
         self.char_props = char_props
@@ -74,27 +85,27 @@ class PopulationManager:
         self.data = {}
         self.set_size({}, size)
 
-    def get_size(self, pop: Pop) -> float:
+    def get_size(self, pop: PopulationID) -> float:
         return self.data[self._pop_to_tuple(pop)]
 
-    def set_size(self, pop: Pop, value: float) -> None:
+    def set_size(self, pop: PopulationID, value: float) -> None:
         self.data[self._pop_to_tuple(pop)] = value
 
-    def delete_pop(self, pop: Pop) -> None:
+    def delete_pop(self, pop: PopulationID) -> None:
         del self.data[self._pop_to_tuple(pop)]
 
-    def pops(self) -> Iterator[Pop]:
+    def pops(self) -> Iterator[PopulationID]:
         return map(self._tuple_to_pop, self.data.keys())
 
-    def _tuple_to_pop(self, levels: tuple[str, ...]) -> Pop:
+    def _tuple_to_pop(self, levels: tuple[str, ...]) -> PopulationID:
         return dict(zip(self.chars, levels))
 
-    def _pop_to_tuple(self, pop: Pop) -> tuple[str, ...]:
+    def _pop_to_tuple(self, pop: PopulationID) -> tuple[str, ...]:
         return tuple(pop.get(char, None) for char in self.chars)
 
     def map(
-        self, f: Callable[[Pop, float], dict[str, Any]]
-    ) -> Iterator[tuple[Pop, Any]]:
+        self, f: Callable[[PopulationID, float], dict[str, Any]]
+    ) -> Iterator[tuple[PopulationID, Any]]:
         """Map a function over all subpopulations
 
         Args:
@@ -123,7 +134,7 @@ class PopulationManager:
                 new_pops = self.partition(pop, result["characteristic"])
                 pop_stack = new_pops + pop_stack
 
-    def partition(self, pop: Pop, char: str) -> [Pop]:
+    def partition(self, pop: PopulationID, char: str) -> [PopulationID]:
         """Partition a population on a characteristic
 
         Args:
