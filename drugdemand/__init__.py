@@ -74,6 +74,14 @@ class PopulationID(dict):
         assert all(isinstance(k, str) for k in self.keys())
 
 
+@dataclass
+class PopulationResult:
+    """Result of a calculation on a population"""
+
+    char_to_resolve: str = None
+    value: Any = None
+
+
 class PopulationManager:
     def __init__(self, size: float, char_props: CharacteristicProportions):
         self.char_props = char_props
@@ -104,19 +112,17 @@ class PopulationManager:
         return tuple(pop.get(char, None) for char in self.chars)
 
     def map(
-        self, f: Callable[[PopulationID, float], dict[str, Any]]
+        self, f: Callable[[PopulationID, float], PopulationResult]
     ) -> Iterator[tuple[PopulationID, Any]]:
         """Map a function over all subpopulations
 
         Args:
-            f (Callable[dict[str, Any], dict[str, Any]]): The function to be mapped. It
-              should take a dictionary `{characteristic: level}` and the population
-              size and return a
-              dictionary `{"characteristic": characteristic, "value": value}`. If
-              `characteristic` is None, it means the function could successfully
-              interpret the `{characteristic: level}` dictionary. If not, it should
-              be the key of the characteristic that caused the failure and that
-              the population needs to be partitioned on.
+            f (Callable[dict[str, Any], PopulationResult]): The function to be
+              mapped. It should take a PopulationID and the population size and return
+              a PopulationResult. If `result.resolved`, then the function was able to
+              compute a result based on the PopulationID. If not, then the function
+              needs the characteristic `result.char_to_resolve` to be further partitioned,
+              to return a value.
 
         Yields:
             Iterator: 2-tuples of the population (defined by its `{characteristic: level}`
@@ -127,11 +133,10 @@ class PopulationManager:
         while pop_stack:
             pop = pop_stack.pop()
             result = f(pop, self.get_size(pop))
-            assert set(result.keys()) == {"characteristic", "value"}
-            if result["characteristic"] is None:
-                yield pop, result["value"]
+            if result.char_to_resolve is None:
+                yield pop, result.value
             else:
-                new_pops = self.partition(pop, result["characteristic"])
+                new_pops = self.partition(pop, result.char_to_resolve)
                 pop_stack = new_pops + pop_stack
 
     def partition(self, pop: PopulationID, char: str) -> [PopulationID]:
@@ -158,21 +163,3 @@ class PopulationManager:
 
         self.delete_pop(pop)
         return new_pops
-
-    @staticmethod
-    def update_tuple(x: tuple, i: int, new_val: Any) -> tuple:
-        """Given a tuple, return a new tuple with one value replaced
-
-        Args:
-            x (tuple): input tuple
-            i (int): index of the value to replace
-            new_val (Any): value to insert
-
-        Returns:
-            tuple: tuple of same length, with new value
-        """
-        assert 0 <= i < len(x)
-        out = tuple(x[:i]) + (new_val,) + tuple(x[i + 1 :])
-        assert len(out) == len(x)
-        assert out[i] == new_val
-        return out

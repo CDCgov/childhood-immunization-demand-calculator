@@ -1,6 +1,6 @@
 import pytest
 
-from drugdemand import PopulationManager, CharacteristicProportions
+from drugdemand import PopulationResult, PopulationManager, CharacteristicProportions
 
 
 def test_char_prop_validate():
@@ -44,17 +44,6 @@ def test_pm_init():
     assert pm.data == {(None, None): 100}
 
 
-def test_update_tuple():
-    x = (1, 2, 3)
-    assert PopulationManager.update_tuple(x, 1, "foo") == (1, "foo", 3)
-
-    with pytest.raises(Exception):
-        PopulationManager.update_tuple(x, 3, "foo")
-
-    with pytest.raises(Exception):
-        PopulationManager.update_tuple(x, -1, "foo")
-
-
 def test_pm_divide1():
     pm = PopulationManager(
         100,
@@ -68,11 +57,11 @@ def test_pm_divide1():
 
     def f(pop_dict, size):
         if pop_dict["risk_level"] is None:
-            return {"characteristic": "risk_level", "value": None}
+            return PopulationResult(char_to_resolve="risk_level")
         elif pop_dict["risk_level"] == "low":
-            return {"characteristic": None, "value": 0.1 * size}
+            return PopulationResult(value=0.1 * size)
         elif pop_dict["risk_level"] == "high":
-            return {"characteristic": None, "value": 2.0 * size}
+            return PopulationResult(value=2.0 * size)
 
     results = list(pm.map(f))
 
@@ -98,27 +87,27 @@ def test_pm_divide_twice():
 
     def f_risk(pop_dict, size):
         if size == 0:
-            return {"characteristic": None, "value": 0}
+            return PopulationResult(value=0)
 
         if pop_dict["risk_level"] is None:
-            return {"characteristic": "risk_level", "value": None}
+            return PopulationResult(char_to_resolve="risk_level")
         elif pop_dict["risk_level"] == "low":
-            return {"characteristic": None, "value": 0.1 * size}
+            return PopulationResult(value=0.1 * size)
         elif pop_dict["risk_level"] == "high":
-            return {"characteristic": None, "value": 2.0 * size}
+            return PopulationResult(value=2.0 * size)
 
     # do the first partitions
     list(pm.map(f_risk))
 
     def f_age(pop_dict, size):
         if pop_dict["age_group"] is None:
-            return {"characteristic": "age_group", "value": None}
+            return PopulationResult(char_to_resolve="age_group")
         elif pop_dict["age_group"] == "infant":
-            return {"characteristic": None, "value": 0}
+            return PopulationResult(value=0)
         elif pop_dict["age_group"] == "child":
-            return {"characteristic": None, "value": 0}
+            return PopulationResult(value=0)
         elif pop_dict["age_group"] == "adult":
-            return {"characteristic": None, "value": size}
+            return PopulationResult(value=size)
 
     results = list(pm.map(f_age))
 
