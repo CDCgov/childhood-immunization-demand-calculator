@@ -11,11 +11,12 @@ repo_dir = Path(__file__).resolve().parents[1]
 
 # parameters constant across all scenarios
 fixed_pars = {
-    "uptake": 0.8,
-    "season_start": date(2024, 10, 1),
-    "season_end": date(2025, 3, 31),
+    "uptake": 1.0,
+    "season_start": date(2024, 9, 29),
+    "season_end": date(2025, 3, 23),
     "births_path": str(repo_dir / "input" / "births.csv"),
     "weights_path": str(repo_dir / "data" / "weights.csv"),
+    "interval": "week",  # birth cohort interval
 }
 
 # parameters that vary between scenarios
@@ -28,43 +29,18 @@ varying_pars = [
             0: 0.8,
             8: 0.2,
         },  # in form delay_in_weeks: proportion_with_that_delay
-        "interval": "week",  # birth cohort interval
     },
     {
         "scenario": "middle_100",
         "growth_chart": "WHO",
         "p_high_risk": 0.03,
         "delays": {0: 0.8, 4: 0.2},
-        "interval": "week",
     },
     {
         "scenario": "lowest_100",
         "growth_chart": "CDC",
         "p_high_risk": 0.02,
         "delays": {0: 1.0},
-        "interval": "week",
-    },
-    {
-        "scenario": "highest_100",
-        "growth_chart": "WHO",
-        "p_high_risk": 0.04,
-        # month delays have different delays, assuming 1mo=4wk
-        "delays": {0: 0.8, 2: 0.2},
-        "interval": "month",
-    },
-    {
-        "scenario": "middle_100",
-        "growth_chart": "WHO",
-        "p_high_risk": 0.03,
-        "delays": {0: 0.8, 1: 0.2},
-        "interval": "month",
-    },
-    {
-        "scenario": "lowest_100",
-        "growth_chart": "CDC",
-        "p_high_risk": 0.02,
-        "delays": {0: 1.0},
-        "interval": "month",
     },
 ]
 

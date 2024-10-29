@@ -7,10 +7,7 @@ import altair as alt
 # Get path to top level of repo
 repo_dir = Path(__file__).resolve().parents[1]
 
-results_raw = pl.read_csv(repo_dir / "output" / "results.csv", try_parse_dates=True)
-
-# we only need to report on the weekly results, not monthly
-results = results_raw.filter(pl.col("interval") == pl.lit("week"))
+results = pl.read_csv(repo_dir / "output" / "results.csv", try_parse_dates=True)
 
 # summarize demand over the season, by scenario and dosage
 season_demand = (
@@ -55,7 +52,7 @@ time_axis = alt.Axis(
 )
 row_encoding = alt.Row(
     "scenario",
-    sort=["lowest_100", "middle_100", "highest_100"],
+    sort=["middle_100", "lowest_100", "highest_100"],
     title=None,
     header=None,
     spacing=50,
@@ -87,5 +84,5 @@ plot_demand_by_birth = (
 )
 
 alt.hconcat(plot_demand_by_time, plot_demand_by_birth, spacing=35).save(
-    repo_dir / "output" / "demand.png"
+    repo_dir / "output" / "demand.png", ppi=300
 )

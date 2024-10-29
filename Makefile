@@ -3,7 +3,7 @@ MAIN_OUTPUT = output/results.csv
 PACKAGE_CODE = drugdemand/__init__.py drugdemand/nirsevimab.py
 SCENARIOS = input/scenarios.yaml
 INPUT = input/births.csv input/weights.csv
-RAW_DATA = data/Natality,\ 2016-2022\ expanded.txt data/weights.csv data/hhs_regions.yaml
+RAW_DATA = data/Natality,\ 2016-2022\ expanded.txt data/weights.csv
 
 .PHONY: clean
 
