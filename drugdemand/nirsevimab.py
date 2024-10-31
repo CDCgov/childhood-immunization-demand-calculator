@@ -78,7 +78,7 @@ class NirsevimabCalculator:
 
     @classmethod
     def calculate_demand(
-        cls, pop: dict[str, str], size: float, pars: dict
+        cls, pop: PopulationID, size: float, pars: dict
     ) -> DrugDemand | None:
         """Calculate amount and timing of demand, for a single population
 
