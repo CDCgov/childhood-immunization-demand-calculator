@@ -61,7 +61,7 @@ row_encoding = alt.Row(
 plot_demand_by_time = (
     alt.Chart(demand_by_time)
     .encode(
-        alt.X("time", title="Week of demand", axis=time_axis),
+        alt.X("time", title="Week of immunization", axis=time_axis),
         alt.Y("n_doses", title="Weekly no. of doses"),
         alt.Color("drug_dosage", title="Dosage"),
         row_encoding,
@@ -73,7 +73,7 @@ plot_demand_by_time = (
 plot_demand_by_birth = (
     alt.Chart(demand_by_birth)
     .encode(
-        alt.X("time", title="Week of birth", axis=time_axis),
+        alt.X("time", title="Birth cohort (week of birth)", axis=time_axis),
         alt.Y("n_doses", title=None),
         alt.Color("drug_dosage"),
         row_encoding,
