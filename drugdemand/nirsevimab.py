@@ -249,14 +249,14 @@ class NirsevimabCalculator:
         # generate demand events
         events = [
             {"population_id": pop, "demand": demand}
-            for pop, demand in pm.map(cls.calculate_demand)
+            for pop, demand in pm.map(cls.calculate_demand, pars=pars)
         ]
 
         # "results" is a data frame. each row is a demand event, augmented with columns about the
         # population attributes and the scenarios. (this is why we need separate names for scenario
         # parameter, plural "delays" vs. population attribute, singular "delay")
         results = pl.from_dicts(
-            event["population_id"]
+            cls._clean_pop_id(event["population_id"])
             | event["demand"].__dict__
             | {"size": pm.get_size(event["population_id"])}
             for event in events
@@ -264,6 +264,15 @@ class NirsevimabCalculator:
         )
 
         return results
+
+    @staticmethod
+    def _clean_pop_id(x: PopulationID) -> PopulationID:
+        keys = list(x.keys())
+        values = [
+            x[k] if not isinstance(x[k], UnresolvedCharacteristic) else "unresolved"
+            for k in keys
+        ]
+        return PopulationID(zip(keys, values))
 
     @staticmethod
     def add_pars_to_results(results: pl.DataFrame, pars: dict) -> pl.DataFrame:

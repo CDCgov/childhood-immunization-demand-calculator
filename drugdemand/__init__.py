@@ -93,6 +93,9 @@ class UnresolvedCharacteristic:
     def __hash__(self):
         return hash("UnresolvedCharacteristic")
 
+    def __str__(self):
+        return "unresolved"
+
 
 class PopulationManager:
     def __init__(self, size: float, char_props: CharacteristicProportions):

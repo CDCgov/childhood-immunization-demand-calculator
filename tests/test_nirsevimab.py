@@ -11,6 +11,7 @@ from drugdemand import (
     PopulationManager,
     CharacteristicProportions,
     PopulationResult,
+    UnresolvedCharacteristic,
 )
 
 from drugdemand.nirsevimab import NirsevimabCalculator
@@ -55,6 +56,8 @@ def test_all():
             ]
         )
         .agg([pl.col("n_doses").sum(), pl.col("size").sum()])
+        # need to add an explicit delay column
+        .with_columns(delay=0.0)
     )
 
     scenario_pars = [
@@ -79,6 +82,9 @@ def test_all():
         .drop("season_end")
         .with_columns(pl.col("season_start").replace({"2024-10-01": "uniform"}))
     )
+
+    expected_results.write_parquet("tmp_expected.parquet")
+    results.write_parquet("tmp_results.parquet")
 
     polars.testing.assert_frame_equal(
         results, expected_results, check_row_order=False, check_column_order=False
@@ -272,3 +278,9 @@ def test_delay_props():
             ("100mg", 20.0, birth_date + relativedelta(months=1)),
         ]
     )
+
+
+def test_clean_pop_id():
+    pop = {"age": "adult", "risk_level": UnresolvedCharacteristic()}
+    clean_pop = {"age": "adult", "risk_level": "unresolved"}
+    assert NirsevimabCalculator._clean_pop_id(pop) == clean_pop
