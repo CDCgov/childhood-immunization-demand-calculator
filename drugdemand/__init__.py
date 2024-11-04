@@ -49,15 +49,16 @@ class CharacteristicProportions(dict):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.validate()
+        self.validate(self)
 
-    def validate(self):
+    @staticmethod
+    def validate(x):
         # all keys (characteristics) should be strings
-        assert all(isinstance(k, str) for k in self.keys())
+        assert all(isinstance(k, str) for k in x.keys())
         # all values (proportions) should be dictionaries
-        assert all(isinstance(v, dict) for v in self.values())
+        assert all(isinstance(v, dict) for v in x.values())
         # all proportions of a characteristic should sum to 1
-        for char, props in self.items():
+        for char, props in x.items():
             assert np.isclose(sum(props.values()), 1.0)
 
 

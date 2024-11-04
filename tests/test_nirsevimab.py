@@ -6,7 +6,12 @@ import pytest
 from dateutil.relativedelta import relativedelta
 from datetime import date
 
-from drugdemand import DrugDemand, PopulationManager
+from drugdemand import (
+    DrugDemand,
+    PopulationManager,
+    CharacteristicProportions,
+    PopulationResult,
+)
 
 from drugdemand.nirsevimab import NirsevimabCalculator
 
@@ -90,6 +95,7 @@ def test_in_season():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
         size=size,
         pars={
@@ -100,9 +106,8 @@ def test_in_season():
             "uptake": 1.0,
         },
     )
-    expected_result = DrugDemand("50mg", size, birth_date)
 
-    assert result == expected_result
+    assert result == PopulationResult(value=DrugDemand("50mg", size, birth_date))
 
 
 def test_after_season():
@@ -115,6 +120,7 @@ def test_after_season():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
         pars={
             "season_start": date(2024, 10, 1),
@@ -125,7 +131,7 @@ def test_after_season():
         },
     )
 
-    assert result is None
+    assert result == PopulationResult(value=None)
 
 
 def test_before_season():
@@ -140,6 +146,7 @@ def test_before_season():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
         pars={
             "season_start": date(2024, 10, 1),
@@ -149,9 +156,8 @@ def test_before_season():
             "uptake": 1.0,
         },
     )
-    expected_result = DrugDemand("100mg", size, season_start)
 
-    assert result == expected_result
+    assert result == PopulationResult(value=DrugDemand("100mg", size, season_start))
 
 
 def test_feb_2024():
@@ -170,6 +176,7 @@ def test_feb_2024():
             "age_at_5kg": 1,
             "will_receive": True,
             "risk_level": "high",
+            "delay": 0.0,
         },
         pars={
             "season_start": season_start,
@@ -178,9 +185,8 @@ def test_feb_2024():
             "uptake": 1.0,
         },
     )
-    expected_result = DrugDemand("100mg", size * 2, season_start)
 
-    assert result == expected_result
+    assert result == PopulationResult(value=DrugDemand("100mg", size * 2, season_start))
 
 
 def test_parse_delay():
@@ -199,6 +205,11 @@ def test_parse_delay():
 def test_simple_delay():
     """A population with a 1-month delay has a demand one month after a population otherwise
     identical but with no delay"""
+    pars = {
+        "season_start": date(2024, 10, 1),
+        "season_end": date(2025, 3, 31),
+        "interval": "month",
+    }
     birth_date = datetime.date(2024, 11, 1)
     size = 100
     result1 = NirsevimabCalculator.calculate_demand(
@@ -207,14 +218,9 @@ def test_simple_delay():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
-        pars={
-            "season_start": date(2024, 10, 1),
-            "season_end": date(2025, 3, 31),
-            "interval": "month",
-            "p_high_risk": 0,
-            "uptake": 1.0,
-        },
+        pars=pars,
     )
 
     result2 = NirsevimabCalculator.calculate_demand(
@@ -225,6 +231,30 @@ def test_simple_delay():
             "will_receive": True,
             "delay": 1,
         },
+        pars=pars,
+    )
+
+    assert result2.value.time == result1.value.time + relativedelta(months=1)
+
+
+def test_delay_props():
+    """Separate a birth cohort into two populations with different delays. Confirm that you
+    end up with two demand events, in the correct proportion"""
+    birth_date = datetime.date(2024, 11, 1)
+    size = 100
+
+    char_props = {
+        "birth_date": {birth_date: 1.0},
+        "age_at_5kg": {1: 1.0},
+        "delay": {0: 0.8, 1: 0.2},
+        "will_receive": {True: 1.0},
+    }
+    CharacteristicProportions.validate(char_props)
+
+    pm = PopulationManager(size=size, char_props=char_props)
+
+    results = pm.map(
+        NirsevimabCalculator.calculate_demand,
         pars={
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
@@ -234,41 +264,7 @@ def test_simple_delay():
         },
     )
 
-    assert result2.time == result1.time + relativedelta(months=1)
-
-
-def test_delay_props():
-    """Separate a birth cohort into two populations with different delays. Confirm that you
-    end up with two demand events, in the correct proportion"""
-    birth_date = datetime.date(2024, 11, 1)
-    size = 100
-
-    pm = PopulationManager(
-        size=size,
-        char_props={
-            "birth_date": {birth_date: 1.0},
-            "age_at_5kg": {1, 1.0},
-            "delay": {0: 0.8, 1: 0.2},
-        },
-    )
-
-    # need to use map here
-    # probably want to allow for args and kwargs
-    results = [
-        NirsevimabCalculator.calculate_demand(
-            subpop,
-            pars={
-                "season_start": date(2024, 10, 1),
-                "season_end": date(2025, 3, 31),
-                "interval": "month",
-                "p_high_risk": 0,
-                "uptake": 1.0,
-            },
-        )
-        for subpop in subpops
-    ]
-
-    dose_dates = [(x.drug_dosage, x.n_doses, x.time) for x in results]
+    dose_dates = [(x.drug_dosage, x.n_doses, x.time) for pop, x in results]
     assert set(dose_dates) == set(
         [
             ("50mg", 80.0, birth_date),
