@@ -82,6 +82,17 @@ class PopulationResult:
     value: Any = None
 
 
+class UnresolvedCharacteristic:
+    """Marker for a population characteristic not yet resolved"""
+
+    def __eq__(self, other):
+        """All UnresolvedCharacteristics are equal, for ease of testing"""
+        return isinstance(other, UnresolvedCharacteristic)
+
+    def __hash__(self):
+        return hash("UnresolveCharacteristic")
+
+
 class PopulationManager:
     def __init__(self, size: float, char_props: CharacteristicProportions):
         self.char_props = char_props
@@ -109,10 +120,10 @@ class PopulationManager:
         return dict(zip(self.chars, levels))
 
     def _pop_to_tuple(self, pop: PopulationID) -> tuple[str, ...]:
-        return tuple(pop.get(char, None) for char in self.chars)
+        return tuple(pop.get(char, UnresolvedCharacteristic()) for char in self.chars)
 
     def map(
-        self, f: Callable[[PopulationID, float], PopulationResult]
+        self, f: Callable[[PopulationID, float], PopulationResult], *args, **kwargs
     ) -> Iterator[tuple[PopulationID, Any]]:
         """Map a function over all subpopulations
 
@@ -123,6 +134,7 @@ class PopulationManager:
               compute a result based on the PopulationID. If not, then the function
               needs the characteristic `result.char_to_resolve` to be further partitioned,
               to return a value.
+            args, kwargs: further arguments passed to `f`
 
         Yields:
             Iterator: 2-tuples of the population (defined by its `{characteristic: level}`
@@ -132,7 +144,9 @@ class PopulationManager:
 
         while pop_stack:
             pop = pop_stack.pop()
-            result = f(pop, self.get_size(pop))
+            result = f(pop, self.get_size(pop), *args, **kwargs)
+            assert isinstance(result, PopulationResult)
+
             if result.char_to_resolve is None:
                 yield pop, result.value
             else:
@@ -150,7 +164,7 @@ class PopulationManager:
             list: A list of new population IDs
         """
         # the characteristic we are partitioning on should not have a level
-        assert pop[char] is None
+        assert isinstance(pop[char], UnresolvedCharacteristic)
 
         parent_size = self.get_size(pop)
 
