@@ -103,6 +103,10 @@ class NirsevimabCalculator:
         # parameter validity checks
         assert "interval" in pars
 
+        # zero-size populations get nothing
+        if size == 0:
+            return PopulationResult(value=None)
+
         # if population will not uptake, stop right away
         if isinstance(pop["will_receive"], UnresolvedCharacteristic):
             return PopulationResult(char_to_resolve="will_receive")

@@ -30,6 +30,7 @@ def test_all():
         .rename({"age_mo": "age"})
         .with_columns(interval=pl.lit("month"))
     )
+
     expected_results = (
         pl.read_parquet("tests/data/results.parquet")
         .with_columns(interval=pl.lit("month"))
@@ -83,11 +84,34 @@ def test_all():
         .with_columns(pl.col("season_start").replace({"2024-10-01": "uniform"}))
     )
 
-    expected_results.write_parquet("tmp_expected.parquet")
-    results.write_parquet("tmp_results.parquet")
+    # older results were made when we articulated every single population, so now we just want to check
+    # that demand is the same by date and by birth cohort
+    common_groups = ["season_start", "interval", "drug_dosage", "uptake", "p_high_risk"]
 
+    expected_by_birth = expected_results.group_by(common_groups + ["birth_date"]).agg(
+        pl.col("n_doses").sum()
+    )
+    current_by_birth = results.group_by(common_groups + ["birth_date"]).agg(
+        pl.col("n_doses").sum()
+    )
     polars.testing.assert_frame_equal(
-        results, expected_results, check_row_order=False, check_column_order=False
+        expected_by_birth,
+        current_by_birth,
+        check_column_order=False,
+        check_row_order=False,
+    )
+
+    expected_by_time = expected_results.group_by(common_groups + ["time"]).agg(
+        pl.col("n_doses").sum()
+    )
+    current_by_time = results.group_by(common_groups + ["time"]).agg(
+        pl.col("n_doses").sum()
+    )
+    polars.testing.assert_frame_equal(
+        expected_by_time,
+        current_by_time,
+        check_column_order=False,
+        check_row_order=False,
     )
 
 
