@@ -90,7 +90,7 @@ class UnresolvedCharacteristic:
         return isinstance(other, UnresolvedCharacteristic)
 
     def __hash__(self):
-        return hash("UnresolveCharacteristic")
+        return hash("UnresolvedCharacteristic")
 
 
 class PopulationManager:
