@@ -1,10 +1,8 @@
 from drugdemand import (
-    PopulationResult,
     DrugDemand,
     PopulationManager,
     PopulationID,
     CharacteristicProportions,
-    UnresolvedCharacteristic,
 )
 
 import polars as pl
@@ -84,9 +82,7 @@ class NirsevimabCalculator:
             raise NotImplementedError()
 
     @classmethod
-    def calculate_demand(
-        cls, pop: PopulationID, size: float, pars: dict
-    ) -> PopulationResult:
+    def calculate_demand(cls, pop: PopulationID, size: float, pars: dict) -> DrugDemand:
         """Calculate amount and timing of demand, for a single population
 
         see https://downloads.aap.org/AAP/PDF/Nirsevemab-Visual-Guide.pdf
@@ -97,28 +93,21 @@ class NirsevimabCalculator:
             pars (dict): simulation parameters
 
         Returns:
-            PopulationResult: with values of type DrugDemand (amount and timing of
-            demand), or None
+            DrugDemand | None: amount and timing of demand, or no demand
         """
         # parameter validity checks
         assert "interval" in pars
 
         # zero-size populations get nothing
         if size == 0:
-            return PopulationResult(value=None)
+            return None
 
         # if population will not uptake, stop right away
-        if isinstance(pop["will_receive"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="will_receive")
-
         if not pop["will_receive"]:
-            return PopulationResult(value=None)
+            return None
 
         # when is the population eligible? depends on population birth date and season
         # start time
-        if isinstance(pop["birth_date"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="birth_date")
-
         if pop["birth_date"] < pars["season_start"]:
             # if born before the season, eligibility date is start of the season
             eligibility_date = pars["season_start"]
@@ -127,12 +116,9 @@ class NirsevimabCalculator:
             eligibility_date = pop["birth_date"]
         elif pars["season_end"] < pop["birth_date"]:
             # if born after the season, you aren't eligible for anything; return zero demand
-            return PopulationResult(value=None)
+            return None
 
         # compute the immunization date, which is eligibility date plus delay, if any
-        if isinstance(pop["delay"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="delay")
-
         assert pop["delay"] >= 0
         immunization_date = eligibility_date + cls.relativedelta(
             pop["delay"], pars["interval"]
@@ -140,7 +126,7 @@ class NirsevimabCalculator:
 
         # if immunization would be after the season, there is no demand
         if immunization_date > pars["season_end"]:
-            return PopulationResult(value=None)
+            return None
 
         # get age and weight at the immunization date
         # age in months at immunization determines eligibility, even if the simulation uses weeks
@@ -152,8 +138,6 @@ class NirsevimabCalculator:
             pop["birth_date"], immunization_date, pars["interval"]
         )
 
-        if isinstance(pop["age_at_5kg"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="age_at_5kg")
         is_5kg_at_immunization = pop["age_at_5kg"] <= age_at_immunization
 
         # some sanity checks
@@ -163,28 +147,16 @@ class NirsevimabCalculator:
         # determine dosage eligibility based on age (in months), weight at time of immunization,
         # and risk level
         if 0 <= age_mo_at_immunization < 8 and not is_5kg_at_immunization:
-            return PopulationResult(
-                value=DrugDemand(
-                    drug_dosage="50mg", n_doses=size, time=immunization_date
-                )
-            )
+            return DrugDemand(drug_dosage="50mg", n_doses=size, time=immunization_date)
         elif 0 <= age_mo_at_immunization < 8 and is_5kg_at_immunization:
-            return PopulationResult(
-                value=DrugDemand(
-                    drug_dosage="100mg", n_doses=size, time=immunization_date
-                )
-            )
-        elif isinstance(pop["risk_level"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="risk_level")
+            return DrugDemand(drug_dosage="100mg", n_doses=size, time=immunization_date)
         elif 8 <= age_mo_at_immunization < 19 and pop["risk_level"] == "high":
             # note the 2xsize here
-            return PopulationResult(
-                value=DrugDemand(
-                    drug_dosage="100mg", n_doses=2 * size, time=immunization_date
-                )
+            return DrugDemand(
+                drug_dosage="100mg", n_doses=2 * size, time=immunization_date
             )
         else:
-            return PopulationResult(value=None)
+            return None
 
     @staticmethod
     def validate_delays(delays: dict):
@@ -269,14 +241,19 @@ class NirsevimabCalculator:
 
         return results
 
-    @staticmethod
-    def _clean_pop_id(x: PopulationID) -> PopulationID:
+    @classmethod
+    def _clean_pop_id(cls, x: PopulationID) -> dict:
         keys = list(x.keys())
-        values = [
-            x[k] if not isinstance(x[k], UnresolvedCharacteristic) else "unresolved"
-            for k in keys
-        ]
-        return PopulationID(zip(keys, values))
+        values = [cls._clean_char_level(x[k]) for k in keys]
+        return dict(zip(keys, values))
+
+    @staticmethod
+    def _clean_char_level(x):
+        """Ensure every characteristic level is compatible with a polars df"""
+        if isinstance(x, (str, float, int, date, bool)) or x is None:
+            return x
+        else:
+            return str(x)
 
     @staticmethod
     def add_pars_to_results(results: pl.DataFrame, pars: dict) -> pl.DataFrame:
