@@ -208,17 +208,8 @@ class NirsevimabCalculator:
             x["age"]: x["p_gt_5kg"] for x in weights.iter_rows(named=True)
         }
 
-        if "delays" in pars:
-            cls.validate_delays(pars["delays"])
-            # need to do this renaming to avoid collisions on parameter vs. attribute name
-            # all other parameters have different names from their corresponding attributes
-            # eg "p_high_risk" vs. "risk_level"
-            #
-            # thus the scenario parameter is called plural "delays", but the population attribute
-            # is singular "delay"
-            char_props["delay"] = pars["delays"]
-        else:
-            char_props["delay"] = {0.0: 1.0}
+        cls.validate_delays(pars["delay_props"])
+        char_props["delay"] = pars["delay_props"]
 
         pm = PopulationManager(size=total_n_births, char_props=char_props)
 
@@ -232,9 +223,11 @@ class NirsevimabCalculator:
         # population attributes and the scenarios. (this is why we need separate names for scenario
         # parameter, plural "delays" vs. population attribute, singular "delay")
         results = pl.from_dicts(
-            cls._clean_pop_id(event["population_id"])
-            | event["demand"].__dict__
-            | {"size": pm.get_size(event["population_id"])}
+            cls._clean_df_dict(
+                event["population_id"]
+                | event["demand"].__dict__
+                | {"size": pm.get_size(event["population_id"])}
+            )
             for event in events
             if event["demand"] is not None
         )
@@ -242,21 +235,23 @@ class NirsevimabCalculator:
         return results
 
     @classmethod
-    def _clean_pop_id(cls, x: PopulationID) -> dict:
+    def _clean_df_dict(cls, x: dict) -> dict:
+        """Polars data frames can only have certain kinds of values. Ensure that
+        every value has a compatible type."""
         keys = list(x.keys())
-        values = [cls._clean_char_level(x[k]) for k in keys]
+        values = [cls._clean_df_dict_value(x[k]) for k in keys]
         return dict(zip(keys, values))
 
     @staticmethod
-    def _clean_char_level(x):
-        """Ensure every characteristic level is compatible with a polars df"""
+    def _clean_df_dict_value(x):
+        """Ensure every value is compatible with a polars df"""
         if isinstance(x, (str, float, int, date, bool)) or x is None:
             return x
         else:
             return str(x)
 
-    @staticmethod
-    def add_pars_to_results(results: pl.DataFrame, pars: dict) -> pl.DataFrame:
+    @classmethod
+    def add_pars_to_results(cls, results: pl.DataFrame, pars: dict) -> pl.DataFrame:
         # check for collisions: there shouldn't be the same column names in the population
         # attributes and the scenario parameters
         assert len(set(results.columns) & set(pars)) == 0
@@ -277,5 +272,8 @@ class NirsevimabCalculator:
                     pars[x] = "non-uniform"
 
         return results.with_columns(
-            [pl.lit(value).alias(key) for key, value in pars.items()]
+            [
+                pl.lit(cls._clean_df_dict_value(value)).alias(key)
+                for key, value in pars.items()
+            ]
         )

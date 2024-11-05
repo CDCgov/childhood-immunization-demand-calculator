@@ -13,17 +13,17 @@ nested_parameters:
   - scenario: highest_100
     growth_chart: WHO
     p_high_risk: 0.04
-    delays: # 20% delay by 8 weeks
+    delay_props: # 20% delay by 8 weeks
       0: 0.8
       8: 0.2
   - scenario: middle_100
     growth_chart: WHO
     p_high_risk: 0.03
-    delays:
+    delay_props:
       0: 0.8
       4: 0.2
   - scenario: lowest_100
     growth_chart: CDC
     p_high_risk: 0.02
-    delays:
+    delay_props:
       0: 1.0
