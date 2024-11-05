@@ -26,15 +26,6 @@ def test_popid_basic_patterns():
     assert pop.get("foo", None) is None
     # can get length
     assert len(pop) == 2
-    # can set values
-    pop["age"] = "child"
-    assert pop["age"] == "child"
-
-
-def test_no_delete_key():
-    pop = PopulationID({"age": "adult", "sex": UnresolvedCharacteristic()})
-    with pytest.raises(NotImplementedError):
-        pop.pop("age")
 
 
 def test_raise_unresolved():

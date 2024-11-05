@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Any, Callable
 from collections.abc import Iterator
 import numpy as np
-from collections.abc import MutableMapping
+from collections.abc import Mapping
 
 
 @dataclass
@@ -82,8 +82,8 @@ class UnresolvedCharacteristicException(Exception):
     pass
 
 
-class PopulationID(MutableMapping):
-    """Dictionary-like class to represent a population ID. The keys
+class PopulationID(Mapping):
+    """Immutable, dictionary-like class to represent a population ID. The keys
     are strings (characteristics) and the values are anything (levels).
 
     If an UnresolvedCharacteristic would be returned, instead raise an
@@ -91,8 +91,7 @@ class PopulationID(MutableMapping):
     """
 
     def __init__(self, data=()):
-        self.mapping = {}
-        self.update(data)
+        self.mapping = dict(data)
         self.validate(self.mapping)
 
     @classmethod
@@ -110,17 +109,11 @@ class PopulationID(MutableMapping):
         else:
             return value
 
-    def __delitem__(self, key):
-        raise NotImplementedError("No support to delete keys from PopulationIDs")
-
     def __len__(self):
         return len(self.mapping)
 
     def __iter__(self):
         return iter(self.mapping)
-
-    def __setitem__(self, key, value):
-        self.mapping[key] = value
 
     def __str__(self):
         return str(self.mapping)
