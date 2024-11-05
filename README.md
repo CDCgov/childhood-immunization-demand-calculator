@@ -4,13 +4,17 @@
 
 The Python package `drugdemand` is an experimental modeling framework for developing hypothetical, forward-looking projections of demand for childhood immunizations. Currently, this approach is deterministic, data-informed calculation. In other words, the modeling framework produces models with no stochastic or dynamical elements. Once a model has been formulated, the model parameters can be adjusted to produce demand estimates for hypothetical scenarios.
 
-The modeling framework centers around _populations_ of children. Each population has a size (i.e., number of children) and one or other more _attributes_ that uniquely determine the volume and timing of demand for an immunization among that population. A model consists of these populations and a _demand function_ that takes a population as input, examines its size and attributes, and determines if the population would have demand for an immunization, and if so, when and how much.
+The modeling framework centers around _populations_ of children. Populations are defined by _characteristics_ and their _levels_. For example, the characteristic "sex" might have levels "male" and "female." Each population also has a size (i.e., number of children). A population's characteristics and size uniquely determine the volume and timing of demand for an immunization among that population. A model consists of these populations and a _demand function_. This function takes a population's characteristics and size as inputs, then determines if the population would have demand for an immunization, and if so, when and how much.
 
-The code consists of these classes:
+Currently, the model assumes that each level of each characteristic has some frequency in the population, and that characteristics are statistically independent. For example, if half of children are each sex, and half are in each of a low and high risk, then one-quarter will be male and low risk.
 
-- `Population` is a data class contains a population's size (i.e., number of people) and attributes (e.g., birth date, will uptake).
-- `IndependentSubpopulations` is a data manager that subdivides a list of `Population`s into smaller populations based on lists of attributes.
-- `DrugDosage`, `DrugQuantity`, and `DrugDemand` are data classes that account for dosages (e.g., 50mg vs. 100mg), numbers of doses, and times of demand.
+The model is designed to begin with a single, monolithic population that is partitioned only when necessary in order to compute demand. If the demand function represents some kind of decision tree, then the starting population will be partitioned at each node in the tree.
+
+The most important elements in the code are:
+
+- `PopulationManager` is a class that keeps track of populations, their characteristics, and their sizes.
+- `CharacteristicProportions` is a way of articulating how characteristics are distributed in the population.
+- The `PopulationManger.map()` method allows a demand function to be iterated over all populations, including partitioning according to `CharacteristicProportions`.
 
 ## Example application to nirsevimab
 
