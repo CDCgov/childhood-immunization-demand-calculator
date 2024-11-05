@@ -63,6 +63,7 @@ def test_all():
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
             "interval": "month",
+            "delay_props": {0: 1.0},
         }
         for uptake in [0.3, 0.5, 0.7]
         for p_high_risk in [0.01]

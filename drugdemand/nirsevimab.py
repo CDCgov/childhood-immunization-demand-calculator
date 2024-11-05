@@ -204,15 +204,8 @@ class NirsevimabCalculator:
             },
         }
 
-        if "delays" in pars:
-            cls.validate_delays(pars["delays"])
-            # need to do this renaming to avoid collisions on parameter vs. attribute name
-            # all other parameters have different names from their corresponding attributes
-            # eg "p_high_risk" vs. "risk_level"
-            #
-            # thus the scenario parameter is called plural "delays", but the population attribute
-            # is singular "delay"
-            subpop_attribute_levels["delay"] = pars["delays"]
+        cls.validate_delays(pars["delay_props"])
+        subpop_attribute_levels["delay"] = pars["delay_props"]
 
         # generate demand events
         events = [
