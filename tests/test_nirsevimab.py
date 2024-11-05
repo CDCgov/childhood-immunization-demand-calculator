@@ -10,7 +10,6 @@ from drugdemand import (
     DrugDemand,
     PopulationManager,
     CharacteristicProportions,
-    PopulationResult,
     UnresolvedCharacteristic,
 )
 
@@ -137,7 +136,7 @@ def test_in_season():
         },
     )
 
-    assert result == PopulationResult(value=DrugDemand("50mg", size, birth_date))
+    assert result == DrugDemand("50mg", size, birth_date)
 
 
 def test_after_season():
@@ -161,7 +160,7 @@ def test_after_season():
         },
     )
 
-    assert result == PopulationResult(value=None)
+    assert result is None
 
 
 def test_before_season():
@@ -187,7 +186,7 @@ def test_before_season():
         },
     )
 
-    assert result == PopulationResult(value=DrugDemand("100mg", size, season_start))
+    assert result == DrugDemand("100mg", size, season_start)
 
 
 def test_feb_2024():
@@ -216,7 +215,7 @@ def test_feb_2024():
         },
     )
 
-    assert result == PopulationResult(value=DrugDemand("100mg", size * 2, season_start))
+    assert result == DrugDemand("100mg", size * 2, season_start)
 
 
 def test_parse_delay():
@@ -264,7 +263,7 @@ def test_simple_delay():
         pars=pars,
     )
 
-    assert result2.value.time == result1.value.time + relativedelta(months=1)
+    assert result2.time == result1.time + relativedelta(months=1)
 
 
 def test_delay_props():
