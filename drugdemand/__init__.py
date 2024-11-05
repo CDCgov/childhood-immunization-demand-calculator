@@ -92,22 +92,28 @@ class PopulationID(Mapping):
 
     def __init__(self, data=()):
         self.mapping = dict(data)
-        self.validate(self.mapping)
+        self._validate_mapping(self.mapping)
 
     @classmethod
     def from_characteristics(cls, chars: [str]):
         return cls({char: UnresolvedCharacteristic() for char in chars})
 
     @staticmethod
-    def validate(x: dict):
+    def _validate_mapping(x: dict) -> None:
         assert all(isinstance(k, str) for k in x.keys())
 
-    def __getitem__(self, key):
-        value = self.mapping[key]
-        if isinstance(value, UnresolvedCharacteristic):
-            raise UnresolvedCharacteristicException(key)
+    def is_resolved(self, char: str) -> bool:
+        return not isinstance(self.mapping[char], UnresolvedCharacteristic)
+
+    def __getitem__(self, char: str):
+        if not self.is_resolved(char):
+            raise UnresolvedCharacteristicException(char)
         else:
-            return value
+            return self.mapping[char]
+
+    def _safe_get(self, char: str, default=None):
+        """Get the value without triggering an exception"""
+        return self.mapping.get(char, default)
 
     def __len__(self):
         return len(self.mapping)
@@ -131,7 +137,7 @@ class PopulationManager:
 
         # set up the data, with an initial population with no characteristics
         self.data = {}
-        self.set_size({}, size)
+        self.set_size(PopulationID({}), size)
 
     def get_size(self, pop: PopulationID) -> float:
         return self.data[self._pop_to_tuple(pop)]
@@ -149,7 +155,10 @@ class PopulationManager:
         return PopulationID(zip(self.chars, levels))
 
     def _pop_to_tuple(self, pop: PopulationID) -> tuple[str, ...]:
-        return tuple(pop.get(char, UnresolvedCharacteristic()) for char in self.chars)
+        assert isinstance(pop, PopulationID)
+        return tuple(
+            pop._safe_get(char, UnresolvedCharacteristic()) for char in self.chars
+        )
 
     def map(
         self, f: Callable[[PopulationID, float], Any], *args, **kwargs
@@ -177,7 +186,6 @@ class PopulationManager:
                 yield pop, value
             except UnresolvedCharacteristicException as e:
                 char_to_resolve = e.args[0]
-                assert char_to_resolve in pop
                 new_pops = self.partition(pop, char_to_resolve)
                 pop_stack = new_pops + pop_stack
 
@@ -192,14 +200,14 @@ class PopulationManager:
             list: A list of new population IDs
         """
         # the characteristic we are partitioning on should not have a level
-        assert isinstance(pop[char], UnresolvedCharacteristic)
+        assert not pop.is_resolved(char)
 
         parent_size = self.get_size(pop)
 
         new_pops = []
         for level, prop in self.char_props[char].items():
             # new population is the parent population, but with this characteristic at this level
-            new_pop = pop | {char: level}
+            new_pop = PopulationID(pop | {char: level})
             new_pops.append(new_pop)
             self.set_size(new_pop, prop * parent_size)
 

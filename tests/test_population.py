@@ -48,6 +48,18 @@ def test_pm_init():
     assert pm.data == {(UnresolvedCharacteristic(), UnresolvedCharacteristic()): 100}
 
 
+def test_pm_init():
+    pm = PopulationManager(
+        100,
+        CharacteristicProportions(
+            {
+                "risk_level": {"low": 0.5, "high": 0.5},
+                "age_group": {"infant": 0.1, "child": 0.1, "adult": 0.8},
+            }
+        ),
+    )
+
+
 def test_pm_divide1():
     pm = PopulationManager(
         100,
