@@ -242,14 +242,19 @@ class NirsevimabCalculator:
 
         return results
 
-    @staticmethod
-    def _clean_pop_id(x: PopulationID) -> PopulationID:
+    @classmethod
+    def _clean_pop_id(cls, x: PopulationID) -> dict:
         keys = list(x.keys())
-        values = [
-            x[k] if not isinstance(x[k], UnresolvedCharacteristic) else "unresolved"
-            for k in keys
-        ]
-        return PopulationID(zip(keys, values))
+        values = [cls._clean_char_level(x[k]) for k in keys]
+        return dict(zip(keys, values))
+
+    @staticmethod
+    def _clean_char_level(x):
+        """Ensure every characteristic level is compatible with a polars df"""
+        if isinstance(x, (str, float, int, date, bool)) or x is None:
+            return x
+        else:
+            return str(x)
 
     @staticmethod
     def add_pars_to_results(results: pl.DataFrame, pars: dict) -> pl.DataFrame:

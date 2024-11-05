@@ -87,6 +87,9 @@ def test_all():
     # that demand is the same by date and by birth cohort
     common_groups = ["season_start", "interval", "drug_dosage", "uptake", "p_high_risk"]
 
+    assert set(common_groups).issubset(expected_results.columns)
+    assert set(common_groups).issubset(results.columns)
+
     expected_by_birth = expected_results.group_by(common_groups + ["birth_date"]).agg(
         pl.col("n_doses").sum()
     )
