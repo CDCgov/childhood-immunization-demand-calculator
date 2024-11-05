@@ -90,8 +90,9 @@ class PopulationID(Mapping):
     exception, to be caught by PopulationManager.map().
     """
 
-    def __init__(self, data=()):
+    def __init__(self, data=(), raise_if_unresolved: bool = False):
         self.mapping = dict(data)
+        self.raise_if_unresolved = raise_if_unresolved
         self._validate_mapping(self.mapping)
 
     @classmethod
@@ -106,14 +107,10 @@ class PopulationID(Mapping):
         return not isinstance(self.mapping[char], UnresolvedCharacteristic)
 
     def __getitem__(self, char: str):
-        if not self.is_resolved(char):
+        if self.raise_if_unresolved and not self.is_resolved(char):
             raise UnresolvedCharacteristicException(char)
         else:
             return self.mapping[char]
-
-    def _safe_get(self, char: str, default=None):
-        """Get the value without triggering an exception"""
-        return self.mapping.get(char, default)
 
     def __len__(self):
         return len(self.mapping)
@@ -126,6 +123,9 @@ class PopulationID(Mapping):
 
     def __repr__(self):
         return f"PopulationID({self.mapping!r})"
+
+    def __or__(self, other: dict):
+        return PopulationID(self.mapping | other)
 
 
 class PopulationManager:
@@ -155,10 +155,7 @@ class PopulationManager:
         return PopulationID(zip(self.chars, levels))
 
     def _pop_to_tuple(self, pop: PopulationID) -> tuple[str, ...]:
-        assert isinstance(pop, PopulationID)
-        return tuple(
-            pop._safe_get(char, UnresolvedCharacteristic()) for char in self.chars
-        )
+        return tuple(pop.get(char, UnresolvedCharacteristic()) for char in self.chars)
 
     def map(
         self, f: Callable[[PopulationID, float], Any], *args, **kwargs
@@ -182,9 +179,17 @@ class PopulationManager:
             pop = pop_stack.pop()
 
             try:
-                value = f(pop, self.get_size(pop), *args, **kwargs)
+                # get the size (need to do this *before* allowing exception raising)
+                size = self.get_size(pop)
+                # run the function, raising the unresolved exceptions if needed
+                pop.raise_if_unresolved = True
+                value = f(pop, size, *args, **kwargs)
+                # revert back, so the pop ID has normal functionality
+                pop.raise_if_unresolved = False
                 yield pop, value
             except UnresolvedCharacteristicException as e:
+                # revert back, so the pop ID has normal functionality
+                pop.raise_if_unresolved = False
                 char_to_resolve = e.args[0]
                 new_pops = self.partition(pop, char_to_resolve)
                 pop_stack = new_pops + pop_stack
@@ -207,7 +212,7 @@ class PopulationManager:
         new_pops = []
         for level, prop in self.char_props[char].items():
             # new population is the parent population, but with this characteristic at this level
-            new_pop = PopulationID(pop | {char: level})
+            new_pop = pop | {char: level}
             new_pops.append(new_pop)
             self.set_size(new_pop, prop * parent_size)
 

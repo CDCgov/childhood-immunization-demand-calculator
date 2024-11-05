@@ -3,6 +3,7 @@ import pytest
 from drugdemand import (
     PopulationManager,
     CharacteristicProportions,
+    PopulationID,
     UnresolvedCharacteristic,
 )
 
@@ -58,6 +59,25 @@ def test_pm_init():
             }
         ),
     )
+
+
+def test_pm_partition():
+    pm = PopulationManager(
+        100,
+        CharacteristicProportions(
+            {
+                "risk_level": {"low": 0.5, "high": 0.5},
+                "age_group": {"infant": 0.1, "child": 0.1, "adult": 0.8},
+            }
+        ),
+    )
+
+    pops = list(pm.pops())
+    assert len(pops) == 1
+    pop = pops[0]
+    pm.partition(pop, "risk_level")
+
+    assert pm.get_size(PopulationID({"risk_level": "low"})) == 50
 
 
 def test_pm_divide1():
