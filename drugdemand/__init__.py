@@ -128,6 +128,22 @@ class PopulationID(Mapping):
         return PopulationID(self.mapping | other)
 
 
+class RaiseIfUnresolvedManager:
+    """With-statement manager that sets a PopulationID to raise if an
+    unresolved characteristic is queried, and then resets to *not* raise
+    when exiting the with-statement"""
+
+    def __init__(self, pop: PopulationID):
+        self.pop = pop
+
+    def __enter__(self) -> None:
+        self.pop.raise_if_unresolved = True
+
+    def __exit__(self, exc_type, value, tb) -> bool:
+        self.pop.raise_if_unresolved = False
+        return False
+
+
 class PopulationManager:
     def __init__(self, size: float, char_props: CharacteristicProportions):
         self.char_props = char_props
@@ -178,18 +194,14 @@ class PopulationManager:
         while pop_stack:
             pop = pop_stack.pop()
 
+            # get the size (need to do this *before* allowing exception raising)
+            size = self.get_size(pop)
+
             try:
-                # get the size (need to do this *before* allowing exception raising)
-                size = self.get_size(pop)
-                # run the function, raising the unresolved exceptions if needed
-                pop.raise_if_unresolved = True
-                value = f(pop, size, *args, **kwargs)
-                # revert back, so the pop ID has normal functionality
-                pop.raise_if_unresolved = False
-                yield pop, value
+                with RaiseIfUnresolvedManager(pop):
+                    value = f(pop, size, *args, **kwargs)
+                    yield pop, value
             except UnresolvedCharacteristicException as e:
-                # revert back, so the pop ID has normal functionality
-                pop.raise_if_unresolved = False
                 char_to_resolve = e.args[0]
                 new_pops = self.partition(pop, char_to_resolve)
                 pop_stack = new_pops + pop_stack
