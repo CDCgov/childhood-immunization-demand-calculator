@@ -234,6 +234,27 @@ python-dateutil = ">=2.8.1"
 dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
+name = "griddler"
+version = "0.1.0"
+description = ""
+optional = false
+python-versions = "^3.10"
+files = []
+develop = false
+
+[package.dependencies]
+pyyaml = "^6.0.1"
+
+[package.extras]
+polars = ["polars (>=1.7.1,<2.0.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/CDCgov/pygriddler"
+reference = "HEAD"
+resolved_reference = "abea5098d0659fffaa656a6c0ed3fd99a58b5b1e"
+
+[[package]]
 name = "griffe"
 version = "0.48.0"
 description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API."
@@ -1349,4 +1370,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "fec592ccce583615a2d93c87eda5b2ee7af615c465f99deb79e1448278c5ba61"
+content-hash = "b08b5c709d44603052c28633dd419cd464ae1062b633b74abf1ad75b1b030c84"

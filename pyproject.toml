@@ -18,6 +18,7 @@ altair = "^5.4.0"
 pandas = "^2.2.2"
 vl-convert-python = "^1.6.0"
 pyarrow = "^17.0.0"
+griddler = {git = "https://github.com/CDCgov/pygriddler"}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "7.4.4"
