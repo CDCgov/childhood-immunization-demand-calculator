@@ -129,14 +129,6 @@ class PopulationID(MutableMapping):
         return f"PopulationID({self.mapping!r})"
 
 
-@dataclass
-class PopulationResult:
-    """Result of a calculation on a population"""
-
-    char_to_resolve: str = None
-    value: Any = None
-
-
 class PopulationManager:
     def __init__(self, size: float, char_props: CharacteristicProportions):
         self.char_props = char_props
@@ -161,40 +153,39 @@ class PopulationManager:
         return map(self._tuple_to_pop, self.data.keys())
 
     def _tuple_to_pop(self, levels: tuple[str, ...]) -> PopulationID:
-        return dict(zip(self.chars, levels))
+        return PopulationID(zip(self.chars, levels))
 
     def _pop_to_tuple(self, pop: PopulationID) -> tuple[str, ...]:
         return tuple(pop.get(char, UnresolvedCharacteristic()) for char in self.chars)
 
     def map(
-        self, f: Callable[[PopulationID, float], PopulationResult], *args, **kwargs
+        self, f: Callable[[PopulationID, float], Any], *args, **kwargs
     ) -> Iterator[tuple[PopulationID, Any]]:
         """Map a function over all subpopulations
 
         Args:
-            f (Callable[dict[str, Any], PopulationResult]): The function to be
-              mapped. It should take a PopulationID and the population size and return
-              a PopulationResult. If `result.resolved`, then the function was able to
-              compute a result based on the PopulationID. If not, then the function
-              needs the characteristic `result.char_to_resolve` to be further partitioned,
-              to return a value.
+            f (Callable[[PopulationID, float], Any]): The function to be mapped. It
+              should take a PopulationID and the population size. If the function
+              references a key in the PopulationID that has not been resolved, that
+              characteristic will be partitioned and resolved.
             args, kwargs: further arguments passed to `f`
 
         Yields:
             Iterator: 2-tuples of the population (defined by its `{characteristic: level}`
-              dictionary) and the output of the `f` function for that population
+              dictionary) and the output of `f` for that population
         """
         pop_stack = list(self.pops())
 
         while pop_stack:
             pop = pop_stack.pop()
-            result = f(pop, self.get_size(pop), *args, **kwargs)
-            assert isinstance(result, PopulationResult)
 
-            if result.char_to_resolve is None:
-                yield pop, result.value
-            else:
-                new_pops = self.partition(pop, result.char_to_resolve)
+            try:
+                value = f(pop, self.get_size(pop), *args, **kwargs)
+                yield pop, value
+            except UnresolvedCharacteristicException as e:
+                char_to_resolve = e.args[0]
+                assert char_to_resolve in pop
+                new_pops = self.partition(pop, char_to_resolve)
                 pop_stack = new_pops + pop_stack
 
     def partition(self, pop: PopulationID, char: str) -> [PopulationID]:

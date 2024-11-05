@@ -39,7 +39,9 @@ def test_no_delete_key():
 
 def test_raise_unresolved():
     pop = PopulationID({"age": "adult", "sex": UnresolvedCharacteristic()})
-    with pytest.raises(UnresolvedCharacteristicException) as e:
+    with pytest.raises(UnresolvedCharacteristicException) as exc_info:
         pop["sex"]
 
-    assert str(e.value) == "sex"
+    # pytest gives you an ExceptionInfo objects; pull out the exception itself
+    e = exc_info.value
+    assert e.args[0] == "sex"

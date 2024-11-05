@@ -1,7 +1,6 @@
 import pytest
 
 from drugdemand import (
-    PopulationResult,
     PopulationManager,
     CharacteristicProportions,
     UnresolvedCharacteristic,
@@ -60,13 +59,13 @@ def test_pm_divide1():
         ),
     )
 
-    def f(pop_dict, size):
-        if isinstance(pop_dict["risk_level"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="risk_level")
-        elif pop_dict["risk_level"] == "low":
-            return PopulationResult(value=0.1 * size)
-        elif pop_dict["risk_level"] == "high":
-            return PopulationResult(value=2.0 * size)
+    def f(pop, size):
+        if pop["risk_level"] == "low":
+            return 0.1 * size
+        elif pop["risk_level"] == "high":
+            return 2.0 * size
+        else:
+            raise RuntimeError
 
     results = list(pm.map(f))
 
@@ -104,31 +103,22 @@ def test_pm_divide_twice():
 
     def f_risk(pop_dict, size):
         if size == 0:
-            return PopulationResult(value=0)
-        elif isinstance(pop_dict["risk_level"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="risk_level")
+            return 0
         elif pop_dict["risk_level"] == "low":
-            return PopulationResult(value=0.1 * size)
+            return 0.1 * size
         elif pop_dict["risk_level"] == "high":
-            return PopulationResult(value=2.0 * size)
+            return 2.0 * size
         else:
-            print(pop_dict["risk_level"])
-            print(type(pop_dict["risk_level"]))
-            print(isinstance(pop_dict["risk_level"], UnresolvedCharacteristic))
             raise RuntimeError
 
     # do the first partitions
     list(pm.map(f_risk))
 
     def f_age(pop_dict, size):
-        if isinstance(pop_dict["age_group"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="age_group")
-        elif pop_dict["age_group"] == "infant":
-            return PopulationResult(value=0)
-        elif pop_dict["age_group"] == "child":
-            return PopulationResult(value=0)
+        if pop_dict["age_group"] in ["infant", "child"]:
+            return 0
         elif pop_dict["age_group"] == "adult":
-            return PopulationResult(value=size)
+            return size
         else:
             raise RuntimeError
 
@@ -151,12 +141,10 @@ def test_pm_takes_args():
     )
 
     def f(pop, size, multiplier):
-        if isinstance(pop["risk_level"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="risk_level")
-        elif pop["risk_level"] == "low":
-            return PopulationResult(value=0.1 * size * multiplier)
+        if pop["risk_level"] == "low":
+            return 0.1 * size * multiplier
         elif pop["risk_level"] == "high":
-            return PopulationResult(value=2.0 * size * multiplier)
+            return 2.0 * size * multiplier
         else:
             raise RuntimeError
 
@@ -175,12 +163,10 @@ def test_pm_takes_kwargs():
     )
 
     def f(pop, size, multiplier):
-        if isinstance(pop["risk_level"], UnresolvedCharacteristic):
-            return PopulationResult(char_to_resolve="risk_level")
-        elif pop["risk_level"] == "low":
-            return PopulationResult(value=0.1 * size * multiplier)
+        if pop["risk_level"] == "low":
+            return 0.1 * size * multiplier
         elif pop["risk_level"] == "high":
-            return PopulationResult(value=2.0 * size * multiplier)
+            return 2.0 * size * multiplier
         else:
             raise RuntimeError
 
