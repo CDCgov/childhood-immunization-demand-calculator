@@ -3,7 +3,6 @@ from drugdemand import (
     PopulationManager,
     PopulationID,
     CharacteristicProportions,
-    UnresolvedCharacteristic,
 )
 
 import polars as pl
