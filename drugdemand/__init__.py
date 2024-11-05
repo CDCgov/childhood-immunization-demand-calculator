@@ -21,7 +21,7 @@ class DrugDosage:
 
 @dataclass
 class DrugQuantity:
-    """Quantity of a drug-dosage"""
+    """Quantity of a drug-dosage (e.g., 3 doses of nirsevimab 50mg)"""
 
     drug_dosage: DrugDosage
     n_doses: int
@@ -36,7 +36,8 @@ class DrugQuantity:
 
 @dataclass
 class DrugDemand:
-    """Quantity of a drug-dosage, at a time"""
+    """Quantity of a drug-dosage, at a time (e.g., 3 doses of nirsevimab 50mg
+    on 2024-10-01)"""
 
     drug_dosage: DrugDosage
     n_doses: int
@@ -79,6 +80,8 @@ class UnresolvedCharacteristic:
 
 
 class UnresolvedCharacteristicException(Exception):
+    """Raised when an unresolved characteristic is queried"""
+
     pass
 
 
@@ -97,16 +100,28 @@ class PopulationID(Mapping):
 
     @classmethod
     def from_characteristics(cls, chars: [str]):
+        """Create a PopulationID with unresolved characteristics
+
+        Args:
+            chars (str]): List of characteristics
+
+        Returns:
+            PopulationID: PopulationID with unresolved characteristics
+        """
         return cls({char: UnresolvedCharacteristic() for char in chars})
 
     @staticmethod
     def _validate_mapping(x: dict) -> None:
-        assert all(isinstance(k, str) for k in x.keys())
+        """Ensure all characteristics are strings"""
+        assert all(isinstance(char, str) for char in x.keys())
 
     def is_resolved(self, char: str) -> bool:
+        """Is the characteristic resolved?"""
         return not isinstance(self.mapping[char], UnresolvedCharacteristic)
 
     def __getitem__(self, char: str):
+        """Get the level of a characteristic, raising an exception if
+        the characteristic is unresolved and raise_if_unresolved flag is True"""
         if self.raise_if_unresolved and not self.is_resolved(char):
             raise UnresolvedCharacteristicException(char)
         else:
