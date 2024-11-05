@@ -6,7 +6,12 @@ import pytest
 from dateutil.relativedelta import relativedelta
 from datetime import date
 
-from drugdemand import DrugDemand, PopulationManager
+from drugdemand import (
+    DrugDemand,
+    PopulationManager,
+    CharacteristicProportions,
+    UnresolvedCharacteristic,
+)
 
 from drugdemand.nirsevimab import NirsevimabCalculator
 
@@ -24,6 +29,7 @@ def test_all():
         .rename({"age_mo": "age"})
         .with_columns(interval=pl.lit("month"))
     )
+
     expected_results = (
         pl.read_parquet("tests/data/results.parquet")
         .with_columns(interval=pl.lit("month"))
@@ -50,6 +56,8 @@ def test_all():
             ]
         )
         .agg([pl.col("n_doses").sum(), pl.col("size").sum()])
+        # need to add an explicit delay column
+        .with_columns(delay=0.0)
     )
 
     scenario_pars = [
@@ -75,8 +83,37 @@ def test_all():
         .with_columns(pl.col("season_start").replace({"2024-10-01": "uniform"}))
     )
 
+    # older results were made when we articulated every single population, so now we just want to check
+    # that demand is the same by date and by birth cohort
+    common_groups = ["season_start", "interval", "drug_dosage", "uptake", "p_high_risk"]
+
+    assert set(common_groups).issubset(expected_results.columns)
+    assert set(common_groups).issubset(results.columns)
+
+    expected_by_birth = expected_results.group_by(common_groups + ["birth_date"]).agg(
+        pl.col("n_doses").sum()
+    )
+    current_by_birth = results.group_by(common_groups + ["birth_date"]).agg(
+        pl.col("n_doses").sum()
+    )
     polars.testing.assert_frame_equal(
-        results, expected_results, check_row_order=False, check_column_order=False
+        expected_by_birth,
+        current_by_birth,
+        check_column_order=False,
+        check_row_order=False,
+    )
+
+    expected_by_time = expected_results.group_by(common_groups + ["time"]).agg(
+        pl.col("n_doses").sum()
+    )
+    current_by_time = results.group_by(common_groups + ["time"]).agg(
+        pl.col("n_doses").sum()
+    )
+    polars.testing.assert_frame_equal(
+        expected_by_time,
+        current_by_time,
+        check_column_order=False,
+        check_row_order=False,
     )
 
 
@@ -90,6 +127,7 @@ def test_in_season():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
         size=size,
         pars={
@@ -100,9 +138,8 @@ def test_in_season():
             "uptake": 1.0,
         },
     )
-    expected_result = DrugDemand("50mg", size, birth_date)
 
-    assert result == expected_result
+    assert result == DrugDemand("50mg", size, birth_date)
 
 
 def test_after_season():
@@ -115,6 +152,7 @@ def test_after_season():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
         pars={
             "season_start": date(2024, 10, 1),
@@ -140,6 +178,7 @@ def test_before_season():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
         pars={
             "season_start": date(2024, 10, 1),
@@ -149,9 +188,8 @@ def test_before_season():
             "uptake": 1.0,
         },
     )
-    expected_result = DrugDemand("100mg", size, season_start)
 
-    assert result == expected_result
+    assert result == DrugDemand("100mg", size, season_start)
 
 
 def test_feb_2024():
@@ -170,6 +208,7 @@ def test_feb_2024():
             "age_at_5kg": 1,
             "will_receive": True,
             "risk_level": "high",
+            "delay": 0.0,
         },
         pars={
             "season_start": season_start,
@@ -178,9 +217,8 @@ def test_feb_2024():
             "uptake": 1.0,
         },
     )
-    expected_result = DrugDemand("100mg", size * 2, season_start)
 
-    assert result == expected_result
+    assert result == DrugDemand("100mg", size * 2, season_start)
 
 
 def test_parse_delay():
@@ -199,6 +237,11 @@ def test_parse_delay():
 def test_simple_delay():
     """A population with a 1-month delay has a demand one month after a population otherwise
     identical but with no delay"""
+    pars = {
+        "season_start": date(2024, 10, 1),
+        "season_end": date(2025, 3, 31),
+        "interval": "month",
+    }
     birth_date = datetime.date(2024, 11, 1)
     size = 100
     result1 = NirsevimabCalculator.calculate_demand(
@@ -207,14 +250,9 @@ def test_simple_delay():
             "birth_date": birth_date,
             "age_at_5kg": 1,
             "will_receive": True,
+            "delay": 0.0,
         },
-        pars={
-            "season_start": date(2024, 10, 1),
-            "season_end": date(2025, 3, 31),
-            "interval": "month",
-            "p_high_risk": 0,
-            "uptake": 1.0,
-        },
+        pars=pars,
     )
 
     result2 = NirsevimabCalculator.calculate_demand(
@@ -225,13 +263,7 @@ def test_simple_delay():
             "will_receive": True,
             "delay": 1,
         },
-        pars={
-            "season_start": date(2024, 10, 1),
-            "season_end": date(2025, 3, 31),
-            "interval": "month",
-            "p_high_risk": 0,
-            "uptake": 1.0,
-        },
+        pars=pars,
     )
 
     assert result2.time == result1.time + relativedelta(months=1)
@@ -243,32 +275,28 @@ def test_delay_props():
     birth_date = datetime.date(2024, 11, 1)
     size = 100
 
-    pm = PopulationManager(
-        size=size,
-        char_props={
-            "birth_date": {birth_date: 1.0},
-            "age_at_5kg": {1, 1.0},
-            "delay": {0: 0.8, 1: 0.2},
+    char_props = {
+        "birth_date": {birth_date: 1.0},
+        "age_at_5kg": {1: 1.0},
+        "delay": {0: 0.8, 1: 0.2},
+        "will_receive": {True: 1.0},
+    }
+    CharacteristicProportions.validate(char_props)
+
+    pm = PopulationManager(size=size, char_props=char_props)
+
+    results = pm.map(
+        NirsevimabCalculator.calculate_demand,
+        pars={
+            "season_start": date(2024, 10, 1),
+            "season_end": date(2025, 3, 31),
+            "interval": "month",
+            "p_high_risk": 0,
+            "uptake": 1.0,
         },
     )
 
-    # need to use map here
-    # probably want to allow for args and kwargs
-    results = [
-        NirsevimabCalculator.calculate_demand(
-            subpop,
-            pars={
-                "season_start": date(2024, 10, 1),
-                "season_end": date(2025, 3, 31),
-                "interval": "month",
-                "p_high_risk": 0,
-                "uptake": 1.0,
-            },
-        )
-        for subpop in subpops
-    ]
-
-    dose_dates = [(x.drug_dosage, x.n_doses, x.time) for x in results]
+    dose_dates = [(x.drug_dosage, x.n_doses, x.time) for pop, x in results]
     assert set(dose_dates) == set(
         [
             ("50mg", 80.0, birth_date),
@@ -276,3 +304,9 @@ def test_delay_props():
             ("100mg", 20.0, birth_date + relativedelta(months=1)),
         ]
     )
+
+
+def test_clean_pop_id():
+    pop = {"age": "adult", "risk_level": UnresolvedCharacteristic()}
+    clean_pop = {"age": "adult", "risk_level": "unresolved"}
+    assert NirsevimabCalculator._clean_pop_id(pop) == clean_pop

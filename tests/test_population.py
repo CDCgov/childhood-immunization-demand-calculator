@@ -1,6 +1,11 @@
 import pytest
 
-from drugdemand import PopulationManager, CharacteristicProportions
+from drugdemand import (
+    PopulationManager,
+    CharacteristicProportions,
+    PopulationID,
+    UnresolvedCharacteristic,
+)
 
 
 def test_char_prop_validate():
@@ -41,18 +46,26 @@ def test_pm_init():
         ),
     )
 
-    assert pm.data == {(None, None): 100}
+    assert pm.data == {(UnresolvedCharacteristic(), UnresolvedCharacteristic()): 100}
 
 
-def test_update_tuple():
-    x = (1, 2, 3)
-    assert PopulationManager.update_tuple(x, 1, "foo") == (1, "foo", 3)
+def test_pm_partition():
+    pm = PopulationManager(
+        100,
+        CharacteristicProportions(
+            {
+                "risk_level": {"low": 0.5, "high": 0.5},
+                "age_group": {"infant": 0.1, "child": 0.1, "adult": 0.8},
+            }
+        ),
+    )
 
-    with pytest.raises(Exception):
-        PopulationManager.update_tuple(x, 3, "foo")
+    pops = list(pm.pops())
+    assert len(pops) == 1
+    pop = pops[0]
+    pm.partition(pop, "risk_level")
 
-    with pytest.raises(Exception):
-        PopulationManager.update_tuple(x, -1, "foo")
+    assert pm.get_size(PopulationID({"risk_level": "low"})) == 50
 
 
 def test_pm_divide1():
@@ -66,23 +79,35 @@ def test_pm_divide1():
         ),
     )
 
-    def f(pop_dict, size):
-        if pop_dict["risk_level"] is None:
-            return {"characteristic": "risk_level", "value": None}
-        elif pop_dict["risk_level"] == "low":
-            return {"characteristic": None, "value": 0.1 * size}
-        elif pop_dict["risk_level"] == "high":
-            return {"characteristic": None, "value": 2.0 * size}
+    def f(pop, size):
+        if pop["risk_level"] == "low":
+            return 0.1 * size
+        elif pop["risk_level"] == "high":
+            return 2.0 * size
+        else:
+            raise RuntimeError
 
     results = list(pm.map(f))
 
     assert len(results) == 2
 
-    assert ({"risk_level": "low", "age_group": None}, 100 * 0.5 * 0.1) in results
-    assert ({"risk_level": "high", "age_group": None}, 100 * 0.5 * 2.0) in results
+    assert (
+        {"risk_level": "low", "age_group": UnresolvedCharacteristic()},
+        100 * 0.5 * 0.1,
+    ) in results
+    assert (
+        {"risk_level": "high", "age_group": UnresolvedCharacteristic()},
+        100 * 0.5 * 2.0,
+    ) in results
 
-    assert pm.get_size({"risk_level": "low", "age_group": None}) == 100 * 0.5
-    assert pm.get_size({"risk_level": "high", "age_group": None}) == 100 * 0.5
+    assert (
+        pm.get_size({"risk_level": "low", "age_group": UnresolvedCharacteristic()})
+        == 100 * 0.5
+    )
+    assert (
+        pm.get_size({"risk_level": "high", "age_group": UnresolvedCharacteristic()})
+        == 100 * 0.5
+    )
 
 
 def test_pm_divide_twice():
@@ -98,27 +123,24 @@ def test_pm_divide_twice():
 
     def f_risk(pop_dict, size):
         if size == 0:
-            return {"characteristic": None, "value": 0}
-
-        if pop_dict["risk_level"] is None:
-            return {"characteristic": "risk_level", "value": None}
+            return 0
         elif pop_dict["risk_level"] == "low":
-            return {"characteristic": None, "value": 0.1 * size}
+            return 0.1 * size
         elif pop_dict["risk_level"] == "high":
-            return {"characteristic": None, "value": 2.0 * size}
+            return 2.0 * size
+        else:
+            raise RuntimeError
 
     # do the first partitions
     list(pm.map(f_risk))
 
     def f_age(pop_dict, size):
-        if pop_dict["age_group"] is None:
-            return {"characteristic": "age_group", "value": None}
-        elif pop_dict["age_group"] == "infant":
-            return {"characteristic": None, "value": 0}
-        elif pop_dict["age_group"] == "child":
-            return {"characteristic": None, "value": 0}
+        if pop_dict["age_group"] in ["infant", "child"]:
+            return 0
         elif pop_dict["age_group"] == "adult":
-            return {"characteristic": None, "value": size}
+            return size
+        else:
+            raise RuntimeError
 
     results = list(pm.map(f_age))
 
@@ -131,3 +153,47 @@ def test_pm_divide_twice():
         {"risk_level": "high", "age_group": "adult"},
         100 * 0.5 * 0.8,
     ) in results
+
+
+def test_pm_takes_args():
+    pm = PopulationManager(
+        100, CharacteristicProportions({"risk_level": {"low": 0.5, "high": 0.5}})
+    )
+
+    def f(pop, size, multiplier):
+        if pop["risk_level"] == "low":
+            return 0.1 * size * multiplier
+        elif pop["risk_level"] == "high":
+            return 2.0 * size * multiplier
+        else:
+            raise RuntimeError
+
+    multiplier = 4.0
+    results = list(pm.map(f, multiplier))
+
+    assert len(results) == 2
+
+    assert ({"risk_level": "low"}, 100 * 0.5 * 0.1 * multiplier) in results
+    assert ({"risk_level": "high"}, 100 * 0.5 * 2.0 * multiplier) in results
+
+
+def test_pm_takes_kwargs():
+    pm = PopulationManager(
+        100, CharacteristicProportions({"risk_level": {"low": 0.5, "high": 0.5}})
+    )
+
+    def f(pop, size, multiplier):
+        if pop["risk_level"] == "low":
+            return 0.1 * size * multiplier
+        elif pop["risk_level"] == "high":
+            return 2.0 * size * multiplier
+        else:
+            raise RuntimeError
+
+    multiplier = 4.0
+    results = list(pm.map(f, multiplier=multiplier))
+
+    assert len(results) == 2
+
+    assert ({"risk_level": "low"}, 100 * 0.5 * 0.1 * multiplier) in results
+    assert ({"risk_level": "high"}, 100 * 0.5 * 2.0 * multiplier) in results
