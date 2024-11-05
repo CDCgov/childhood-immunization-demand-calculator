@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import Any, Callable
 from collections.abc import Iterator
 import numpy as np
+from collections.abc import MutableMapping
 
 
 @dataclass
@@ -62,27 +63,6 @@ class CharacteristicProportions(dict):
             assert np.isclose(sum(props.values()), 1.0)
 
 
-class PopulationID(dict):
-    """Extension of the dictionary class to represent a population ID. The keys
-    are strings (characteristics) and the values are anything (levels).
-    """
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.validate()
-
-    def validate(self):
-        assert all(isinstance(k, str) for k in self.keys())
-
-
-@dataclass
-class PopulationResult:
-    """Result of a calculation on a population"""
-
-    char_to_resolve: str = None
-    value: Any = None
-
-
 class UnresolvedCharacteristic:
     """Marker for a population characteristic not yet resolved"""
 
@@ -91,10 +71,70 @@ class UnresolvedCharacteristic:
         return isinstance(other, UnresolvedCharacteristic)
 
     def __hash__(self):
+        """Identical hash, so it can go into dictionaries"""
         return hash("UnresolvedCharacteristic")
 
     def __str__(self):
         return "unresolved"
+
+
+class UnresolvedCharacteristicException(Exception):
+    pass
+
+
+class PopulationID(MutableMapping):
+    """Dictionary-like class to represent a population ID. The keys
+    are strings (characteristics) and the values are anything (levels).
+
+    If an UnresolvedCharacteristic would be returned, instead raise an
+    exception, to be caught by PopulationManager.map().
+    """
+
+    def __init__(self, data=()):
+        self.mapping = {}
+        self.update(data)
+        self.validate(self.mapping)
+
+    @classmethod
+    def from_characteristics(cls, chars: [str]):
+        return cls({char: UnresolvedCharacteristic() for char in chars})
+
+    @staticmethod
+    def validate(x: dict):
+        assert all(isinstance(k, str) for k in x.keys())
+
+    def __getitem__(self, key):
+        value = self.mapping[key]
+        if isinstance(value, UnresolvedCharacteristic):
+            raise UnresolvedCharacteristicException(key)
+        else:
+            return value
+
+    def __delitem__(self, key):
+        raise NotImplementedError("No support to delete keys from PopulationIDs")
+
+    def __len__(self):
+        return len(self.mapping)
+
+    def __iter__(self):
+        return iter(self.mapping)
+
+    def __setitem__(self, key, value):
+        self.mapping[key] = value
+
+    def __str__(self):
+        return str(self.mapping)
+
+    def __repr__(self):
+        return f"PopulationID({self.mapping!r})"
+
+
+@dataclass
+class PopulationResult:
+    """Result of a calculation on a population"""
+
+    char_to_resolve: str = None
+    value: Any = None
 
 
 class PopulationManager:
