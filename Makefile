@@ -1,8 +1,8 @@
 SECONDARY_OUTPUT = output/demand_by_birth.png output/demand_by_time.csv
 MAIN_OUTPUT = output/results.csv
 PACKAGE_CODE = drugdemand/__init__.py drugdemand/nirsevimab.py
-SCENARIOS = input/scenarios.yaml
 INPUT = input/births.csv input/weights.csv
+PARAMS = scripts/params.yaml
 RAW_DATA = data/Natality,\ 2016-2022\ expanded.txt data/weights.csv
 
 .PHONY: clean
@@ -14,14 +14,11 @@ $(SECONDARY_OUTPUT): scripts/postprocess.py $(MAIN_OUTPUT) $(POSTPROCESSING_SCRI
 	python $<
 
 # MAIN COMPUTATION ------------------------------------------------------------
-$(MAIN_OUTPUT): scripts/run_scenarios.py $(INPUT) $(SCENARIOS) $(PACKAGE_CODE)
+$(MAIN_OUTPUT): scripts/run_scenarios.py $(INPUT) $(PARAMS) $(PACKAGE_CODE)
 	python $<
 
 # PREPROCESSING ---------------------------------------------------------------
 $(INPUT): scripts/preprocess.py $(RAW_DATA)
-	python $<
-
-$(SCENARIOS): scripts/create_scenarios.py
 	python $<
 
 # Data history ----------------------------------------------------------------
