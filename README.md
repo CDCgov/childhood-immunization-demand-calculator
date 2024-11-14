@@ -1,5 +1,7 @@
 # Childhood immunization demand calculator
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14165987.svg)](https://doi.org/10.5281/zenodo.14165987)
+
 ## Overview
 
 The Python package `drugdemand` is an experimental modeling framework for developing hypothetical, forward-looking projections of demand for childhood immunizations. Currently, this approach is deterministic, data-informed calculation. In other words, the modeling framework produces models with no stochastic or dynamical elements. Once a model has been formulated, the model parameters can be adjusted to produce demand estimates for hypothetical scenarios.
