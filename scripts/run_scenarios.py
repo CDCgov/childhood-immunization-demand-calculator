@@ -3,7 +3,7 @@
 # - Generate output tables and figures
 
 from pathlib import Path
-import yaml
+import griddler.griddle
 import polars as pl
 
 from drugdemand.nirsevimab import NirsevimabCalculator
@@ -13,8 +13,7 @@ repo_dir = Path(__file__).resolve().parents[1]
 
 # input parameters ------------------------------------------------------------
 
-with open(repo_dir / "input" / "scenarios.yaml") as f:
-    scenarios = yaml.safe_load(f)
+scenarios = griddler.griddle.read(repo_dir / "scripts" / "params.yaml")
 
 # run the scenarios -----------------------------------------------------------
 

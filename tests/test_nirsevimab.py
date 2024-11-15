@@ -30,7 +30,8 @@ def test_all():
     )
     expected_results = (
         pl.read_parquet("tests/data/results.parquet")
-        .with_columns(interval=pl.lit("month"))
+        .with_columns(interval=pl.lit("month"), delay_props=pl.lit("{0: 1.0}"), delay=0)
+        .with_columns(pl.col("delay").cast(pl.Int64))
         .filter(pl.col("n_doses") > 0)
         # note that "willing" is present as a column name in the test data; this is `will_receive`
         # in the code
@@ -51,6 +52,8 @@ def test_all():
                 "time",
                 "uptake",
                 "p_high_risk",
+                "delay_props",
+                "delay",
             ]
         )
         .agg([pl.col("n_doses").sum(), pl.col("size").sum()])
@@ -63,6 +66,7 @@ def test_all():
             "season_start": date(2024, 10, 1),
             "season_end": date(2025, 3, 31),
             "interval": "month",
+            "delay_props": {0: 1.0},
         }
         for uptake in [0.3, 0.5, 0.7]
         for p_high_risk in [0.01]

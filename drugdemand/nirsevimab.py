@@ -39,6 +39,7 @@ class NirsevimabCalculator:
         assert isinstance(self.births["date"].dtype, pl.Date)
         assert set(["age", "p_gt_5kg", "interval"]) <= set(self.weights.columns)
         assert all(self.weights["interval"] == pars["interval"])
+        self.validate_delays(pars["delay_props"])
 
         self.results = self.calculate(self.pars, self.births, self.weights)
 
@@ -202,17 +203,8 @@ class NirsevimabCalculator:
             "age_at_5kg": {
                 x["age"]: x["p_gt_5kg"] for x in weights.iter_rows(named=True)
             },
+            "delay": pars["delay_props"],
         }
-
-        if "delays" in pars:
-            cls.validate_delays(pars["delays"])
-            # need to do this renaming to avoid collisions on parameter vs. attribute name
-            # all other parameters have different names from their corresponding attributes
-            # eg "p_high_risk" vs. "risk_level"
-            #
-            # thus the scenario parameter is called plural "delays", but the population attribute
-            # is singular "delay"
-            subpop_attribute_levels["delay"] = pars["delays"]
 
         # generate demand events
         events = [
@@ -238,8 +230,8 @@ class NirsevimabCalculator:
 
         return results
 
-    @staticmethod
-    def add_pars_to_results(results: pl.DataFrame, pars: dict) -> pl.DataFrame:
+    @classmethod
+    def add_pars_to_results(cls, results: pl.DataFrame, pars: dict) -> pl.DataFrame:
         # check for collisions: there shouldn't be the same column names in the population
         # attributes and the scenario parameters
         assert len(set(results.columns) & set(pars)) == 0
@@ -260,5 +252,15 @@ class NirsevimabCalculator:
                     pars[x] = "non-uniform"
 
         return results.with_columns(
-            [pl.lit(value).alias(key) for key, value in pars.items()]
+            [
+                pl.lit(cls._clean_df_value(value)).alias(key)
+                for key, value in pars.items()
+            ]
         )
+
+    @staticmethod
+    def _clean_df_value(value):
+        if isinstance(value, dict):
+            return str(value)
+        else:
+            return value
