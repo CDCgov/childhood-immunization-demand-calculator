@@ -1,4 +1,7 @@
-# Childhood immunization demand calculator
+> [!CAUTION]
+> - This repository has been archived and is no longer maintained.
+> - The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.
+> - It should not be used in production systems.\n\n# Childhood immunization demand calculator
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14165987.svg)](https://doi.org/10.5281/zenodo.14165987)
 
